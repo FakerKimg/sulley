@@ -1,4 +1,4 @@
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 import urllib
 import requests
 import random
@@ -21,7 +21,7 @@ class BufferOverflow():
 
 
     def parseInput(self):
-        response = requests.get(url) # Todo: identify which to use, GET or POST ?
+        response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
         if response.status_code != 200:
             # Todo
             pass
@@ -62,7 +62,7 @@ class BufferOverflow():
         return
 
     def sendBack(self):
-        for name, form in self.input_pairs.iteritems():
+        for form in self.input_pairs:
             if not form["action"].startswith("http"):
                 urlinfo = urlparse.urlparse(self.url)
                 url = urlinfo.netloc + form["action"]

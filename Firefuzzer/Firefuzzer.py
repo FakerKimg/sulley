@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import BufferOverflow
 import sys
-import logger
+import logging
 
 class Firefuzzer():
     def __init__(self, url, mode, detail = False):
@@ -12,8 +12,8 @@ class Firefuzzer():
         self.detail = detail
 
     def run(self):
-        if mode == "buffer":
-            overflow = BufferOverflow.BufferOverflow(self,url, self,detail)
+        if self.mode == "buffer":
+            overflow = BufferOverflow.BufferOverflow(self.url, self.detail)
             overflow.parseInput()
             overflow.analyzeBufferOverflow()
 
