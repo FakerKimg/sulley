@@ -1,7 +1,7 @@
-from BeautifulSoup import BeautifulSoup
-import urllib
+from bs4 import BeautifulSoup
 import requests
 import random
+import urlparse
 
 class BufferOverflow():
     def __init__(self, url, detail):
@@ -21,7 +21,7 @@ class BufferOverflow():
 
 
     def parseInput(self):
-        response = requests.get(url) # Todo: identify which to use, GET or POST ?
+        response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
         if response.status_code != 200:
             # Todo
             pass
@@ -31,17 +31,18 @@ class BufferOverflow():
         forms = soup.select("form")
         # print "forms # : " + forms.len(forms)
 
+
         self.input_pairs = []
         for form in forms:
-            if "action" not in form:
-                continue;
+            action = form.get("action", "")
+            if action == "":
+                continue
 
             inputs = form.find_all("input")
 
             form_content = {}
             form_content["action"] = form["action"]
             form_content["payload"] = {}
-            self.input_pairs.append(form_content)
 
             for _input in inputs:
                 if "type" not in _input:
@@ -50,11 +51,13 @@ class BufferOverflow():
                     s = self.randomizer()
                     if "value" in _input:
                         s = _input["value"] + s
-                    self.input_pairs.append({_input["name"]: s})
+                    form_content[_input["name"]] = s
                 elif _input["type"].lower() == "radio":
-                    self.input_pairs.append({_input["name"]: "checked"})
+                    form_content[_input["name"]] = "checked"
                 elif _input["type"].lower() == "checkbox":
-                    self.input_pairs.append({_input["name"]: "checked"})
+                    form_content[_input["name"]] = "checked"
+
+            self.input_pairs.append(form_content)
 
         print self.input_pairs
 
@@ -62,19 +65,22 @@ class BufferOverflow():
         return
 
     def sendBack(self):
-        for name, form in self.input_pairs.iteritems():
-            if not form["action"].startswith("http"):
+        for form in self.input_pairs:
+            if not form["action"].startswith("http"): 
                 urlinfo = urlparse.urlparse(self.url)
-                url = urlinfo.netloc + form["action"]
+                #print urlinfo,'1',form['action']   
+                url = urlinfo.scheme + '://' + urlinfo.netloc + '/' + form["action"]
             else:
                 url = form["action"]
-
-            response = requests.post(url, payload)
+            
+            #print 'payload:',form['payload']
+           
+            response = requests.post(url, data = form['payload'])
             if response.status_code != 200:
                 # Todo
                 pass
 
-            print response.content
+            #print response.content
 
         return
 
