@@ -25,8 +25,8 @@ target.procmon_options = {
 
 sess.add_target(target)
 
+sess.pre_send = init_message
 sess.connect(s_get("HTTP VERBS"))
-sess.connect(s_get("HTTP VERBS BASIC"))
 sess.connect(s_get("HTTP VERBS POST"))
 sess.connect(s_get("HTTP HEADERS"))
 sess.connect(s_get("HTTP COOKIE"))

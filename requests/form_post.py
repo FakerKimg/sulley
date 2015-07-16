@@ -22,10 +22,16 @@ def form_post_requests(inputs_form):
         s_static("Content-Length: ")
         s_size("post blob", format="ascii", signed=True, fuzzable=True)
         s_static("\r\n")
-        s_group("name", values = form["payload"].keys())
-        if s_block_start("post blob", group = "name"):
-            s_delim("=")
-            s_string("B"*100)
+        if s_block_start("post blob"):
+            for key in form["payload"].keys()[:-1]:
+                s_static(key)
+                s_static("=")
+                s_string(form["payload"][key])
+                s_static("&")
+
+            s_static(form["payload"].keys()[-1])
+            s_static("=")
+            s_string(form["payload"][form["payload"].keys()[-1]])
         s_block_end()
         s_static("\r\n\r\n")
 
