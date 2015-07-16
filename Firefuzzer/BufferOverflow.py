@@ -25,12 +25,14 @@ class BufferOverflow():
         if response.status_code != 200:
             # Todo
             pass
-
+        test_tag = ["form", "input", "div", "section","article","main","aside","header","footer","nav","figure","figcaption","template","video","audio","embed","mark","embed","mark","progress","meter","time","ruby","rt","rp","bdi","wbr","canvas","datalist","keygen","output"]
         html = response.content
         soup = BeautifulSoup(html)
         forms = soup.select("form")
         # print "forms # : " + forms.len(forms)
-
+        print '<---BUFFER OVERFLOW ANALYSIS--->'
+        for tag in test_tag:
+            print 'Total # of %s tags: %d'%(tag,len(soup.select(tag))) 
 
         self.input_pairs = []
         for form in forms:
@@ -80,7 +82,7 @@ class BufferOverflow():
                 # Todo
                 pass
 
-            #print response.content
+            print response
 
         return
 
