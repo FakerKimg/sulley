@@ -39,25 +39,28 @@ class BufferOverflow():
             action = form.get("action", "")
             if action == "":
                 continue
-
+            #print 'action:',action,'\n'
             inputs = form.find_all("input")
-
+            #print 'input:',inputs,'\n'
             form_content = {}
             form_content["action"] = form["action"]
             form_content["payload"] = {}
 
             for _input in inputs:
-                if "type" not in _input:
+                types = _input.get("type","")
+                if types == "":
                     continue
+                #if "type" not in _input:
+                #    continue
                 elif _input["type"].lower() == "text" or _input["type"].lower() == "hidden" or _input["type"].lower() == "password":
                     s = self.randomizer()
                     if "value" in _input:
                         s = _input["value"] + s
-                    form_content[_input["name"]] = s
+                    form_content['payload'][_input["name"]] = s
                 elif _input["type"].lower() == "radio":
-                    form_content[_input["name"]] = "checked"
+                    form_content['payload'][_input["name"]] = "checked"
                 elif _input["type"].lower() == "checkbox":
-                    form_content[_input["name"]] = "checked"
+                    form_content['payload'][_input["name"]] = "checked"
 
             self.input_pairs.append(form_content)
 
