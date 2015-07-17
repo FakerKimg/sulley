@@ -98,11 +98,11 @@ class BufferOverflow():
             print 'Total # of %s tag:%d'%(entry[0],entry[1])
         print '###################################################################################'
         print '<<-Categorizing the available data on basis of HTTP Status Codes->>'
-        print "Informational Codes 1xx Series:",self.status[0]
-        print "Successful Client Interaction related 2xx Series:",self.status[1]
-        print "Redirection related 3xx Series:",self.status[2]
-        print "Client Error related 4xx Series:",self.status[3]
-        print "Server Error related 5xx Series:",self.status[4]
+        print "Informational Codes 1xx Series: ",self.status[0]
+        print "Successful Client Interaction related 2xx Series: ",self.status[1]
+        print "Redirection related 3xx Series: ",self.status[2]
+        print "Client Error related 4xx Series: ",self.status[3]
+        print "Server Error related 5xx Series: ",self.status[4]
         print '###################################################################################'
 
 
