@@ -12,7 +12,7 @@ parser = HtmlParser(html)
 inputs_form = parser.find_inputs_in_forms()
 form_post_requests(inputs_form)
 
-sess = sessions.session()
+sess = sessions.session(sleep_time = 0.0001)
 sess.post_send = recv_bad_request
 target = sessions.target("192.168.144.104", 80)
 sess.add_target(target)
