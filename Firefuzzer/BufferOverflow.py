@@ -11,6 +11,7 @@ class BufferOverflow():
         self.tag_num = []
         self.status = [0,0,0,0,0]
         self.input_tag_num = {}
+        self.ask = True  #To decide whether to ask user to input payload by themself
     def randomizer(self):
         str2 = ""
         str1 = "QAa0bcLdUK2eHfJgTP8XhiFj61DOklNm9nBoI5pGqYVrs3CtSuMZvwWx4yE7zR"
@@ -57,17 +58,23 @@ class BufferOverflow():
                     continue
                 #if "type" not in _input:
                 #    continue
-                elif _input["type"].lower() == "text" or _input["type"].lower() == "hidden" or _input["type"].lower() == "password":
-                    s = self.randomizer()
-                    if "value" in _input:
-                        s = _input["value"] + s
-                    form_content['payload'][_input["name"]] = s
-                elif _input["type"].lower() == "radio":
-                    form_content['payload'][_input["name"]] = "checked"
-                elif _input["type"].lower() == "checkbox":
-                    form_content['payload'][_input["name"]] = "checked"
-                self.input_tag_num[_input['type'].lower()] += 1
-
+                payload = ""
+                if self.ask:
+                    print "The input's name is %s and its type is %s."%(_input["name"],_input["type"])
+		    payload = raw_input("Press enter directly if you don't want to input payload by yourself.\n")
+                if payload == "":
+                    if _input["type"].lower() == "text" or _input["type"].lower() == "hidden" or _input["type"].lower() == "password":
+                        s = self.randomizer()
+                        if "value" in _input:
+                            s = _input["value"] + s
+                        form_content['payload'][_input["name"]] = s
+                    elif _input["type"].lower() == "radio":
+                        form_content['payload'][_input["name"]] = "checked"
+                    elif _input["type"].lower() == "checkbox":
+                        form_content['payload'][_input["name"]] = "checked"
+                    self.input_tag_num[_input['type'].lower()] += 1
+                else:
+                    form_content['payload'][_input["name"]] = payload
             self.input_pairs.append(form_content)
 
         print self.input_pairs
