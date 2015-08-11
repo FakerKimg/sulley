@@ -21,7 +21,7 @@ def form_post_requests(inputs_form):
         s_string("application/x-www-form-urlencoded")
         s_static("\r\n")
         s_static("Host: ")
-        s_static("www.hhserver.com")
+        s_static("www.hhserver.com\r\n")
         s_static("Content-Length: ")
         #s_size("post blob", format="ascii", signed=True, fuzzable=False)
         s_size("post blob", format="ascii", signed=True, fuzzable=True)
@@ -39,7 +39,7 @@ def form_post_requests(inputs_form):
             s_delim("=")
             s_string(form["payload"][form["payload"].keys()[-1]])
         s_block_end()
-        s_static("\r\n\r\n")
+        #s_static("\r\n\r\n")
 
         count = count + 1
 
