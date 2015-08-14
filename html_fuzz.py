@@ -7,7 +7,9 @@ html_url = "http://www.hhserver.com/test.html"
 html = get_html(html_url)
 parser = HtmlParser(html)
 inputs_form = parser.find_inputs_in_forms()
-form_post_requests(inputs_form)
+
+data_file = open("../fuzzdb/attack-payloads/sql-injection/payloads-sql-blind/payloads-sql-blind-MySQL-WHERE.txt", 'r')
+form_post_requests(inputs_form, data_file)
 
 sess = sessions.session(sleep_time = 0.0001)
 target = sessions.target("192.168.144.104", 80)

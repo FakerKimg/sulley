@@ -7,11 +7,26 @@ from sulley import *
 sess.connect(s_get("HTML FORM POST"))
 """
 
+def s_file_group(name, data_file):
+    group = []
+
+    data_file.seek(0)
+    for line in data_file:
+        if line.startswith('#'):
+            continue
+
+        group.append(line)
+
+    s_group(name, group)
+
+    return
+
+
 ########################################################################################################################
 # Basic fuzz of form post payloads
 ########################################################################################################################
 
-def form_post_requests(inputs_form):
+def form_post_requests(inputs_form, data_file):
     count = 0
     for form in inputs_form:
         s_initialize("HTTP VERBS POST" + str(count))
@@ -31,13 +46,22 @@ def form_post_requests(inputs_form):
                 s_static(key)
                 #s_static('=' + form["payload"][key] + '&')
                 s_delim("=")
-                s_string(form["payload"][key])
-                s_delim("&")
+                #s_string(form["payload"][key])
+                #s_delim("&")
+                s_file_group("group_" + form["payload"][key], data_file)
+                if s_block_start(name="block_" + key, group="group_" + key):
+                    s_delim('&')
+                s_block_end()
 
             s_static(form["payload"].keys()[-1])
             #s_static('=')
             s_delim("=")
-            s_string(form["payload"][form["payload"].keys()[-1]])
+            #s_string(form["payload"][form["payload"].keys()[-1]])
+            s_file_group("group_" + form["payload"].keys()[-1], data_file)
+            if s_block_start(name = "block_" + form["payload"].keys()[-1], group = "group_" + form["payload"].keys()[-1]):
+                s_static("")
+            s_block_end()
+
         s_block_end()
         #s_static("\r\n\r\n")
 
