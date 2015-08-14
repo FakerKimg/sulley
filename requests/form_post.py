@@ -48,7 +48,7 @@ def form_post_requests(inputs_form, data_file):
                 s_delim("=")
                 #s_string(form["payload"][key])
                 #s_delim("&")
-                s_file_group("group_" + form["payload"][key], data_file)
+                s_file_group("group_" + key, data_file)
                 if s_block_start(name="block_" + key, group="group_" + key):
                     s_delim('&')
                 s_block_end()
