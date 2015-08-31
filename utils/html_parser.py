@@ -36,23 +36,17 @@ class HtmlParser():
             if not action.startswith("/"):
                 action = '/' + action
 
-            inputs = form.find_all("input")
-
             form_content = {}
             form_content["action"] = action
-            form_content["payload"] = {}
+            form_content["inputs"] = []
 
+            inputs = form.find_all("input")
             for _input in inputs:
                 t = _input.get("type", "")
                 n = _input.get("name", "")
-                if t == "" or n == "":
-                    continue
-                elif t.lower() in ["text", "hidden", "password"]:
-                    v = _input.get("value", "")
-                    form_content["payload"][_input["name"]] = v
-                elif t.lower() in ["radio", "checkbox"]:
-                    form_content["payload"][_input["name"]] = "checked"
+                v = _input.get("value", "")
 
+                form_content["inputs"].append({"type": t, "name": n, "value": v})
 
             inputs_form.append(form_content)
 
