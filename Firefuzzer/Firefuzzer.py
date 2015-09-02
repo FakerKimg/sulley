@@ -31,7 +31,7 @@ class Firefuzzer():
         if self.mode == "buffer":
             overflow = BufferOverflow.BufferOverflow(self.url, self.detail)
             overflow.parse_html()
-			if self.testmode == 'auto':
+	    if self.testmode == 'auto':
                 overflow.autotest()
             else:
                 overflow.parseInput()

@@ -12,8 +12,8 @@ class BufferOverflow():
         self.status = [0,0,0,0,0]
         self.input_tag_num = {}
         self.ask = False  #To decide whether to ask user to input payload by themself
-		self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
-        
+        self.payload = {} 
+ 
     def randomizer(self):
         str2 = ""
         str1 = "QAa0bcLdUK2eHfJgTP8XhiFj61DOklNm9nBoI5pGqYVrs3CtSuMZvwWx4yE7zR"
@@ -25,13 +25,13 @@ class BufferOverflow():
         return str2
 
     def read_payload(self,filename):
-        fin = open('./attach-payloads/'+filename,'r')
+        fin = open('./attack-payloads/'+filename,'r')
         #fin.readline() # the first line
         while 1:
             tmp = fin.readline()
             if tmp == "":
                 break
-            self.payload[f].append(tmp[:-1])
+            self.payload[filename].append(tmp[:-1])
             '''
             if tmp[:2] == '0x':
                 self.payload.append(int(tmp[2:-1],16))
@@ -40,20 +40,24 @@ class BufferOverflow():
             '''
 			
     def autotest(self):
+        self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
+        #self.filelist = ['integer-overflows.txt']
+
         for f in self.filelist:
             self.payload[f] = []
             self.read_payload(f)
+            print '###################################################################################'
             print 'Test file:%s'%(f)			
             for s in self.payload[f]:
                 self.parseInput(s)	        
 		
-    def parse_html(self):
+    def parse_html(self,key = ''):
         response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
         print 'key:',key
         if response.status_code != 200:
             # Todo
             pass
-        self.status[response.status_code/100-1] += 1
+        #self.status[response.status_code/100-1] += 1
         html = response.content
         soup = BeautifulSoup(html)
         forms = soup.select("form")
@@ -64,33 +68,36 @@ class BufferOverflow():
             self.tag_num[tag]=len(soup.select(tag))
         for tag in input_tag:
             self.input_tag_num[tag] = 0
-		self.input_pairs = []
+	    self.input_pairs = []
         for form in forms:
             action = form.get("action", "")
             if action == "":
                 continue
-            print 'action:',action,'\n'
+            #print 'action:',action,'\n'
             inputs = form.find_all("input")
             #print 'input:',inputs,'\n'
             form_content = {}
             form_content["action"] = form["action"]
             form_content["payload"] = {}
-			form_content["input"] = []
+	    form_content["input"] = []
            
             #count the number of input label
             for _input in inputs:
-			    types = _input.get("type","")
-				if type == "":
-				    continue
-				form_content["input"].append({'type':_input['type'],'name':_input['name'],'value':_input['value']})
-				self.input_tag_num[_input['type'].lower()] += 1
+	        types = _input.get("type","")
+		if type == "":
+		    continue
+                t = _input.get("type","")
+                n = _input.get("name","")
+                v = _input.get("value","")
+		form_content["input"].append({'type':t,'name':n,'value':v})
+		self.input_tag_num[_input['type'].lower()] += 1
             self.input_pairs.append(form_content)
         print self.input_pairs
 		
 		
     def parseInput(self, key=""):
-		for pairs in self.input_pairs:
- 		    for _input in pairs['input']:
+	for pairs in self.input_pairs:
+ 	    for _input in pairs['input']:
                 payload = ""
                 if self.ask:
                     print "The input's name is %s and its type is %s."%(_input["name"],_input["type"])
@@ -124,10 +131,10 @@ class BufferOverflow():
             #print 'payload:',form['payload']
            
             response = requests.post(url, data = form['payload'])
+            self.status[response.status_code/100-1] += 1
             if response.status_code != 200:
                 # Todo
                 pass
-
             print response
 
 
