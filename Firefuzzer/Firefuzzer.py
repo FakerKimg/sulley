@@ -11,22 +11,7 @@ class Firefuzzer():
         self.mode = mode
         self.detail = detail
         self.testmode = mode2
-
-    def read_payload(self,filename):
-        fin = open(filename,'r')
-        fin.readline() # the first line
-        while 1:
-            tmp = fin.readline()
-            if tmp == "":
-                break
-            self.payload.append(tmp[:-1])
-            '''
-            if tmp[:2] == '0x':
-                self.payload.append(int(tmp[2:-1],16))
-            else:
-                self.payload.append(int(tmp[:-1]))
-            '''
-			
+		
     def run(self):
         print ""
         print "\t8888888888 8888888 8888888b.  8888888888 8888888888 888     888 8888888888P 8888888888P 8888888888 8888888b."
@@ -45,15 +30,9 @@ class Firefuzzer():
 
         if self.mode == "buffer":
             overflow = BufferOverflow.BufferOverflow(self.url, self.detail)
-            if self.testmode == '1':
-                payload_file = ['integer-overflows.txt']
-                for f in payload_file:
-                    self.payload = []
-                    print 'payload_file:%s'%(f)
-                    self.read_payload(f)
-                    print 'payload:',self.payload
-                    for key in self.payload:
-                        overflow.parseInput(str(key))
+            overflow.parse_html()
+			if self.testmode == 'auto':
+                overflow.autotest()
             else:
                 overflow.parseInput()
             overflow.analyzeBufferOverflow()   
@@ -67,7 +46,7 @@ if __name__ == "__main__":
         print "Wyntax is \n\tpython Firefuzzer <url> <buffer> <test_mode> <detail(OPTIONAL)>"
 
     args = sys.argv
-    detail = len(args) >= 5 and args[4] == "detail"
+    detail = len(args) >= 5 and args[-1] == "detail"
 
     fuzzer = Firefuzzer(args[1], args[2], args[3],detail)
     #print args,detail
