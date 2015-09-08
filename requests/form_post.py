@@ -27,9 +27,10 @@ def s_file_group(name, data_file):
 ########################################################################################################################
 
 def form_post_requests(forms, datas):
-    count = 0
+    form_count = 0
     for form in forms:
-        s_initialize("HTTP VERBS POST" + str(count))
+        s_initialize("HTTP VERBS POST" + str(form_count))
+        form_count = form_count + 1
         s_static("POST " + form["action"] + " HTTP/1.1\r\n")
         s_static("Content-Type: ")
         s_static("application/x-www-form-urlencoded")
@@ -37,31 +38,42 @@ def form_post_requests(forms, datas):
         s_static("Host: ")
         s_static("www.hhserver.com\r\n")
         s_static("Content-Length: ")
-        s_size("post blob", format="ascii", signed=True, fuzzable=False)
+        s_size("post payload", format="ascii", signed=True, fuzzable=False)
         s_static("\r\n\r\n")
-        if s_block_start("post blob"):
+
+
+
+        if s_block_start("post payload"):
+            input_count = 0
             for _input in form["inputs"][:-1]:
                 s_static(_input["name"])
                 s_static("=")
 
                 if _input["type"] in datas:
-                    s_file_group()
+                    data_file = open(datas[_input["type"]], "r")
+                    s_file_group("input_" + str(input_count), data_file)
                 else:
-                    pass
+                    data_file = open(datas["default"], "r")
+                    s_file_group("input_" + str(input_count), data_file)
+                    #s_string(name="input_" + count, value=_input["value"])
 
-                if s_block_start(name="block_" + key, group="group_" + key):
-                    s_static('&')
-                s_block_end()
+                input_count = input_count + 1
+                s_static('&')
 
-            s_static(form["payload"].keys()[-1])
+            _input = form["inputs"][-1]
+            s_static(_input["name"])
             s_static("=")
-            s_file_group("group_" + form["payload"].keys()[-1], data_file)
-            if s_block_start(name = "block_" + form["payload"].keys()[-1], group = "group_" + form["payload"].keys()[-1]):
-                s_static("")
-            s_block_end()
+            if _input["type"] in datas:
+                data_file = open(datas[_input["type"]], "r")
+                s_file_group("input_" + str(input_count), data_file)
+            else:
+                data_file = open(datas["default"], "r")
+                s_file_group("input_" + str(input_count), data_file)
+                #s_string(name="input_" + count, value=_input["value"])
+
+            input_count = input_count + 1
 
         s_block_end()
-        #s_static("\r\n\r\n")
 
-        count = count + 1
+        #s_static("\r\n\r\n")
 

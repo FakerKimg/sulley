@@ -24,6 +24,7 @@ class HtmlParser():
 
         forms = soup.select("form")
         for form in forms:
+            name = form.get("name", "")
             action = form.get("action", "")
             if action == "":
                 continue
@@ -37,6 +38,7 @@ class HtmlParser():
                 action = '/' + action
 
             form_content = {}
+            form_content["name"] = name
             form_content["action"] = action
             form_content["inputs"] = []
 
