@@ -40,8 +40,8 @@ class BufferOverflow():
             '''
 			
     def autotest(self):
-        self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
-        #self.filelist = ['integer-overflows.txt']
+        #self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
+        self.filelist = ['integer-overflows.txt']
 
         for f in self.filelist:
             self.payload[f] = []
@@ -136,6 +136,7 @@ class BufferOverflow():
                 # Todo
                 pass
             print response
+            print response.text.replace('<br>','\n')
 
 
     def analyzeBufferOverflow(self):
