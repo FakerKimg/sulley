@@ -15,6 +15,9 @@ def s_file_group(name, data_file):
         if line.startswith('#'):
             continue
 
+        if line[-1] == '\n':
+            line = line[:-1]
+
         group.append(line)
 
     s_group(name, group)
@@ -53,8 +56,9 @@ def form_post_requests(forms, datas):
                     data_file = open(datas[_input["type"]], "r")
                     s_file_group("input_" + str(input_count), data_file)
                 else:
-                    data_file = open(datas["default"], "r")
-                    s_file_group("input_" + str(input_count), data_file)
+                    pass
+                    #data_file = open(datas["default"], "r")
+                    #s_file_group("input_" + str(input_count), data_file)
                     #s_string(name="input_" + count, value=_input["value"])
 
                 input_count = input_count + 1
@@ -67,8 +71,9 @@ def form_post_requests(forms, datas):
                 data_file = open(datas[_input["type"]], "r")
                 s_file_group("input_" + str(input_count), data_file)
             else:
-                data_file = open(datas["default"], "r")
-                s_file_group("input_" + str(input_count), data_file)
+                pass
+                #data_file = open(datas["default"], "r")
+                #s_file_group("input_" + str(input_count), data_file)
                 #s_string(name="input_" + count, value=_input["value"])
 
             input_count = input_count + 1
