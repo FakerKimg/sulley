@@ -33,6 +33,8 @@ class Firefuzzer():
             overflow.parse_html()
 	    if self.testmode == 'auto':
                 overflow.autotest()
+            elif self.testmode == 'html':
+                overflow.test_input()
             else:
                 overflow.parseInput()
             overflow.analyzeBufferOverflow()   

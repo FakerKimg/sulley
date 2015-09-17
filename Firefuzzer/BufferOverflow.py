@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import random
 import urlparse
+import re
 
 class BufferOverflow():
     def __init__(self, url, detail):
@@ -13,6 +14,7 @@ class BufferOverflow():
         self.input_tag_num = {}
         self.ask = False  #To decide whether to ask user to input payload by themself
         self.payload = {} 
+        self.current = [-1]
  
     def randomizer(self):
         str2 = ""
@@ -24,8 +26,8 @@ class BufferOverflow():
 
         return str2
 
-    def read_payload(self,filename):
-        fin = open('./attack-payloads/'+filename,'r')
+    def read_payload(self,filename,path):
+        fin = open(path,'r')
         #fin.readline() # the first line
         while 1:
             tmp = fin.readline()
@@ -45,17 +47,34 @@ class BufferOverflow():
 
         for f in self.filelist:
             self.payload[f] = []
-            self.read_payload(f)
+            self.read_payload(f,'./attack-payloads/'+f)
             print '###################################################################################'
             print 'Test file:%s'%(f)			
             for s in self.payload[f]:
                 self.parseInput(s)	        
-		
+    
+    def test_input(self):
+       for pairs in self.input_pairs:
+            out = 0
+            for _input in pairs['input']:
+                if _input['type'] == 'checkbox' or _input['type'] == 'submit':
+                    continue
+                self.payload[_input['type']] = []
+                self.read_payload(_input['type'],'./input_type/'+_input['type'])
+                self.current = [out,open('./input_type/'+_input['type']+'_result','w')]
+                for k in self.payload[_input['type']]:
+                    print k
+                    self.current[1].write(k+'\n')
+                    self.parseInput(k)
+                    print pairs['payload']
+                out += 1
+ 
+        
     def parse_html(self,key = ''):
         response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
         print 'key:',key
         if response.status_code != 200:
-            # Todo
+            # Todo 
             pass
         #self.status[response.status_code/100-1] += 1
         html = response.content
@@ -116,8 +135,8 @@ class BufferOverflow():
                         pairs['payload'][_input["name"]] = "checked"
                 else:
                     pairs['payload'][_input["name"]] = payload
-        print pairs['payload']
-        self.sendBack()
+            print pairs['payload']
+            self.sendBack()
 
     def sendBack(self):
         for form in self.input_pairs:
@@ -136,7 +155,11 @@ class BufferOverflow():
                 # Todo
                 pass
             print response
-            print response.text.replace('<br>','\n')
+            if self.current[0] != -1:
+                res = BeautifulSoup(response.text)
+                res = re.split('\n+',res.text.strip())
+                self.current[1].write(res[self.current[0]]+'\n')
+            #print response.text.replace('<br>','\n')
 
 
     def analyzeBufferOverflow(self):

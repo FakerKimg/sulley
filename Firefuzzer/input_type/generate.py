@@ -11,7 +11,7 @@ def getone(regular):
 
 #Type:text
 text = []
-text.append('15\n')
+#text.append('15\n')
 #number
 text.append(getone('\d{0,6}'))
 text.append(getone('\d{6,17}'))
@@ -42,7 +42,7 @@ fout['password'].write("".join(text))
 ##########################################
 #Type:tel
 tel = []
-tel.append('36\n')
+#tel.append('36\n')
 #number only
 tel.append(getone('[1-9]\d{0,8}'))
 tel.append(getone('[1-9]\d{9}'))
@@ -96,7 +96,7 @@ fout['tel'].write("".join(tel))
 ##########################################
 #Type:email
 email = []
-email.append('3\n')
+#email.append('3\n')
 email.append(getone('[a-zA-Z0-9]*@[a-zA-Z0-9]*'))
 email.append(getone('[a-zA-Z0-9]*@+[a-zA-Z0-9]*'))
 email.append(getone('[_]*@[_]*'))
@@ -105,7 +105,7 @@ fout['email'].write("".join(email))
 ##########################################
 #Type:url
 url = []
-url.append('10\n')
+#url.append('10\n')
 url.append(getone('www\.([a-zA-Z0-9]*\.)*[a-zA-Z0-9]'))
 url.append(getone('www\.*([a-zA-Z0-9]*\.)*[a-zA-Z0-9]'))
 url.append(getone('www\.([a-zA-Z0-9]*\.*)*[a-zA-Z0-9]'))
@@ -121,7 +121,7 @@ fout['url'].write("".join(url))
 ##########################################
 #Type:date
 date = []
-date.append('31\n')
+#date.append('31\n')
 #correct
 date.append(getone('[1-2][0-9]{3}(/| |-)([1-9]|(1[0-2]))(/| |-)([1-9]|([1-2][0-9])|(3[0-1]))'))
 #year
@@ -166,7 +166,7 @@ fout['date'].write("".join(date))
 ##########################################
 #time
 time = []
-time.append('10\n')
+#time.append('10\n')
 time.append(getone('(([0-1][1-9])|(2[0-4])):(([0-5][0-9])|(60))'))
 time.append(getone('(([0-1][1-9])|(2[0-4])):{2,}(([0-5][0-9])|(60))'))
 time.append(getone('(0+(([0-1][1-9])|(2[0-4])):(([0-5][0-9])|(60)))'))
@@ -182,7 +182,7 @@ fout['time'].write("".join(time))
 ##########################################
 #number
 number = []
-number.append('9\n')
+#number.append('9\n')
 number.append(getone('0+[1-9]+'))
 number.append(getone('[1-9a-f]+'))
 number.append(getone('[1-9A-F]+'))
@@ -198,7 +198,7 @@ fout['number'].write("".join(number))
 ##########################################
 #Type:range
 ranges = []
-ranges.append('8\n')
+#ranges.append('8\n')
 ranges.append(getone('[0-9]'))
 ranges.append(getone('[1-9]*'))
 ranges.append(getone('0+[1-9]*'))
@@ -213,7 +213,7 @@ fout['range'].write("".join(ranges))
 ##########################################
 #Type:color
 color = []
-color.append('25\n')
+#color.append('25\n')
 color.append(getone('#'))
 color.append(getone('#[0-9a-f]{6}'))
 color.append(getone('#[0-9a-f]{1,5}'))
