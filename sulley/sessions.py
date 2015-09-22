@@ -358,7 +358,7 @@ class session (pgraph.graph):
 
 
     ####################################################################################################################
-    def fuzz (self, this_node=None, path=[]):
+    def fuzz (self, this_node=None, path=[], _file=None):
         '''
         Call this routine to get the ball rolling. No arguments are necessary as they are both utilized internally
         during the recursive traversal of the session graph.
@@ -502,14 +502,14 @@ class session (pgraph.graph):
                         try:
                             for e in path[:-1]:
                                 node = self.nodes[e.dst]
-                                self.transmit(sock, node, e, target)
+                                self.transmit(sock, node, e, target, _file)
                         except Exception, e:
                             error_handler(e, "failed transmitting a node up the path", target, sock)
                             continue
 
                         # now send the current node we are fuzzing.
                         try:
-                            self.transmit(sock, self.fuzz_node, edge, target)
+                            self.transmit(sock, self.fuzz_node, edge, target, _file)
                         except Exception, e:
                             error_handler(e, "failed transmitting fuzz node", target, sock)
                             continue
@@ -823,7 +823,7 @@ class session (pgraph.graph):
 
 
     ####################################################################################################################
-    def transmit (self, sock, node, edge, target):
+    def transmit (self, sock, node, edge, target, _file):
         '''
         Render and transmit a node, process callbacks accordingly.
 
@@ -865,7 +865,9 @@ class session (pgraph.graph):
                 data = data[:MAX_UDP]
 
         try:
-            if self.proto == socket.SOCK_STREAM:
+            if _file:
+                _file.write(data)
+            elif self.proto == socket.SOCK_STREAM:
                 sock.send(data)
             else:
                 sock.sendto(data, (self.targets[0].host, self.targets[0].port))
