@@ -866,7 +866,7 @@ class session (pgraph.graph):
 
         try:
             if _file:
-                _file.write(data)
+                _file.write(data + "\n")
             elif self.proto == socket.SOCK_STREAM:
                 sock.send(data)
             else:
