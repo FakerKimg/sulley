@@ -919,7 +919,7 @@ class limit_random_data(random_data):
         self.value = ""
         for i in xrange(length):
             #self.value += chr(random.randint(0, 255))
-            self.value += self.limit_values[random.randint(0, len(self.limit_values))]
+            self.value += self.limit_values[random.randint(0, len(self.limit_values) - 1)]
 
         # increment the mutation count.
         self.mutant_index += 1
