@@ -49,9 +49,9 @@ class Firefuzzer():
             overflow = BufferOverflow.BufferOverflow(self.source)
             overflow.parse_html()
 	    if self.testmode == 'auto':
-                overflow.autotest(self.sleep)
+                overflow.autotest(float(self.sleep))
             elif self.testmode == 'html':
-                overflow.test_input(self.sleep)
+                overflow.test_input(float(self.sleep))
             else:
                 overflow.parseInput()
             overflow.analyzeBufferOverflow()   
@@ -62,9 +62,9 @@ class Firefuzzer():
                 overflow = BufferOverflow.BufferOverflow(u)
                 overflow.parse_html()
                 if self.testmode == 'auto':
-                    overflow.autotest(self.sleep)
+                    overflow.autotest(float(self.sleep))
                 elif self.testmode == 'html':
-                    overflow.test_input(self.sleep)
+                    overflow.test_input(float(self.sleep))
                 else:
                     overflow.parseInput()
                 overflow.analyzeBufferOverflow()
@@ -81,7 +81,9 @@ if __name__ == "__main__":
     if len(args)==3:
         fuzzer = Firefuzzer(args[1], args[2])
     elif len(args)==4:
-        if re.match('([0-9]+\.[0-9]+)|(\d)',args[3]):
+        match = re.match('([0-9]+\.[0-9]+)|(\d)+',args[3])
+        #print match.group(0)
+        if match and match.group(0) == args[3]:
             fuzzer = Firefuzzer(args[1], args[2], sleep_time = args[3])
         else:
             fuzzer = Firefuzzer(args[1], args[2], mode = args[3])

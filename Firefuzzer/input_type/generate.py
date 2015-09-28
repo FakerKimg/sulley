@@ -1,10 +1,13 @@
 import exrex
-import os
+import sys
 type_list = ['text','password','tel','email','url','date','time','number','range','color']
 #type_list = ['number']
 fout = {}
 for k in type_list:
-    fout[k] = open(k,'w')
+    if len(sys.argv)>1:
+        fout[k] = open(k+'_'+sys.argv[1],'w')
+    else:
+        fout[k] = open(k,'w')
 
 def getone(regular):
     return exrex.getone(regular) + '\n'
