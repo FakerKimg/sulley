@@ -3,19 +3,19 @@ import requests
 import random
 import urlparse
 import re
+import time
 
 class BufferOverflow():
-    def __init__(self, url, detail):
+    def __init__(self, url):
         self.url = url
-        self.detail = detail
         self.input_pairs = []
         self.tag_num = {}
         self.status = [0,0,0,0,0]
         self.input_tag_num = {}
         self.ask = False  #To decide whether to ask user to input payload by themself
         self.payload = {} 
-        self.current = [-1]
- 
+        self.writer = []
+
     def randomizer(self):
         str2 = ""
         str1 = "QAa0bcLdUK2eHfJgTP8XhiFj61DOklNm9nBoI5pGqYVrs3CtSuMZvwWx4yE7zR"
@@ -41,7 +41,7 @@ class BufferOverflow():
                 self.payload.append(int(tmp[:-1]))
             '''
 			
-    def autotest(self):
+    def autotest(self,sleep_time):
         #self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
         self.filelist = ['integer-overflows.txt']
 
@@ -51,28 +51,30 @@ class BufferOverflow():
             print '###################################################################################'
             print 'Test file:%s'%(f)			
             for s in self.payload[f]:
-                self.parseInput(s)	        
+                self.parseInput(s)
+                time.sleep(sleep_time)	        
     
-    def test_input(self):
-       for pairs in self.input_pairs:
-            out = 0
-            for _input in pairs['input']:
-                if _input['type'] == 'checkbox' or _input['type'] == 'submit':
-                    continue
-                self.payload[_input['type']] = []
-                self.read_payload(_input['type'],'./input_type/'+_input['type'])
-                self.current = [out,open('./input_type/'+_input['type']+'_result','w')]
-                for k in self.payload[_input['type']]:
-                    print k
-                    self.current[1].write(k+'\n')
-                    self.parseInput(k)
-                    print pairs['payload']
-                out += 1
+    def test_input(self,sleep_time):
+       input_type = ['text','password','tel','email','url','date','time','number','range','color']
+       for k in input_type:
+           self.payload[k] = []
+           self.read_payload(k,'./input_type/'+k)
+           self.writer.append(open('./input_type/'+k+'_result','w'))  
+       for i in range(40):
+           for pairs in self.input_pairs:
+               for _input in pairs['input']:
+                   if _input['type'] not in input_type:
+                       continue
+                   self.writer[input_type.index(_input['type'])].write(self.payload[_input['type']][i]+'\n')
+                   pairs['payload'][_input['name']]=self.payload[_input['type']][i] 
+               print pairs['payload']
+               self.sendBack(True)
+               time.sleep(sleep_time)
  
         
     def parse_html(self,key = ''):
         response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
-        print 'key:',key
+        #print 'key:',key
         if response.status_code != 200:
             # Todo 
             pass
@@ -138,7 +140,7 @@ class BufferOverflow():
             print pairs['payload']
             self.sendBack()
 
-    def sendBack(self):
+    def sendBack(self,out = False):
         for form in self.input_pairs:
             if not form["action"].startswith("http"): 
                 urlinfo = urlparse.urlparse(self.url)
@@ -155,10 +157,11 @@ class BufferOverflow():
                 # Todo
                 pass
             print response
-            if self.current[0] != -1:
+            if out:
                 res = BeautifulSoup(response.text)
                 res = re.split('\n+',res.text.strip())
-                self.current[1].write(res[self.current[0]]+'\n')
+                for k in range(len(res)):
+                    self.writer[k].write(res[k]+'\n')
             #print response.text.replace('<br>','\n')
 
 

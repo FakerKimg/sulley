@@ -2,16 +2,29 @@
 import BufferOverflow
 import sys
 import logging
+import re
 
 class Firefuzzer():
-    def __init__(self, url, mode, mode2, detail = False):
-        self.url = url
-        if not self.url.startswith("http"):
-            self.url = "http://" + self.url
-        self.mode = mode
-        self.detail = detail
-        self.testmode = mode2
-		
+    def __init__(self, source, stype, sleep_time = 0.1, mode = ''):
+        self.source = source
+        if stype == 'url' and not self.source.startswith("http"):
+            self.source = "http://" + self.source
+        self.testmode = mode
+        self.stype = stype
+        self.sleep = sleep_time
+        print sleep_time,mode
+	
+    def readlink(self):
+        f = open(self.source,'r')
+        self.link = []
+        while True:
+            tmp = f.readline()
+            if tmp == '':
+                break
+            if not tmp.startswith("http"):
+                tmp = "http://" + tmp
+            self.link.append(tmp[:-1])
+        
     def run(self):
         print ""
         print "\t8888888888 8888888 8888888b.  8888888888 8888888888 888     888 8888888888P 8888888888P 8888888888 8888888b."
@@ -25,32 +38,55 @@ class Firefuzzer():
         print ""
 
         print "########################################################################################################################"
-        print "Targeted URL : " + self.url
+        print "Targeted source : ",
+        if self.stype == 'file':
+            print 'File:',self.source
+        else:
+            print self.source
         print "########################################################################################################################"
 
-        if self.mode == "buffer":
-            overflow = BufferOverflow.BufferOverflow(self.url, self.detail)
+        if self.stype == "url":
+            overflow = BufferOverflow.BufferOverflow(self.source)
             overflow.parse_html()
 	    if self.testmode == 'auto':
-                overflow.autotest()
+                overflow.autotest(self.sleep)
             elif self.testmode == 'html':
-                overflow.test_input()
+                overflow.test_input(self.sleep)
             else:
                 overflow.parseInput()
             overflow.analyzeBufferOverflow()   
-        else:
-            print 'not buffer'
+        elif self.stype == 'file':
+            self.readlink()
+            for u in self.link:
+                print 'Target url:',u
+                overflow = BufferOverflow.BufferOverflow(u)
+                overflow.parse_html()
+                if self.testmode == 'auto':
+                    overflow.autotest(self.sleep)
+                elif self.testmode == 'html':
+                    overflow.test_input(self.sleep)
+                else:
+                    overflow.parseInput()
+                overflow.analyzeBufferOverflow()
+
+               
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4 and len(sys.argv) != 5:
+    if len(sys.argv) <3 or len(sys.argv)>5:
         print "Incorrect number of parameters"
-        print "Wyntax is \n\tpython Firefuzzer <url> <buffer> <test_mode> <detail(OPTIONAL)>"
+        print "Wyntax is \n\tpython Firefuzzer <source> <source_type> (<sleep_time>) (<test_mode>)"
 
     args = sys.argv
-    detail = len(args) >= 5 and args[-1] == "detail"
-
-    fuzzer = Firefuzzer(args[1], args[2], args[3],detail)
+    if len(args)==3:
+        fuzzer = Firefuzzer(args[1], args[2])
+    elif len(args)==4:
+        if re.match('([0-9]+\.[0-9]+)|(\d)',args[3]):
+            fuzzer = Firefuzzer(args[1], args[2], sleep_time = args[3])
+        else:
+            fuzzer = Firefuzzer(args[1], args[2], mode = args[3])
+    else:
+        fuzzer = Firefuzzer(args[1], args[2], args[3], args[4])
     #print args,detail
     fuzzer.run()
 

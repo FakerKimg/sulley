@@ -298,9 +298,6 @@ color.append(getone('[0-9A-Z]{7,}'))
 color.append(getone('#[0-9a-fA-F]{1,5}'))
 color.append(getone('#[0-9a-fA-F]{6}'))
 color.append(getone('#[0-9a-fA-F]{7,}'))
-color.append(getone('[0-9a-fA-F]{1,5}'))
-color.append(getone('[0-9a-fA-F]{6}'))
-color.append(getone('[0-9a-fA-F]{7,}'))
 fout['color'].write("".join(color))
 
     
