@@ -33,7 +33,7 @@ s_bit_field(0, 32, fuzzable=False) # stream ID
 ########################################################################################################################
 def set_header_frame(headers):
     s_initialize("HTTP/2 Headers")
-    s_size("headers payload", endian=">", length=3, format="binary") # length(bytes number) of payload in frame
+    s_size("headers payload", endian=">", length=3, format="binary", fuzzable=False) # length(bytes number) of payload in frame
     s_bit_field(1, 8, fuzzable=False)  # type of frame
     s_bit_field(4, 8, fuzzable=False)  # flags of frame, End Headers
     s_bit_field(1, 32, endian=">", fuzzable=False, name="header stream id") # stream ID
@@ -57,7 +57,7 @@ def set_header_frame(headers):
 # Datas packet in HTTP/2 protocol
 ########################################################################################################################
 s_initialize("HTTP/2 Datas")
-s_size("datas payload", length=3, format="binary") # length(bytes number) of payload in frame
+s_size("datas payload", endian=">", length=3, format="binary", fuzzable=False) # length(bytes number) of payload in frame
 s_bit_field(0, 8, fuzzable=False)  # type of frame
 s_bit_field(1, 8, fuzzable=False)  # flags of frame, End Stream
 s_bit_field(1, 32, endian=">", fuzzable=False, name="data stream id") # stream ID
