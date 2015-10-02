@@ -4,13 +4,15 @@ from requests import base_http2_frame
 
 def clean_receive_buffer(sock):
     try:
-        sock.recv(4096)
+        #sock.recv(4096)
+        pass
     except:
         pass
 
 def update_stream_id(session, node, edge, sock):
     try:
-        sock.recv(4096)
+        #sock.recv(4096)
+        pass
     except:
         pass
     stream_id = 1

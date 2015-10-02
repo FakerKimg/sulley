@@ -63,6 +63,6 @@ s_bit_field(1, 8, fuzzable=False)  # flags of frame, End Stream
 s_bit_field(1, 32, endian=">", fuzzable=False, name="data stream id") # stream ID
 # payload (Header block fragment)
 if s_block_start("datas payload"):
-    s_string("", encoding="binary", fuzzable=True)
+    s_string("", encoding="binary", max_len=100, fuzzable=True)
 s_block_end()
 
