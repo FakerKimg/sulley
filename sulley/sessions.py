@@ -380,8 +380,11 @@ class session (pgraph.graph):
 
             this_node = self.root
 
-            try:    self.server_init()
-            except: return
+            if not _file:
+                try:    self.server_init()
+                except: return
+            else:
+                self.signal_module = False
 
         # TODO: complete parallel fuzzing, will likely have to thread out each target
         target = self.targets[0]
@@ -864,10 +867,12 @@ class session (pgraph.graph):
                 self.logger.debug("Too much data for UDP, truncating to %d bytes" % MAX_UDP)
                 data = data[:MAX_UDP]
 
+        if _file:
+            _file.write(data + "\n")
+            return
+
         try:
-            if _file:
-                _file.write(data + "\n")
-            elif self.proto == socket.SOCK_STREAM:
+            if self.proto == socket.SOCK_STREAM:
                 sock.send(data)
             else:
                 sock.sendto(data, (self.targets[0].host, self.targets[0].port))
