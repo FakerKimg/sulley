@@ -419,7 +419,7 @@ class session (pgraph.graph):
                 # if we have exhausted the mutations of the fuzz node, break out of the while(1).
                 # note: when mutate() returns False, the node has been reverted to the default (valid) state.
                 if not self.fuzz_node.mutate():
-                    self.logger.error("all possible mutations for current fuzz node exhausted")
+                    #self.logger.error("all possible mutations for current fuzz node exhausted")
                     done_with_fuzz_node = True
                     continue
 
