@@ -125,7 +125,8 @@ class session (pgraph.graph):
                   timeout=5.0,
                   web_port=26000,
                   crash_threshold=3,
-                  restart_sleep_time=300
+                  restart_sleep_time=300,
+                  _file=None
                 ):
         '''
         Extends pgraph.graph and provides a container for architecting protocol dialogs.
@@ -172,6 +173,7 @@ class session (pgraph.graph):
         self.web_port            = web_port
         self.crash_threshold     = crash_threshold
         self.restart_sleep_time  = restart_sleep_time
+        self._file = _file
 
         # Initialize logger
         self.logger = logging.getLogger("Sulley_logger")
@@ -358,7 +360,7 @@ class session (pgraph.graph):
 
 
     ####################################################################################################################
-    def fuzz (self, this_node=None, path=[], _file=None):
+    def fuzz (self, this_node=None, path=[]):
         '''
         Call this routine to get the ball rolling. No arguments are necessary as they are both utilized internally
         during the recursive traversal of the session graph.
@@ -380,7 +382,7 @@ class session (pgraph.graph):
 
             this_node = self.root
 
-            if not _file:
+            if not self._file:
                 try:    self.server_init()
                 except: return
             else:
@@ -447,52 +449,57 @@ class session (pgraph.graph):
                     # attempt to complete a fuzz transmission. keep trying until we are successful, whenever a failure
                     # occurs, restart the target.
                     while 1:
-                        # instruct the debugger/sniffer that we are about to send a new fuzz.
-                        if target.procmon:
+                        # ============================== don't connect if there is self._file ===========================
+                        if not self._file:
+                            # instruct the debugger/sniffer that we are about to send a new fuzz.
+                            if target.procmon:
+                                try:
+                                    target.procmon.pre_send(self.total_mutant_index)
+                                except Exception, e:
+                                    error_handler(e, "failed on procmon.pre_send()", target)
+                                    continue
+
+                            if target.netmon:
+                                try:
+                                    target.netmon.pre_send(self.total_mutant_index)
+                                except Exception, e:
+                                    error_handler(e, "failed on netmon.pre_send()", target)
+                                    continue
+
                             try:
-                                target.procmon.pre_send(self.total_mutant_index)
+                                # establish a connection to the target.
+                                sock = socket.socket(socket.AF_INET, self.proto)
                             except Exception, e:
-                                error_handler(e, "failed on procmon.pre_send()", target)
+                                error_handler(e, "failed creating socket", target)
                                 continue
 
-                        if target.netmon:
+                            if self.bind:
+                                try:
+                                    sock.bind(self.bind)
+                                except Exception, e:
+                                    error_handler(e, "failed binding on socket", target, sock)
+                                    continue
+
                             try:
-                                target.netmon.pre_send(self.total_mutant_index)
+                                sock.settimeout(self.timeout)
+                                # Connect is needed only for TCP stream
+                                if self.proto == socket.SOCK_STREAM:
+                                    sock.connect((target.host, target.port))
                             except Exception, e:
-                                error_handler(e, "failed on netmon.pre_send()", target)
+                                error_handler(e, "failed connecting on socket", target, sock)
                                 continue
 
-                        try:
-                            # establish a connection to the target.
-                            sock = socket.socket(socket.AF_INET, self.proto)
-                        except Exception, e:
-                            error_handler(e, "failed creating socket", target)
-                            continue
-
-                        if self.bind:
-                            try:
-                                sock.bind(self.bind)
-                            except Exception, e:
-                                error_handler(e, "failed binding on socket", target, sock)
-                                continue
-
-                        try:
-                            sock.settimeout(self.timeout)
-                            # Connect is needed only for TCP stream
-                            if self.proto == socket.SOCK_STREAM:
-                                sock.connect((target.host, target.port))
-                        except Exception, e:
-                            error_handler(e, "failed connecting on socket", target, sock)
-                            continue
-
-                        # if SSL is requested, then enable it.
-                        if self.ssl:
-                            try:
-                                ssl  = socket.ssl(sock)
-                                sock = httplib.FakeSocket(sock, ssl)
-                            except Exception, e:
-                                error_handler(e, "failed ssl setup", target, sock)
-                                continue
+                            # if SSL is requested, then enable it.
+                            if self.ssl:
+                                try:
+                                    ssl  = socket.ssl(sock)
+                                    sock = httplib.FakeSocket(sock, ssl)
+                                except Exception, e:
+                                    error_handler(e, "failed ssl setup", target, sock)
+                                    continue
+                        else:
+                            sock = None
+                        # ========================================= don't connect if there is self._file ====================================
 
                         # if the user registered a pre-send function, pass it the sock and let it do the deed.
                         try:
@@ -505,14 +512,14 @@ class session (pgraph.graph):
                         try:
                             for e in path[:-1]:
                                 node = self.nodes[e.dst]
-                                self.transmit(sock, node, e, target, _file)
+                                self.transmit(sock, node, e, target, self._file)
                         except Exception, e:
                             error_handler(e, "failed transmitting a node up the path", target, sock)
                             continue
 
                         # now send the current node we are fuzzing.
                         try:
-                            self.transmit(sock, self.fuzz_node, edge, target, _file)
+                            self.transmit(sock, self.fuzz_node, edge, target, self._file)
                         except Exception, e:
                             error_handler(e, "failed transmitting fuzz node", target, sock)
                             continue
@@ -529,7 +536,8 @@ class session (pgraph.graph):
                         error_handler(e, "post_send() failed", target, sock)
 
                     # done with the socket.
-                    sock.close()
+                    if not self._file:
+                        sock.close()
 
                     # delay in between test cases.
                     self.logger.info("sleeping for %f seconds" % self.sleep_time)
@@ -868,7 +876,7 @@ class session (pgraph.graph):
                 data = data[:MAX_UDP]
 
         if _file:
-            _file.write(data + "\n")
+            _file.write(data)
             return
 
         try:
