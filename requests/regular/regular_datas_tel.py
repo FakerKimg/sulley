@@ -1,0 +1,280 @@
+from sulley import *
+
+import string
+
+limit_alpha_num = ""
+limit_alpha_num = limit_alpha_num + string.ascii_letters
+limit_alpha_num = limit_alpha_num + string.digits
+
+# Tel
+# Tel - Number
+s_initialize("Tel_001")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 0, max_length = 8, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_002")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 9, max_length = 9, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_003")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 10, max_length = 100, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_004")
+s_static('0')
+s_limit_random(value="", min_length = 0, max_length = 8, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_005")
+s_static('0')
+s_limit_random(value="", min_length = 9, max_length = 9, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_006")
+s_static('0')
+s_limit_random(value="", min_length = 10, max_length = 100, num_mutations = 1, limit_values=string.digits)
+
+# Tel - Number with one division ( - or space)
+s_initialize("Tel_007")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 6, max_length = 6, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_008")
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 6, max_length = 6, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_009")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 6, max_length = 6, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_010")
+s_static('0')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 6, max_length = 6, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_011")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values='-')
+s_limit_random(value="", min_length = 6, max_length = 6, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_012")
+s_static('0')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' ')
+s_limit_random(value="", min_length = 6, max_length = 6, num_mutations = 1, limit_values=string.digits)
+
+# Tel - Number with two dividsion
+s_initialize("Tel_013")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_014")
+s_static('0')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_015")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_016")
+s_static('0')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_017")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_018")
+s_static('0')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_019")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_020")
+s_static('0')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_021")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values='-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values='-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_022")
+s_static('0')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+# Tel - Wrong division position
+s_initialize("Tel_023")
+s_static('0')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_024")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_025")
+s_static('0')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_026")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_027")
+s_static('0')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_028")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_029")
+s_static('0')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_030")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_031")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_032")
+s_static('0')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 4, max_length = 4, num_mutations = 1, limit_values=string.digits)
+s_limit_random(value="", min_length = 1, max_length = 100, num_mutations = 1, limit_values=' '+'-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+# Tel - 09
+s_initialize("Tel_033")
+s_static('09-')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_034")
+s_static('09-')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_035")
+s_static('09-')
+s_limit_random(value="", min_length = 5, max_length = 5, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+s_initialize("Tel_036")
+s_static('09-')
+s_limit_random(value="", min_length = 2, max_length = 2, num_mutations = 1, limit_values=string.digits)
+s_static(' ')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+s_static('-')
+s_limit_random(value="", min_length = 3, max_length = 3, num_mutations = 1, limit_values=string.digits)
+
+# Tel - Not number
+s_initialize("Tel_037")
+s_limit_random(value="", min_length = 10, max_length = 10, num_mutations = 1, limit_values=string.ascii_letters + string.punctuation)
+
+s_initialize("Tel_038")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values='123456789')
+s_limit_random(value="", min_length = 9, max_length = 9, num_mutations = 1, limit_values=limit_alpha_num + string.punctuation)
+
+s_initialize("Tel_039")
+s_static('0')
+s_limit_random(value="", min_length = 9, max_length = 9, num_mutations = 1, limit_values=limit_alpha_num + string.punctuation)
+
+s_initialize("Tel_040")
+s_limit_random(value="", min_length = 1, max_length = 1, num_mutations = 1, limit_values=string.ascii_letters + string.punctuation)
+s_limit_random(value="", min_length = 9, max_length = 9, num_mutations = 1, limit_values=string.digits)
+
+
