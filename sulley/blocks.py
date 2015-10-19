@@ -43,7 +43,7 @@ class request (pgraph.node):
                 if not isinstance(item, block):
                     self.mutant = item
 
-                break
+                #break
 
         if mutated:
             self.mutant_index += 1
