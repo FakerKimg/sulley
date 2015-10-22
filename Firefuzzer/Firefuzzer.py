@@ -5,14 +5,15 @@ import logging
 import re
 
 class Firefuzzer():
-    def __init__(self, source, stype, sleep_time = 0.1, mode = ''):
+    def __init__(self, source, stype, sleep_time = 0.1, mode = 'Normal'):
         self.source = source
         if stype == 'url' and not self.source.startswith("http"):
             self.source = "http://" + self.source
         self.testmode = mode
         self.stype = stype
         self.sleep = sleep_time
-        print sleep_time,mode
+        print 'Sleep time: %s secs'%(sleep_time)
+        print 'Mode:',mode
 	
     def readlink(self):
         f = open(self.source,'r')
@@ -52,8 +53,11 @@ class Firefuzzer():
                 overflow.autotest(float(self.sleep))
             elif self.testmode == 'html':
                 overflow.test_input(float(self.sleep))
-            else:
+            elif self.testmode == 'Normal':
                 overflow.parseInput()
+            else:
+                print 'wrong testing mode!'
+                sys.exit()
             overflow.analyzeBufferOverflow()   
         elif self.stype == 'file':
             self.readlink()
@@ -65,12 +69,14 @@ class Firefuzzer():
                     overflow.autotest(float(self.sleep))
                 elif self.testmode == 'html':
                     overflow.test_input(float(self.sleep))
-                else:
+                elif self.testmode == 'Normal':
                     overflow.parseInput()
+                else:
+                    print 'wrong testing mode!'
+                    sys.exit()
                 overflow.analyzeBufferOverflow()
-
-               
-
+        else:
+            print 'wrong source type!'               
 
 if __name__ == "__main__":
     if len(sys.argv) <3 or len(sys.argv)>5:

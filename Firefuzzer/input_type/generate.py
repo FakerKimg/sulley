@@ -1,13 +1,15 @@
 import exrex
 import sys
+import time
+
 type_list = ['text','password','tel','email','url','date','time','number','range','color']
 #type_list = ['number']
+t = time.strftime("%Y-%m-%d-%H-%M-%s",time.localtime())
+
+
 fout = {}
 for k in type_list:
-    if len(sys.argv)>1:
-        fout[k] = open(k+'_'+sys.argv[1],'w')
-    else:
-        fout[k] = open(k,'w')
+    fout[k] = open(k+'_'+t,'w')
 
 def getone(regular):
     return exrex.getone(regular) + '\n'
@@ -38,14 +40,14 @@ for i in range(1,3):
     text.append(getone('[a-zA-Z0-9]{17,}'))
 
     #space
-    text.append(getone('\s{0,6}'))
-    text.append(getone('\s{6,17}'))
-    text.append(getone('\s{17,}'))
+    text.append(getone('( |\t|\r|\f){0,6}'))
+    text.append(getone('( |\t|\r|\f){6,17}'))
+    text.append(getone('( |\t|\r|\f){17,}'))
 
     #mix 
-    text.append(getone('(\s | [a-zA-Z0-9_]){0,6}'))
-    text.append(getone('(\s | [a-zA-Z0-9_]){6,17}'))
-    text.append(getone('(\s | [a-zA-Z0-9_]){17,}'))
+    text.append(getone('(( |\t|\r|\f)|[a-zA-Z0-9_]){0,6}'))
+    text.append(getone('(( |\t|\r|\f)|[a-zA-Z0-9_]){6,17}'))
+    text.append(getone('(( |\t|\r|\f)|[a-zA-Z0-9_]){17,}'))
 
 fout['text'].write("".join(text))
 fout['password'].write("".join(text))

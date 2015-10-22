@@ -4,6 +4,8 @@ import random
 import urlparse
 import re
 import time
+import csv
+import os
 
 class BufferOverflow():
     def __init__(self, url):
@@ -13,6 +15,7 @@ class BufferOverflow():
         self.status = [0,0,0,0,0]
         self.input_tag_num = {}
         self.ask = False  #To decide whether to ask user to input payload by themself
+        self.decode = True #To decide whether to decode the respose site from php or not, but we only can decode the testing site made by ourself.
         self.payload = {} 
         self.writer = []
 
@@ -26,49 +29,63 @@ class BufferOverflow():
 
         return str2
 
-    def read_payload(self,filename,path):
-        fin = open(path,'r')
-        #fin.readline() # the first line
-        while 1:
-            tmp = fin.readline()
-            if tmp == "":
-                break
-            self.payload[filename].append(tmp[:-1])
-            '''
-            if tmp[:2] == '0x':
-                self.payload.append(int(tmp[2:-1],16))
-            else:
-                self.payload.append(int(tmp[:-1]))
-            '''
+    def read_payload(self,filename,path,path_correct):
+        if path_correct:
+            fin = open(path,'r')
+            #fin.readline() # the first line
+            for line in fin:
+                self.payload[filename].append(line[:-1])
+        else:
+            for f in self.input_file:
+                if f.startswith(filename):
+                    fin = open(path+f,'r')
+                    for line in fin:
+                        self.payload[filename].append(line[:-1])
 			
     def autotest(self,sleep_time):
-        #self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
-        self.filelist = ['integer-overflows.txt']
-
+        self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
+        #self.filelist = ['integer-overflows.txt']
+        self.input_type = ['text','password','tel','email','url','date','time','number','range','color']
+        url = self.url[7:].replace('.','_').replace('/','_')
+        self.decode = False
+        self.writer.append(csv.writer(open('./output/'+url+'/'+'summary.csv','w'))) 
         for f in self.filelist:
             self.payload[f] = []
-            self.read_payload(f,'./attack-payloads/'+f)
+            self.read_payload(f,'./attack-payloads/'+f,True)
             print '###################################################################################'
             print 'Test file:%s'%(f)			
             for s in self.payload[f]:
-                self.parseInput(s)
+                self.parseInput(key = s,out = True)
                 time.sleep(sleep_time)	        
     
     def test_input(self,sleep_time):
-       input_type = ['text','password','tel','email','url','date','time','number','range','color']
-       for k in input_type:
-           self.payload[k] = []
-           self.read_payload(k,'./input_type/'+k)
-           self.writer.append(open('./input_type/'+k+'_result','w'))  
-       for i in range(40):
+       url = self.url[7:].replace('.','_').replace('/','_')
+       if not os.path.exists('./output/'+url):
+           os.makedirs('./output/'+url)
+       self.input_file = os.listdir('./input_type/')
+       print self.input_file
+       self.input_type = ['text','password','tel','email','url','date','time','number','range','color']
+       for k in range(len(self.input_type)):
+           self.payload[self.input_type[k]] = []
+           self.read_payload(self.input_type[k],'./input_type/',False)
+           self.writer.append(csv.writer(open('./output/'+url+'/'+self.input_type[k]+'_result.csv','w')))
+           self.writer[k].writerow(('Input','Output'))
+       self.writer.append(csv.writer(open('./output/'+url+'/'+'summary.csv','w')))
+       self.writer[len(self.writer)-1].writerow(('Payload','Status code','Response'))
+       payload_count = []
+       for k in self.input_type:
+           print k,self.payload[k]
+           payload_count.append(len(self.payload[k]))
+       print payload_count 
+       for i in range(min(payload_count)):
            for pairs in self.input_pairs:
                for _input in pairs['input']:
-                   if _input['type'] not in input_type:
+                   if _input['type'] not in self.input_type:
                        continue
-                   self.writer[input_type.index(_input['type'])].write(self.payload[_input['type']][i]+'\n')
+                   #self.writer[input_type.index(_input['type'])].write(self.payload[_input['type']][i]+'\n')
                    pairs['payload'][_input['name']]=self.payload[_input['type']][i] 
                print pairs['payload']
-               self.sendBack(True)
+               self.sendBack(True,i)
                time.sleep(sleep_time)
  
         
@@ -116,7 +133,7 @@ class BufferOverflow():
         print self.input_pairs
 		
 		
-    def parseInput(self, key=""):
+    def parseInput(self, key="",out = False):
 	for pairs in self.input_pairs:
  	    for _input in pairs['input']:
                 payload = ""
@@ -138,9 +155,9 @@ class BufferOverflow():
                 else:
                     pairs['payload'][_input["name"]] = payload
             print pairs['payload']
-            self.sendBack()
+            self.sendBack(out = out)
 
-    def sendBack(self,out = False):
+    def sendBack(self,out = False,i=0):
         for form in self.input_pairs:
             if not form["action"].startswith("http"): 
                 urlinfo = urlparse.urlparse(self.url)
@@ -158,12 +175,14 @@ class BufferOverflow():
                 pass
             print response
             if out:
-                res = BeautifulSoup(response.text)
-                res = re.split('\n+',res.text.strip())
-                for k in range(len(res)):
-                    self.writer[k].write(res[k]+'\n')
+                self.writer[len(self.writer)-1].writerow((self.input_pairs[0]['payload'],response.status_code,response.text))
+                if self.decode:
+                    res = BeautifulSoup(response.text)
+                    res = re.split('\n+',res.text.strip())
+                    for k in range(len(res)):
+                        self.writer[k].writerow((self.payload[self.input_type[k]][i],res[k]))
             #print response.text.replace('<br>','\n')
-
+                
 
     def analyzeBufferOverflow(self):
         print '###################################################################################'
