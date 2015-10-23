@@ -9,7 +9,10 @@ t = time.strftime("%Y-%m-%d-%H-%M-%s",time.localtime())
 
 fout = {}
 for k in type_list:
-    fout[k] = open(k+'_'+t,'w')
+    if len(sys.argv)!=2:
+        fout[k] = open(k+'_'+t,'w')
+    else:
+        fout[k] = open(k+'_'+sys.argv[1],'w')
 
 def getone(regular):
     return exrex.getone(regular) + '\n'

@@ -15,7 +15,7 @@ class BufferOverflow():
         self.status = [0,0,0,0,0]
         self.input_tag_num = {}
         self.ask = False  #To decide whether to ask user to input payload by themself
-        self.decode = True #To decide whether to decode the respose site from php or not, but we only can decode the testing site made by ourself.
+        self.oursite = True #To decide whether to decode the respose site from php or not, but we only can decode the testing site made by ourself.
         self.payload = {} 
         self.writer = []
 
@@ -47,7 +47,7 @@ class BufferOverflow():
         #self.filelist = ['integer-overflows.txt']
         self.input_type = ['text','password','tel','email','url','date','time','number','range','color']
         url = self.url[7:].replace('.','_').replace('/','_')
-        self.decode = False
+        self.oursite = False
         self.writer.append(csv.writer(open('./output/'+url+'/'+'summary.csv','w'))) 
         for f in self.filelist:
             self.payload[f] = []
@@ -63,22 +63,20 @@ class BufferOverflow():
        if not os.path.exists('./output/'+url):
            os.makedirs('./output/'+url)
        self.input_file = os.listdir('./input_type/')
-       print self.input_file
        self.input_type = ['text','password','tel','email','url','date','time','number','range','color']
        for k in range(len(self.input_type)):
            self.payload[self.input_type[k]] = []
            self.read_payload(self.input_type[k],'./input_type/',False)
-           self.writer.append(csv.writer(open('./output/'+url+'/'+self.input_type[k]+'_result.csv','w')))
-           self.writer[k].writerow(('Input','Output'))
+           if self.oursite:
+               self.writer.append(csv.writer(open('./output/'+url+'/'+self.input_type[k]+'_result.csv','w')))
+               self.writer[k].writerow(('Form','Input','Output'))
        self.writer.append(csv.writer(open('./output/'+url+'/'+'summary.csv','w')))
-       self.writer[len(self.writer)-1].writerow(('Payload','Status code','Response'))
+       self.writer[len(self.writer)-1].writerow(('Form','Payload','Status code','Response'))
        payload_count = []
        for k in self.input_type:
-           print k,self.payload[k]
            payload_count.append(len(self.payload[k]))
-       print payload_count 
-       for i in range(min(payload_count)):
-           for pairs in self.input_pairs:
+       for pairs in self.input_pairs:
+           for i in range(min(payload_count)):
                for _input in pairs['input']:
                    if _input['type'] not in self.input_type:
                        continue
@@ -106,10 +104,12 @@ class BufferOverflow():
             self.tag_num[tag]=len(soup.select(tag))
         for tag in input_tag:
             self.input_tag_num[tag] = 0
-	    self.input_pairs = []
+	self.input_pairs = []
         for form in forms:
             action = form.get("action", "")
-            if action == "":
+            method = form.get("method","").lower()
+            print 'method:',method
+            if action == "" or not (method == "post" or method == "get") :
                 continue
             #print 'action:',action,'\n'
             inputs = form.find_all("input")
@@ -118,6 +118,7 @@ class BufferOverflow():
             form_content["action"] = form["action"]
             form_content["payload"] = {}
 	    form_content["input"] = []
+            form_content["method"] = form["method"]
            
             #count the number of input label
             for _input in inputs:
@@ -158,29 +159,31 @@ class BufferOverflow():
             self.sendBack(out = out)
 
     def sendBack(self,out = False,i=0):
-        for form in self.input_pairs:
-            if not form["action"].startswith("http"): 
+        for k in range(len(self.input_pairs)):
+            if not self.input_pairs[k]["action"].startswith("http"): 
                 urlinfo = urlparse.urlparse(self.url)
                 #print urlinfo,'1',form['action']   
-                url = urlinfo.scheme + '://' + urlinfo.netloc + '/' + form["action"]
+                url = urlinfo.scheme + '://' + urlinfo.netloc + '/' + self.input_pairs[k]["action"]
             else:
-                url = form["action"]
+                url = self.input_pairs[k]["action"]
             
             #print 'payload:',form['payload']
-           
-            response = requests.post(url, data = form['payload'])
+            if self.input_pairs[k]["method"] == "post":
+                response = requests.post(url, data = self.input_pairs[k]['payload'])
+            else:
+                response = requests.get(url, data = self.input_pairs[k]['payload'])
             self.status[response.status_code/100-1] += 1
+            print response
             if response.status_code != 200:
                 # Todo
                 pass
-            print response
             if out:
-                self.writer[len(self.writer)-1].writerow((self.input_pairs[0]['payload'],response.status_code,response.text))
-                if self.decode:
+                self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response.status_code,response.text))
+                if self.oursite:
                     res = BeautifulSoup(response.text)
                     res = re.split('\n+',res.text.strip())
-                    for k in range(len(res)):
-                        self.writer[k].writerow((self.payload[self.input_type[k]][i],res[k]))
+                    for s in range(len(res)):
+                        self.writer[s].writerow((k,self.payload[self.input_type[s]][i],res[s]))
             #print response.text.replace('<br>','\n')
                 
 
