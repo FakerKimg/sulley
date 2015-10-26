@@ -880,3 +880,49 @@ class qword (bit_field):
             value = struct.unpack(endian + "Q", value)[0]
 
         bit_field.__init__(self, value, 64, None, endian, format, signed, full_range, fuzzable, name)
+
+
+
+#########################################################################################################################
+# self-defined random data
+#########################################################################################################################
+class limit_random_data(random_data):
+    def __init__(self, value, min_length, max_length, max_mutations=25, fuzzable=True, step=None, name=None, limit_values=""):
+        self.limit_values = limit_values
+        super(limit_random_data, self).__init__(value, min_length, max_length, max_mutations, fuzzable, step, name)
+
+    def mutate (self):
+        '''
+        Mutate the primitive value returning False on completion.
+
+        @rtype:  Boolean
+        @return: True on success, False otherwise.
+        '''
+
+        # if we've ran out of mutations, raise the completion flag.
+        if self.mutant_index == self.num_mutations():
+            self.fuzz_complete = True
+
+        # if fuzzing was disabled or complete, and mutate() is called, ensure the original value is restored.
+        if not self.fuzzable or self.fuzz_complete:
+            self.value = self.original_value
+            return False
+
+        # select a random length for this string.
+        if not self.step:
+            length = random.randint(self.min_length, self.max_length)
+        # select a length function of the mutant index and the step.
+        else:
+            length = self.min_length + self.mutant_index * self.step
+
+        # reset the value and generate a random string of the determined length.
+        self.value = ""
+        for i in xrange(length):
+            #self.value += chr(random.randint(0, 255))
+            self.value += self.limit_values[random.randint(0, len(self.limit_values) - 1)]
+
+        # increment the mutation count.
+        self.mutant_index += 1
+
+        return True
+
