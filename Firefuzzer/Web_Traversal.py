@@ -4,17 +4,65 @@ import sys
 import re
 from bs4 import BeautifulSoup
 
+def get_url_content(url):
+    try:
+        content = urllib2.urlopen(url)
+        return content
+    except:
+        return False
+
+def get_href(url,root,response):
+    soup = BeautifulSoup(response)
+    for i in soup.findAll('a'):
+        temp = str(i.get('href'))
+        length = len(temp)
+        if length <5:
+            continue
+        if temp[0]=='/':
+            temp = temp[1:length]
+            length = len(temp)
+        if length-1>=0:
+            if temp[length-1]=='/':
+                temp = temp[0:length-1]
+        if 'None' in temp or len(temp)<2:
+            continue
+        if re.search('\?C=[A-Z]{1};O=[A-Z]{1}',temp):
+            continue
+        if 'http' in temp:
+            if root in temp:
+               complete_url = temp
+               complete_url2 = ''
+            else:
+               continue
+        else:
+            if url[len(url)-1]=='/':
+                url = url[0:len(url)-1]
+            if temp[0]=='/':
+                temp = temp[1:len(temp)]
+            complete_url = url + '/'+ temp
+            if url.count('/')<=2:
+                complete_url2 = ''
+            else:
+                index = url.rindex('/')
+                complete_url2 = url[0:index] + '/' + temp
+        if complete_url not in URLs:
+            URLs[complete_url] = 'Not determined'
+            QUE.put(complete_url)
+        if complete_url2 not in URLs and len(complete_url2)>0:
+            URLs[complete_url2] = 'Not determined'
+            QUE.put(complete_url2)
+
 QUE = Queue.Queue()
 URLs = dict()
 
-def main():
+if __name__ == '__main__':
     # Check the number of arguments.
     if len(sys.argv)<2:
         print 'You have to enter the url!!'
-        return
+        sys.exit()
     elif len(sys.argv)>2:
         print 'You have entered too much arguments!!:'
-        return
+        sys.exit()
     else:
         origin_url = sys.argv[1]
         if not origin_url.startswith('http://'):
@@ -36,7 +84,7 @@ def main():
         response = get_url_content(DOMAIN)
         if not response:
             print "Root URL Error!\n"
-            return
+            sys.exit()
         else:
             root_url = DOMAIN
     else:
@@ -46,11 +94,12 @@ def main():
             response = get_url_content(origin_url)
             if not response:
                 print 'Root URL Error!\n'
-                return
+                sys.exit()
             else:
                 root_url = origin_url
         else:
             root_url = DOMAIN1
+            QUE.put(origin_url)
 
     # Succeed to access to root url and get href.
     get_href(root_url,root_url,response)
@@ -68,55 +117,13 @@ def main():
     print 'Length of all URLs:  ' + str(len(URLs))
     f = open('Web_Traversal_Result.txt','w')
     fout = open('Web_Traversal_link','w')
-    fout.write(origin_url+'\n')
+    #fout.write(origin_url+'\n')
     f.write('Root URL = '+root_url+'\n')
     f.write('URL found : '+str(len(URLs))+'\n')
     for k,v in URLs.items():
         s = '%-100s %-10s' % (k,v)
         f.write(s+'\n')
-        if v == 'valid':
+        if v == 'Valid':
             fout.write(k+'\n')
     f.close()
     fout.close()
-
-def get_url_content(url):
-    try:
-        content = urllib2.urlopen(url)
-        return content
-    except:
-        return False
-
-def get_href(url,root,response):
-    soup = BeautifulSoup(response)
-    for i in soup.findAll('a'):
-        temp = str(i.get('href'))
-        length = len(temp)
-        if length <5:
-            continue
-        if temp[0]=='/':
-            temp = temp[1:length-1]
-            length = len(temp)
-        if length-1>=0:
-            if temp[length-1]=='/':
-                temp = temp[0:length-1]
-        if 'None' in temp or len(temp)<2:
-            continue
-        if re.search('\?C=[A-Z]{1};O=[A-Z]{1}',temp):
-            continue
-        if 'http' in temp:
-            if root in temp:
-               complete_url = temp
-            else:
-               continue
-        else:
-            if url[len(url)-1]=='/':
-                url = url[0:len(url)-1]
-            if temp[0]=='/':
-                temp = temp[1:len(temp)]
-            complete_url = url + '/'+ temp
-        if complete_url not in URLs:
-            URLs[complete_url] = 'Not determined'
-            QUE.put(complete_url)
-
-if __name__ == '__main__':
-    main()
