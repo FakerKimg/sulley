@@ -28,6 +28,7 @@ def num_afAF(a,b):
 
 # Color
 s_initialize("Color_001")
+s_limit_random(value="", min_length = 0, max_length = 0, num_mutations = 1, limit_values=limit_num_afAF)
 s_static('#')
 
 

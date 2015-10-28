@@ -877,6 +877,7 @@ class session (pgraph.graph):
 
         if _file:
             _file.write(data)
+            #_file.write(data + node.name)
             return
 
         try:
