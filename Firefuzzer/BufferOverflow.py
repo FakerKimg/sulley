@@ -6,6 +6,8 @@ import re
 import time
 import csv
 import os
+from hyper import HTTP20Connection
+from urlparse import urlparse
 
 class BufferOverflow():
     def __init__(self, url):
@@ -89,11 +91,20 @@ class BufferOverflow():
         
     def parse_html(self,key = ''):
         response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
+        """
+        HTTP2.0:
+        urlinfo = urlparse(self.url)
+        conn = HTTP20Connection(urlinfo.netloc)
+        conn.request('GET', urlinfo.path)
+        response = conn.get_response()
+        """
         #print 'key:',key
+        #HTTP2.0: if response.status != 200:
         if response.status_code != 200:
             # Todo 
             pass
         #self.status[response.status_code/100-1] += 1
+        #HTTP2.0: html = response.read()
         html = response.content
         soup = BeautifulSoup(html)
         forms = soup.select("form")
@@ -170,16 +181,44 @@ class BufferOverflow():
             #print 'payload:',form['payload']
             if self.input_pairs[k]["method"] == "post":
                 response = requests.post(url, data = self.input_pairs[k]['payload'])
+                """
+                HTTP2.0:
+                urlinfo = urlparse("url")
+                conn = HTTP20Connection(urlinfo.netloc)
+                body = ""
+                for key, value in self.input_pairs[k]['payload'].iteritems():
+                    body = body + key + '=' + value + '&'
+                body = body[:-1]
+                conn.request('POST', urlinfo.path, body=body)
+                response = conn.get_response()
+                """
             else:
                 response = requests.get(url, data = self.input_pairs[k]['payload'])
+                """
+                HTTP2.0:
+                urlinfo = urlparse("url")
+                conn = HTTP20Connection(urlinfo.netloc)
+                body = ""
+                for key, value in self.input_pairs[k]['payload'].iteritems():
+                    body = body + key + '=' + value + '&'
+                body = body[:-1]
+                conn.request('GET', urlinfo.path, body=body)
+                response = conn.get_response()
+                """
+            # HTTP2.0: self.status[response.status/100-1] += 1
             self.status[response.status_code/100-1] += 1
+            # HTTP2.0: print response.status
             print response
+            # HTTP2.0: if response.status != 200
             if response.status_code != 200:
                 # Todo
                 pass
             if out:
+                # HTTP2.0: content = response.read()
+                # HTTP2.0: self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response.status, content))
                 self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response.status_code,response.text))
                 if self.oursite:
+                    # res = BeautifulSoup(content)
                     res = BeautifulSoup(response.text)
                     res = re.split('\n+',res.text.strip())
                     for s in range(len(res)):
