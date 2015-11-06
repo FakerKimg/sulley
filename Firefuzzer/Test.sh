@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ $# = 0 ]; then
+if [ "$#" = 0 ]; then
     echo "Usage: test.sh [url] ([Whether to generate new payload]) ([sleep time])"
     exit 0
-elif [ $# > 2 ]; then
-    if [ $2 = 'new' ]; then
+elif [ "$#" > 1 ]; then
+    if [ "$2" = "new" ]; then
         echo "STEP 1: Generate new payload"
         cd ./input_type/
         python generate.py
@@ -14,7 +14,7 @@ elif [ $# > 2 ]; then
         if [ -e Web_Traversal_link ] && [ -s Web_Traversal_link ]; then
             echo "STEP 3: Start fuzzing"
             echo "###################################################################################"
-            if [ $# = 3 ]; then
+            if [ "$#" = 3 ]; then
                 python Firefuzzer.py Web_Traversal_link file $3 html
             else
                 python Firefuzzer.py Web_Traversal_link file html

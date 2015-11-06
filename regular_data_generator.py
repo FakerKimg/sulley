@@ -8,4 +8,4 @@ generate_regular_data("Time")
 generate_regular_data("Color")
 generate_regular_data("Range")
 generate_regular_data("Number")
-
+generate_regular_data("Password")

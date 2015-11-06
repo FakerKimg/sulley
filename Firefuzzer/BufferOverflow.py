@@ -184,8 +184,6 @@ class BufferOverflow():
                     res = re.split('\n+',res.text.strip())
                     for s in range(len(res)):
                         self.writer[s].writerow((k,self.payload[self.input_type[s]][i],res[s]))
-            #print response.text.replace('<br>','\n')
-                
 
     def analyzeBufferOverflow(self):
         print '###################################################################################'

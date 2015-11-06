@@ -9,7 +9,7 @@ def change_line(session, node, edge, sock):
 
 def generate_regular_data(_type):
     t = time.time()
-    timestr = time.strftime(_type + "%Y-%m-%d-%H-%M-%s", time.localtime(t))
+    timestr = time.strftime(_type.lower() + "%Y-%m-%d-%H-%M-%s", time.localtime(t))
     _file_path = "test_datas/" + timestr
     _file = open(_file_path, "w")
 
