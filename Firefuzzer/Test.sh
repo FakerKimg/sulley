@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if [ "$#" = 0 ]; then
+if [ "$#" -eq 0 ]; then
     echo "Usage: test.sh [url] ([Whether to generate new payload]) ([sleep time])"
     exit 0
-elif [ "$#" > 1 ]; then
+elif [ "$#" -ne 1 ]; then
     if [ "$2" = "new" ]; then
         echo "STEP 1: Generate new payload"
         cd ./input_type/
@@ -11,10 +11,10 @@ elif [ "$#" > 1 ]; then
         cd ..
         echo "STEP 2: Start Web traversal"
         python Web_Traversal.py $1
-        if [ -e Web_Traversal_link ] && [ -s Web_Traversal_link ]; then
+        if [ -f Web_Traversal_link ]; then
             echo "STEP 3: Start fuzzing"
             echo "###################################################################################"
-            if [ "$#" = 3 ]; then
+            if [ "$#" -eq 3 ]; then
                 python Firefuzzer.py Web_Traversal_link file $3 html
             else
                 python Firefuzzer.py Web_Traversal_link file html
@@ -26,7 +26,7 @@ elif [ "$#" > 1 ]; then
     else
         echo "STEP 1: Start Web traversal"
         python Web_Traversal.py $1
-        if [ -e Web_Traversal_link ] && [ -s Web_Traversal_link ]; then
+        if [ -f Web_Traversal_link ]; then
             echo "STEP 2: Start fuzzing"
             echo "###################################################################################"
             python Firefuzzer.py Web_Traversal_link file $2 html
@@ -38,7 +38,7 @@ elif [ "$#" > 1 ]; then
 else
     echo "STEP 1: Start Web traversal"
     python Web_Traversal.py $1
-    if [ -e Web_Traversal_link ] && [ -s Web_Traversal_link ]; then
+    if [ -f Web_Traversal_link ]; then
         echo "STEP 2: Start fuzzing"
         echo "###################################################################################"
         python Firefuzzer.py Web_Traversal_link file html

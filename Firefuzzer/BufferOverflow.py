@@ -6,8 +6,7 @@ import re
 import time
 import csv
 import os
-from hyper import HTTP20Connection
-from urlparse import urlparse
+#from hyper import HTTP20Connection
 
 class BufferOverflow():
     def __init__(self, url):
@@ -93,7 +92,7 @@ class BufferOverflow():
         response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
         """
         HTTP2.0:
-        urlinfo = urlparse(self.url)
+        urlinfo = urlparse.urlparse(self.url)
         conn = HTTP20Connection(urlinfo.netloc)
         conn.request('GET', urlinfo.path)
         response = conn.get_response()
@@ -171,7 +170,7 @@ class BufferOverflow():
 
     def sendBack(self,out = False,i=0):
         for k in range(len(self.input_pairs)):
-            if not self.input_pairs[k]["action"].startswith("http"): 
+            if not self.input_pairs[k]["action"].startswith("http"):
                 urlinfo = urlparse.urlparse(self.url)
                 #print urlinfo,'1',form['action']   
                 url = urlinfo.scheme + '://' + urlinfo.netloc + '/' + self.input_pairs[k]["action"]
@@ -183,7 +182,7 @@ class BufferOverflow():
                 response = requests.post(url, data = self.input_pairs[k]['payload'])
                 """
                 HTTP2.0:
-                urlinfo = urlparse("url")
+                urlinfo = urlparse.urlparse("url")
                 conn = HTTP20Connection(urlinfo.netloc)
                 body = ""
                 for key, value in self.input_pairs[k]['payload'].iteritems():
@@ -196,7 +195,7 @@ class BufferOverflow():
                 response = requests.get(url, data = self.input_pairs[k]['payload'])
                 """
                 HTTP2.0:
-                urlinfo = urlparse("url")
+                urlinfo = urlparse.urlparse("url")
                 conn = HTTP20Connection(urlinfo.netloc)
                 body = ""
                 for key, value in self.input_pairs[k]['payload'].iteritems():
