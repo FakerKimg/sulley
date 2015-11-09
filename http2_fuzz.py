@@ -21,11 +21,12 @@ def update_stream_id(session, node, edge, sock):
 
 
 sess = sessions.session(sleep_time = 0.0001)
-target = sessions.target("104.131.161.90", 80)
+target = sessions.target("192.168.144.104", 8080)
+#target = sessions.target("104.131.161.90", 80)
 sess.add_target(target)
 
-headers = {":method": "GET", ":scheme": "http", ":authority": "http2bin.org", ":path": "/ip", "asdf": "asdf"}
-#headers = [(":method", "GET"), (":scheme", "http"), (":authority", "http2bin.org"), (":path", "/ip"), ("asdf", "asdf")]
+headers = {":method": ["GET", "POST"], ":scheme": ["http"], ":path": "/Test1.html", "asdf": "asdf"}
+#headers = {":method": "GET", ":scheme": "http", ":authority": "http2bin.org", ":path": "/ip", "asdf": "asdf"}
 base_http2_frame.set_header_frame(headers)
 
 sess.pre_send = clean_receive_buffer

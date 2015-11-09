@@ -1,5 +1,16 @@
 from sulley import *
 from hyper.packages.hpack.hpack import Encoder, Decoder
+import json
+
+def json_hpack_encoder(json_headers):
+    e = Encoder()
+    headers = json.loads(json_headers)
+    header_pairs = []
+    for name, value in headers.iteritems():
+        header_pairs.append((name.lower(), value))
+    s = e.encode(header_pairs)
+    return s
+
 
 ########################################################################################################################
 # Magic frame(Preamble packet) in HTTP/2 protocol
@@ -38,12 +49,41 @@ def set_header_frame(headers):
     s_bit_field(4, 8, fuzzable=False)  # flags of frame, End Headers
     s_bit_field(1, 32, endian=">", fuzzable=False, name="header stream id") # stream ID
     # payload (Header block fragment)
-    if s_block_start("headers payload"):
+    if s_block_start("headers payload", encoder=json_hpack_encoder):
+        # make it in json form
+        s_static("{")
+
+        count = 0
+        for name, value in headers.iteritems():
+            # name
+            s_static("\"" + name + "\": ")
+
+            # value
+            s_static("\"")
+            if isinstance(value, list):
+                s_group(name+"_group", values=value)
+                if s_block_start(name+"_block", group=name+"_group"):
+                    s_static("")
+                s_block_end()
+            else:
+               s_static(value)
+            
+            s_static("\"")
+
+            if count + 1 != len(headers):
+                s_static(", ")
+            count = count + 1
+            
+        s_static("}")
+
+        """
         e = Encoder()
         header_pairs = []
         for name, value in headers.iteritems():
             header_pairs.append((name.lower(), value))
         s_string(e.encode(header_pairs), encoding="binary", fuzzable=False)
+        """
+
         """
         for key, value in headers:
             s_bit_field(1+len(key), 32, fuzzable=False)
