@@ -545,6 +545,8 @@ class session (pgraph.graph):
         if path:
             path.pop()
 
+        return
+
         # loop to keep the main thread running and be able to receive signals
         if self.signal_module:
             # wait for a signal only if fuzzing is finished (this function is recursive)

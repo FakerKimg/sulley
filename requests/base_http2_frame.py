@@ -18,6 +18,15 @@ def json_hpack_encoder(json_headers):
 s_initialize("HTTP/2 Magic")
 s_static(b"PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n")
 
+s_bit_field(6, 24, endian=">", fuzzable=False) # length(bytes number) of payload in frame
+s_bit_field(4, 8, fuzzable=False)  # type of frame
+s_bit_field(0, 8, fuzzable=False)  # flags of frame
+s_bit_field(0, 32, endian=">", fuzzable=False) # stream ID
+# payload
+s_bit_field(2, 16, endian=">", fuzzable=False) # settings enable_push
+s_bit_field(0, 32, endian=">", fuzzable=False) # disable
+
+
 ########################################################################################################################
 # Settings packet for disable push  in HTTP/2 protocol
 ########################################################################################################################
@@ -92,17 +101,42 @@ def set_header_frame(headers):
             s_string(value, encoding="binary", fuzzable=False, max_length=0)
         """
     s_block_end()
+    s_size("all datas payload", endian=">", length=3, format="binary", fuzzable=False) # length(bytes number) of payload in frame
+    s_bit_field(0, 8, fuzzable=False)  # type of frame
+    s_bit_field(1, 8, fuzzable=False)  # flags of frame, End Stream
+    s_bit_field(1, 32, endian=">", fuzzable=False, name="data stream id") # stream ID
+    # payload (Header block fragment)
+    # payload can't be too large
+
+    if s_block_start("all datas payload"):
+        s_group("datas group", ["fuck you konami"])
+        if s_block_start("datas payload", group="datas group"):
+            s_static("")
+        s_block_end()
+    s_block_end()
+
 
 ########################################################################################################################
 # Datas packet in HTTP/2 protocol
 ########################################################################################################################
 s_initialize("HTTP/2 Datas")
-s_size("datas payload", endian=">", length=3, format="binary", fuzzable=False) # length(bytes number) of payload in frame
+s_size("all datas payload", endian=">", length=3, format="binary", fuzzable=False) # length(bytes number) of payload in frame
 s_bit_field(0, 8, fuzzable=False)  # type of frame
 s_bit_field(1, 8, fuzzable=False)  # flags of frame, End Stream
 s_bit_field(1, 32, endian=">", fuzzable=False, name="data stream id") # stream ID
 # payload (Header block fragment)
-if s_block_start("datas payload"):
-    s_string("", encoding="binary", max_len=100, fuzzable=True)
+# payload can't be too large
+
+if s_block_start("all datas payload"):
+    s_group("datas group", ["fuck you konami"])
+    if s_block_start("datas payload", group="datas group"):
+        s_static("")
+    s_block_end()
 s_block_end()
+
+"""
+if s_block_start("datas payload"):
+    s_string("fuck you konami", encoding="binary", size=0, fuzzable=False)
+s_block_end()
+"""
 
