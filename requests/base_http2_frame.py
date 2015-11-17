@@ -3,7 +3,6 @@ from hyper.packages.hpack.hpack import Encoder, Decoder
 import json
 
 def json_hpack_encoder(json_headers):
-    print json_headers
     e = Encoder()
     headers = json.loads(json_headers)
     header_pairs = []
@@ -78,6 +77,8 @@ def set_header_data_frame(headers, header_name):
             if count + 1 != len(headers):
                 s_static(", ")
             count = count + 1
+
+        s_random("", 0, 0, 1)
 
         # for group.................................
         for i in range(0, gc):

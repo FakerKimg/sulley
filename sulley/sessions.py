@@ -184,10 +184,12 @@ class session (pgraph.graph):
             filehandler.setFormatter(formatter)
             self.logger.addHandler(filehandler)
 
+        """
         consolehandler = logging.StreamHandler()
         consolehandler.setFormatter(formatter)
         consolehandler.setLevel(log_level)
         self.logger.addHandler(consolehandler)
+        """
 
         self.total_num_mutations = 0
         self.total_mutant_index  = 0

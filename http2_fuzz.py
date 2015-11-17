@@ -1,5 +1,6 @@
 from sulley import *
 from requests import base_http2_frame
+import logging
 
 def check_ack_settings_frame(session, node, edge, sock):
     recv = session.last_recv
@@ -8,19 +9,19 @@ def check_ack_settings_frame(session, node, edge, sock):
 
     return
 
+target_ip = "192.168.144.104"
 
-sess = sessions.session(sleep_time = 0.0001)
-target = sessions.target("192.168.144.104", 8080)
+sess = sessions.session(sleep_time = 0.0001, logfile="./fuzz_log", logfile_level=logging.DEBUG, log_level=logging.DEBUG)
+target = sessions.target(target_ip, 8080)
 #target = sessions.target("104.131.161.90", 80)
 sess.add_target(target)
-
-headers = {":method": ["GET", "POST", "PUT", "DELETE"], ":scheme": ["http", "ftp"], ":authority": "192.168.144.104", ":path": "/"}
+headers = {":method": ["GET", "HEAD", "POST", "PUT", "DELETE", "TRACE", "OPTIONS", "CONNECT", "PATCH", "WRONG"], ":scheme": ["http", "https"], ":authority": [target_ip, "8.8.8.8"], ":path": "/"}
 #headers = {":method": "GET", ":scheme": "http", ":authority": "http2bin.org", ":path": "/ip"}
 base_http2_frame.set_header_data_frame(headers, "HTTP/2 Headers and Datas")
 
 sess.connect(sess.root, s_get("HTTP/2 Magic"), callback=None)
 sess.connect(s_get("HTTP/2 Magic"), s_get("HTTP/2 Settings disable push"), callback=None)
-sess.connect(s_get("HTTP/2 Settings disable push"), s_get("HTTP/2 Headers and Datas"), callback=check_ack_settings_frame)
+sess.connect(s_get("HTTP/2 Settings disable push"), s_get("HTTP/2 Headers and Datas"), callback=None)
 
 sess.fuzz()
 
