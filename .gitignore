@@ -3,3 +3,4 @@ archived_fuzzies/*.session
 docs/
 .idea/
 fuzz_log
+result_*

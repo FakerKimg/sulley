@@ -15,22 +15,9 @@ def json_hpack_encoder(json_headers):
 ########################################################################################################################
 # Magic frame(Preamble packet) in HTTP/2 protocol
 ########################################################################################################################
-s_initialize("HTTP/2 Magic")
+s_initialize("HTTP/2 Magic and Settings")
 s_static(b"PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n")
 
-s_bit_field(6, 24, endian=">", fuzzable=False) # length(bytes number) of payload in frame
-s_bit_field(4, 8, fuzzable=False)  # type of frame
-s_bit_field(0, 8, fuzzable=False)  # flags of frame
-s_bit_field(0, 32, endian=">", fuzzable=False) # stream ID
-# payload
-s_bit_field(2, 16, endian=">", fuzzable=False) # settings enable_push
-s_bit_field(0, 32, endian=">", fuzzable=False) # disable
-
-
-########################################################################################################################
-# Settings packet for disable push  in HTTP/2 protocol
-########################################################################################################################
-s_initialize("HTTP/2 Settings disable push")
 s_bit_field(6, 24, endian=">", fuzzable=False) # length(bytes number) of payload in frame
 s_bit_field(4, 8, fuzzable=False)  # type of frame
 s_bit_field(0, 8, fuzzable=False)  # flags of frame
