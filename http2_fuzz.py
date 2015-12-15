@@ -6,6 +6,7 @@ import random
 import os
 import csv
 import datetime
+import time
 
 def check_ack_settings_frame(session, node, edge, sock):
     recv = session.last_recv
@@ -111,11 +112,24 @@ for line in send_lines:
         rsss_header_length = ord(rsss[0])*256*256 + ord(rsss[1])*256 + ord(rsss[2])
         rsss_encoded_headers = rsss[9:(9+rsss_header_length)]
 
+        rsss_html = ""
+        if "<html>" in rsss:
+            rsss_html = "<html>" + rsss.split("</html>")[0].split("<html>")[-1] + "</html>"
+
+        rsss_time = receive_lines[index][1:20]
+        rsss_time = time.strftime("%Y/%m/%d-%H:%M:%S", time.strptime(rsss_time, "%Y-%m-%d %H:%M:%S"))
+
+
+
         if rsss_encoded_headers == "" or rsss[3] != '\x01':
-            rsss_headers = [(u":status", u"0")]
+            rsss_headers = [(u":status", u"0"), (u"response", u"")]
         else:
             d = Decoder()
             rsss_headers = d.decode(b''.join(rsss_encoded_headers))
+
+
+        rsss_headers.append(("fuzztime", rsss_time))
+        rsss_headers.append(("responsehtml", rsss_html))
 
         #html = "<html>" + rsss.split("<html>")[-1].split("</html>")[0] + "</html>"
 
@@ -137,20 +151,47 @@ expected_status_codes = {
     "PATCH" : 405
 }
 
+expected_valid_method = {
+    "GET" : True,
+    "HEAD" : True,
+    "POST" : True,
+    "PUT" : False,
+    "DELETE" : False,
+    "TRACE" : True,
+    "OPTIONS" : True,
+    "CONNECT" : False,
+    "PATCH" : False
+}
+
+expected_valid_scheme = {
+    "http": True
+}
+
+expected_valid_authority = {
+    target_ip: True
+}
+
 
 
 
 result_file_path = "./result_" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".csv"
 with open(result_file_path, 'wb') as csvfile:
     spamwriter = csv.writer(csvfile)
-    spamwriter.writerow(["No.", "method", "scheme", "authority", "status code", "expected code", "consistent"])
-
+    #spamwriter.writerow(["No.", "time", "method", "scheme", "authority", "status code", "response html", "expected code", "consistent"])
+    #spamwriter.writerow(["No.", "time", "method", "scheme", "authority", "receive headers", "status code", "response html", "expected code", "consistent"])
+    spamwriter.writerow(["No.", "time", "method", "scheme", "authority", "is valid method", "is valid scheme", "is valid authority", "receive headers", "status code", "response html"])
 
     for i in range(0, len(send_and_receive)):
         send_headers = send_and_receive[i][0]
         receive_headers = send_and_receive[i][1]
 
-        line = [str(i), send_headers[":method"], send_headers[":scheme"], send_headers[":authority"], receive_headers[":status"]]
+        line = [str(i), receive_headers["fuzztime"], send_headers[":method"], send_headers[":scheme"], send_headers[":authority"]]
+        html = repr(receive_headers["responsehtml"])
+        del receive_headers["fuzztime"]
+        del receive_headers["responsehtml"]
+
+        """
+        line = line + [repr(receive_headers), receive_headers[":status"], html]
 
         if send_headers[":method"] in expected_status_codes:
             line = line + [str(expected_status_codes[send_headers[":method"]])]
@@ -158,10 +199,29 @@ with open(result_file_path, 'wb') as csvfile:
             # unknown method would be treated as server error
             line = line + ["501"]
 
-        if line[-1] == line[-2]:
+        if line[-1] == line[-3]:
             line = line + ["True"]
         else:
             line = line + ["False"]
+        """
+
+
+        if send_headers[":method"] in expected_valid_method:
+            vmethod = expected_valid_method[send_headers[":method"]]
+        else:
+            vmethod = False
+
+        if send_headers[":scheme"] in expected_valid_scheme:
+            vscheme = expected_valid_scheme[send_headers[":scheme"]]
+        else:
+            vscheme = False
+
+        if send_headers[":authority"] in expected_valid_authority:
+            vauthority = expected_valid_authority[send_headers[":authority"]]
+        else:
+            vauthority = False
+
+        line = line + [repr(vmethod), repr(vscheme), repr(vauthority), repr(receive_headers), receive_headers[":status"], html]
 
 
         spamwriter.writerow(line)

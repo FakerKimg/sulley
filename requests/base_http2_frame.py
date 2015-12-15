@@ -99,6 +99,6 @@ def set_header_data_frame(headers, header_name):
     # payload can't be too large
 
     if s_block_start("datas payload"):
-        s_static("fuck you konami")
+        s_static("static string")
     s_block_end()
 
