@@ -7,6 +7,10 @@ import os
 import csv
 import datetime
 import time
+import sys
+
+
+
 
 def check_ack_settings_frame(session, node, edge, sock):
     recv = session.last_recv
@@ -34,10 +38,14 @@ try:
 except:
     pass
 
-target_ip = "192.168.144.104"
+#target_ip = "192.168.144.104"
+target_ip = sys.argv[1]
+target_port = int(sys.argv[2])
+sleep_time = float(sys.argv[3])
 
-sess = sessions.session(sleep_time = 0.001, logfile="./fuzz_log", logfile_level=logging.DEBUG, log_level=logging.DEBUG)
-target = sessions.target(target_ip, 8080)
+
+sess = sessions.session(sleep_time = sleep_time, logfile="./fuzz_log", logfile_level=logging.DEBUG, log_level=logging.DEBUG)
+target = sessions.target(target_ip, target_port)
 sess.add_target(target)
 
 count = 10
