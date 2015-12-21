@@ -1,13 +1,17 @@
 Root URL = http://www.hhserver.com
-URL found : 11
+URL found : 15
 http://www.hhserver.com/Test1.html/index.html                                                        Invalid   
 http://www.hhserver.com/Test3.html                                                                   Valid     
 http://www.hhserver.com/Test3.html/index.html                                                        Invalid   
 http://www.hhserver.com/manual                                                                       Invalid   
 http://www.hhserver.com/index.html/manual                                                            Invalid   
+http://www.hhserver.com/Test3.html/Test1.html                                                        Invalid   
 http://www.hhserver.com/Test2.html                                                                   Valid     
 http://www.hhserver.com/index.html                                                                   Valid     
+http://www.hhserver.com/Test3.html/Test2.html                                                        Invalid   
 http://www.hhserver.com/Test1.html/Test3.html                                                        Invalid   
+http://www.hhserver.com/Test2.html/Test1.html                                                        Invalid   
 http://www.hhserver.com/Test1.html/Test2.html                                                        Invalid   
 http://www.hhserver.com/Test1.html                                                                   Valid     
 http://www.hhserver.com/Test2.html/index.html                                                        Invalid   
+http://www.hhserver.com/Test2.html/Test3.html                                                        Invalid   

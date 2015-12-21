@@ -1,5 +1,5 @@
 #!/bin/sh
-
+start=$(date +"%s.%N")
 if [ "$#" -eq 0 ]; then
     echo "Usage: test.sh [url] ([Whether to generate new payload]) ([sleep time])"
     exit 0
@@ -47,4 +47,7 @@ else
         echo "There is no valid website to fuzz."
     fi
 fi
+end=$(date +"%s.%N")
+exe=$(echo "$end - $start" | bc -l)
+echo "Total execution time: $exe seconds"
 exit 0
