@@ -6,6 +6,7 @@ import re
 import time
 import urlparse
 import csv
+import os
 
 class Firefuzzer():
     def __init__(self, source, stype, sleep_time = 0.1, mode = 'html'):
@@ -50,6 +51,8 @@ class Firefuzzer():
         print "########################################################################################################################"
 
         t = time.strftime("%Y-%m-%d-%H-%M-%s",time.localtime())
+        if not os.path.exists('./output'):
+            os.mkdir('output')
         fout = csv.writer(open('./output/fuzzing_'+t+'.csv','w'))
         fout.writerow(('TestMode','Network domain','Number of websites','Testing Websites','Total time','Time for each test','Number of testcase'))
         

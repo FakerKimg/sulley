@@ -158,7 +158,11 @@ class BufferOverflow():
             t2 = time.time()
             for k in range(len(response)):
                 res = re.split('\n+',BeautifulSoup(response[k].text).text.strip())
-                similarity = self.similar(self.correct['response'][k],res)
+                if len(res)==len(self.correct['response'][k]):
+                    similarity = self.similar(self.correct['response'][k],res)
+                else:
+                    cres = ' '.join(self.correct['response'][k])
+                    similarity = self.similar([cres],[' '.join(res)])
                 #print similarity
                 res = '\n'.join(res)
                 self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0,response[k].text,res,similarity[0],similarity[1],similarity[2]))
