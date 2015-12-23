@@ -64,12 +64,8 @@ class Firefuzzer():
             overflow = BufferOverflow.BufferOverflow(self.source)
             overflow.set_folder(t)
             overflow.parse_html()
-	    if self.testmode == 'auto':
-                overflow.autotest(float(self.sleep))
-            elif self.testmode == 'html':
+            if self.testmode == 'html':
                 overflow.test_input(float(self.sleep))
-            elif self.testmode == 'Normal':
-                overflow.parseInput()
             else:
                 print 'wrong testing mode!'
                 sys.exit()
@@ -87,13 +83,9 @@ class Firefuzzer():
                 overflow = BufferOverflow.BufferOverflow(u)
                 overflow.set_folder(t)
                 overflow.parse_html()
-                if self.testmode == 'auto':
-                    overflow.autotest(float(self.sleep))
-                elif self.testmode == 'html':
+                if self.testmode == 'html':
                     overflow.test_input(float(self.sleep))
                     payload.append(overflow.payload_count)
-                elif self.testmode == 'Normal':
-                    overflow.parseInput()
                 else:
                     print 'wrong testing mode!'
                     sys.exit()

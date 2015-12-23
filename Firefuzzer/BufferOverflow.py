@@ -7,8 +7,6 @@ import time
 import csv
 import os
 import difflib as diff
-import time
-#from hyper import HTTP20Connection
 
 class BufferOverflow():
     def __init__(self, url):
@@ -18,7 +16,6 @@ class BufferOverflow():
         self.status = [0,0,0,0,0]
         self.input_tag_num = {}
         self.ask = False  #To decide whether to ask user to input payload by themself
-        self.oursite = False #To decide whether to decode the respose site from php or not, but we only can decode the testing site made by ourself.
         self.payload = {} 
         self.writer = []
         self.payload_count = 0
@@ -40,7 +37,6 @@ class BufferOverflow():
     def read_payload(self,filename,path,path_correct):
         if path_correct:
             fin = open(path,'r')
-            #fin.readline() # the first line
             for line in fin:
                 self.payload[filename].append(line[:-1])
         else:
@@ -75,24 +71,6 @@ class BufferOverflow():
         sim[0] = sum(sim[1])/len(a)
         return sim
 		
-    def autotest(self,sleep_time):
-        self.filelist = ['payloads-sql-blind-MSSQL-INSERT.txt','payloads-sql-blind-MSSQL-WHERE.txt','payloads-sql-blind-MySQL-INSERT.txt','payloads-sql-blind-MySQL-ORDER_BY.txt','payloads-sql-blind-MySQL-WHERE.txt']
-        #self.filelist = ['integer-overflows.txt']
-        self.input_type = ['text','password','tel','email','url','date','time','number','range','color']
-        url = self.url[7:].replace('.','_').replace('/','_')
-        self.oursite = False
-        self.writer.append(csv.writer(open('./output/'+url+'/'+'summary.csv','w'))) 
-        for f in self.filelist:
-            self.payload[f] = []
-            self.read_payload(f,'./attack-payloads/'+f,True)
-            self.payload_count += len(self.payload[f])
-            print '###################################################################################'
-            print 'Test file:%s'%(f)			
-            for s in self.payload[f]:
-                self.parseInput(key = s,out = True)
-                time.sleep(sleep_time)
-                	        
-    
     def test_input(self,sleep_time):
         if len(self.input_pairs)==0:
             return
@@ -105,9 +83,6 @@ class BufferOverflow():
         for k in range(len(self.input_type)):
             self.payload[self.input_type[k]] = []
             self.read_payload(self.input_type[k],'./testcase/',False)
-            if self.oursite:
-                self.writer.append(csv.writer(open('./output/'+url+'/'+self.input_type[k]+'_result.csv','w')))
-                self.writer[k].writerow(('Form','Input','Output'))
         self.writer.append(csv.writer(open('./output/'+self.folder+'/'+url+'/'+'summary.csv','w')))
         self.writer[len(self.writer)-1].writerow(('Form','Payload','Status code','Request time','Response time','Response','Response body','Average correct rate','Correct rate','Diff'))
         payload_count = []
@@ -137,9 +112,15 @@ class BufferOverflow():
                     continue
                 pairs['payload'][_input['name']] = self.correct[_input['type']]
         self.correct['response'] = self.sendBack()
-        for k in range(len(self.correct['response'])):
-            self.status[self.correct['response'][k].status_code/100-1]-=1
-            self.correct['response'][k] = re.split('\n+',BeautifulSoup(self.correct['response'][k].text).text.strip())
+        if type(self.correct['response'])!=list:
+            print 'Unable to fuzz the target website'
+            print 'The status_code of request is',self.correct['response']
+            self.status[self.correct['response']/100-1] -= 1
+            return ;
+        else:
+            for k in range(len(self.correct['response'])):
+                self.status[self.correct['response'][k].status_code/100-1]-=1
+                self.correct['response'][k] = re.split('\n+',BeautifulSoup(self.correct['response'][k].text).text.strip())
         #print pairs['payload']
         #print self.correct['response'][0].text 
 
@@ -160,38 +141,24 @@ class BufferOverflow():
             t1 = time.time()
             response = self.sendBack()
             t2 = time.time()
-            for k in range(len(response)):
-                res = re.split('\n+',BeautifulSoup(response[k].text).text.strip())
-                if len(res)==len(self.correct['response'][k]):
-                    similarity = self.similar(self.correct['response'][k],res)
-                else:
-                    cres = ' '.join(self.correct['response'][k])
-                    similarity = self.similar([cres],[' '.join(res)])
-                #print similarity
-                res = '\n'.join(res)
-                self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0,response[k].text,res,similarity[0],similarity[1],similarity[2]))
-                if self.oursite:
-                    res = BeautifulSoup(response[k].text)
-                    res = re.split('\n+',res.text.strip())
-                    for s in range(len(res)):
-                        self.writer[s].writerow((k,self.payload[self.input_type[s]][i],res[s]))
+            print response
+            if type(response)!=list:
+                self.writer[len(self.writer)-1].writerow(('none',self.input_pairs[0]['payload'],response,t1-t0,t2-t0,'none','none','none','none','none'))
+            else:
+                for k in range(len(response)):
+                    res = re.split('\n+',BeautifulSoup(response[k].text).text.strip())
+                    if len(res)==len(self.correct['response'][k]):
+                        similarity = self.similar(self.correct['response'][k],res)
+                    else:
+                        cres = ' '.join(self.correct['response'][k])
+                        similarity = self.similar([cres],[' '.join(res)])
+                    #print similarity
+                    res = '\n'.join(res)
+                    self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0,response[k].text,res,similarity[0],similarity[1],similarity[2]))
             time.sleep(sleep_time)
         
     def parse_html(self):
-        response = requests.get(self.url) # Todo: identify which to use, GET or POST ?
-        """
-        HTTP2.0:
-        urlinfo = urlparse.urlparse(self.url)
-        conn = HTTP20Connection(urlinfo.netloc)
-        conn.request('GET', urlinfo.path)
-        response = conn.get_response()
-        """
-        #HTTP2.0: if response.status != 200:
-        if response.status_code != 200:
-            # Todo 
-            pass
-        #self.status[response.status_code/100-1] += 1
-        #HTTP2.0: html = response.read()
+        response = requests.get(self.url) 
         html = response.content
         soup = BeautifulSoup(html)
         forms = soup.select("form")
@@ -243,30 +210,6 @@ class BufferOverflow():
         print self.input_pairs
 		
 		
-    def parseInput(self, key="",out = False):
-	for pairs in self.input_pairs:
- 	    for _input in pairs['input']:
-                payload = ""
-                if self.ask:
-                    print "The input's name is %s and its type is %s."%(_input["name"],_input["type"])
-                    payload = raw_input("Press enter directly if you don't want to input payload by yourself.\n")
-                if key != '':
-                    pairs['payload'][_input["name"]] = key
-                elif payload == "":
-                    if _input["type"].lower() == "text" or _input["type"].lower() == "hidden" or _input["type"].lower() == "password":
-                        s = self.randomizer()
-                        if "value" in _input:
-                            s = _input["value"] + s
-                        pairs['payload'][_input["name"]] = s
-                    elif _input["type"].lower() == "radio":
-                        pairs['payload'][_input["name"]] = "checked"
-                    elif _input["type"].lower() == "checkbox":
-                        pairs['payload'][_input["name"]] = "checked"
-                else:
-                    pairs['payload'][_input["name"]] = payload
-            print pairs['payload']
-        self.sendBack(out = out)
-
     def sendBack(self,out = False,i=0):
         outcome = []
         for k in range(len(self.input_pairs)):
@@ -280,50 +223,17 @@ class BufferOverflow():
             #print 'payload:',form['payload']
             if self.input_pairs[k]["method"] == "post":
                 response = requests.post(url, data = self.input_pairs[k]['payload'])
-                """
-                HTTP2.0:
-                urlinfo = urlparse.urlparse("url")
-                conn = HTTP20Connection(urlinfo.netloc)
-                body = ""
-                for key, value in self.input_pairs[k]['payload'].iteritems():
-                    body = body + key + '=' + value + '&'
-                body = body[:-1]
-                conn.request('POST', urlinfo.path, body=body)
-                response = conn.get_response()
-                """
             else:
                 response = requests.get(url, data = self.input_pairs[k]['payload'])
-                """
-                HTTP2.0:
-                urlinfo = urlparse.urlparse("url")
-                conn = HTTP20Connection(urlinfo.netloc)
-                body = ""
-                for key, value in self.input_pairs[k]['payload'].iteritems():
-                    body = body + key + '=' + value + '&'
-                body = body[:-1]
-                conn.request('GET', urlinfo.path, body=body)
-                response = conn.get_response()
-                """
             outcome.append(response)
-            # HTTP2.0: self.status[response.status/100-1] += 1
             self.status[response.status_code/100-1] += 1
-            # HTTP2.0: print response.status
             print response
-            # HTTP2.0: if response.status != 200
             if response.status_code != 200:
-                # Todo
-                pass
+                return response.status_code
             if out:
-                # HTTP2.0: content = response.read()
-                # HTTP2.0: self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response.status, content))
                 res = re.split('\n+',BeautifulSoup(response.text).text.strip())
                 res = '\n'.join(res)
                 self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response.status_code,response.text,res))
-                if self.oursite:
-                    res = BeautifulSoup(response.text)
-                    res = re.split('\n+',res.text.strip())
-                    for s in range(len(res)):
-                        self.writer[s].writerow((k,self.payload[self.input_type[s]][i],res[s]))
         return outcome
 
     def analyzeBufferOverflow(self):

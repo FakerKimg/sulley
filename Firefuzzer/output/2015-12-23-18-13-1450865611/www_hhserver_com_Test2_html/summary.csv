@@ -1,0 +1,1761 @@
+Form,Payload,Status code,Request time,Response time,Response,Response body,Average correct rate,Correct rate,Diff
+0,"{'remember_me': 'G9ZaDp9y9590QmJjKSlFp9RjnqzCJJCEwfOLC5ZJUjiwhgjkmNOxIxZsIhmLTStMu5ML90hdxl8dJUh06s4UKhL1OOopyoVmCqVcd5fozMleNruhOVjg4qoQiny1t4TQR8CqhHuvDCvMxg4OuBuCM3VDl3Y3fZdZ52mNOmEMOE0RUvCpIjTs0JzLqpdAViUawYFuJj5ogCOzjyVeOylwvK0hFXGlbMh8c1A1rhAnaGX9IF45D0ouyU3bhexiU8wLz32yN97Y8aufmarq1dQrsRHmhCbMDJsecjnmChwkKNti', 'tel': '4423', 'url': 'www.jLUdVA4oV4Ty.zLqsu.b', 'number': '0000000000000012318882', 'color': '#', 'range': '8', 'time': '24:60', 'date': '1497-11 22', 'commit': 'LoginMTWBdQxWrocpTOK4xMXMxKCyHnZXwE9hmo496Ioz3s0TU1kMr0ds1Rk94AF40vWYLaFPok6QSCLhKAjzojvK4RLbhME5dEIm6SwoNk2nIwm5o3zAPLAumvN91EC1qiilU2Q3TJC0rtZGzRkoNMqGmVMnjijFTocPibwHDWvyS5vVrzktAawLQKDIxNpdr2CWX8sEqWmSq6AlZhC5sMB72L3NAEbMCp6dagSvyPYxK5AX5nekcY6dQUS99uWpRHdDd0bHuwYeWg7t29SaDX4b20X6ePr1fRVxnQsMvrtHOxh1', 'login': '49540', 'password': '49540', 'email': '9B8y75HcPgmqPXYB@vxnGW4XPjbe65YCJQ'}",200,0.013932943344116211,0.01728200912475586,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too short or inlcudes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too short or inlcudes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  4423  is invalid!!<br>
+<!-- Deal with Email. -->
+9B8y75HcPgmqPXYB@vxnGW4XPjbe65YCJQ     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www.jLUdVA4oV4Ty.zLqsu.b     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too short or inlcudes invalid chars!!
+Password is too short or inlcudes invalid chars!!
+The phone number  4423  is invalid!!
+9B8y75HcPgmqPXYB@vxnGW4XPjbe65YCJQ     is not a valid email address!!
+www.jLUdVA4oV4Ty.zLqsu.b     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.4184025143425716,"[0.1875, 0.20408163265306123, 0.34782608695652173, 0.2894736842105263, 0.21311475409836067, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 4423', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ 9B8y75HcPgmqPXYB@vxnGW4XPjbe65YCJQ', u'+ not'], [u'- http://www.google.com', u'+ www.jLUdVA4oV4Ty.zLqsu.b', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'lgWRjBPYpSvJQsKnCZJRJfKMmArAnCTJRsIQG7tIQED4pD8g21vADJobNPwHRyGzjvkTXTbhOzQQy4Qm9063RNB7leViezQKKosbnOwpWGg9EJirOMRPAqRy3FMLLNiQN6ztcVSAxhuffPBsDak4mWGjVD0EEoomfCG1tWEkBu47uDTu3rDqPtURMd0eVLthjqgpFgZTutLejQ1MvJdLFrLJedF5zwZENUXDo53SXU6kRkJiZPQtlFYG5lwZMLr7neTCT4xT01A7NwK5dXWn0gv6OqZYrJ4RMsSBrLPGCSy0', 'tel': '4829791996', 'url': 'www................gY4TUguBrjr.R', 'number': 'fcae4c', 'color': '#b81aaa', 'range': '25', 'time': '21:::::51', 'date': '6-10/30', 'commit': 'Login9oJmGOCIbEEnxdDM72A2rORnYbKNSULuemdJBE8h9BEoLOKkrGHv61DdxJmJewhK4PYqpJMrDxZbZYAlapAE6fn7v1YE4v90fXDkh8WDd4FHI3qP7QL8Fsj9ohuSehLI9QlwXn2NIQFnGMo9LQr8vAe6u30nUWnhpJ5Vb1SpVJ0VybuP2DCLzm5HaSivCDvTD2SABsxqqXNMb75TGQDjrqfRZxz0rjnXMNumTB7x779tXTVK1FDdeubk5TT26XwC4GZoqDfOS2NkJ2ywuU8uv6PJEWNqJORMgli6AwqBH6NS', 'login': '76809421', 'password': '76809421', 'email': 'gfYsO7qk4jQP1ueDH3bWo@@@@@@@Pku3TJe3jULLyh'}",200,0.030007123947143555,0.03977799415588379,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  4829791996  is valid!!<br>
+<!-- Deal with Email. -->
+gfYsO7qk4jQP1ueDH3bWo@@@@@@@Pku3TJe3jULLyh     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www................gY4TUguBrjr.R     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is valid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  4829791996  is valid!!
+gfYsO7qk4jQP1ueDH3bWo@@@@@@@Pku3TJe3jULLyh     is not a valid email address!!
+www................gY4TUguBrjr.R     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is valid!!",0.6622875439356732,"[1.0, 1.0, 0.5348837209302326, 0.26190476190476186, 0.18840579710144922, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 1.0]","[[], [], [u'- 0911111111', u'+ 4829791996'], [u'- test@gmail.com.tw', u'+ gfYsO7qk4jQP1ueDH3bWo@@@@@@@Pku3TJe3jULLyh', u'+ not'], [u'- http://www.google.com', u'+ www................gY4TUguBrjr.R', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], []]"
+0,"{'remember_me': 'eYO3ml6LcRDS5wYDdHitUYOdXNxs1tjkHUJnlOChtS9aKlFIaeYPJ0bOi7xmTAwJZYoB8KBJqviI4Jvy3GKKD1SOhubJylCgO6djuP2dsnNGav833KPwDXp5bEIBEkSCSMYDUyVRirgOvSVSGqnjFNbBuLAy2hUm9RmspwxyS9yiH4pO832Gf7SstHI8oqEIW1CB1qBrIWs7Seq4CYCHmo84TRbW1MXEV2AUnq8pqIHLlrfStAKmZBhkNWzNmbhJ2CwJtxkdLg7JycavggEcMDEmUsE3ZhYIHNuHOkT9i90x', 'tel': '311580747419172404009', 'url': 'www.9YXP5Bqh7IwtvSXXCI........o', 'number': '8155', 'color': '#98', 'range': '1....................', 'time': '00000000000022:60', 'date': '0000 7/31', 'commit': 'LoginFbAwPh0p8AfGYZbmxtofdff6TlRw9gmQnZU8s9au2zxbdhugrNOFwSD05PLx8iiP01z8BMDD3G41fnDIfyJWseAVfW82IzwYS8UB5gDO1BXyojvPLaoqpCQRsvpLn2bnWKdRkonnESK5Pg0o0Z9NGUdSMN4zNL3sBtc0QJ5i5efY1zOjR0v8AqP9BxVsS8smPDDkzwFKXWcNbNDdBc988fYBafTf96rSVtuAIRiDxhK0lw2SSO5cqkGlqu9EsLHMMJHKFUcoyk5E5gki0PDMieiDfwl2DasABha0S8z4z0Oq', 'login': '90910319804800165412104211566158527', 'password': '90910319804800165412104211566158527', 'email': 'z1m8DPoyD0sJEkYv@SG2cM@Fe6yIBHuy8ef'}",200,0.057073116302490234,0.06108808517456055,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  311580747419172404009  is invalid!!<br>
+<!-- Deal with Email. -->
+z1m8DPoyD0sJEkYv@SG2cM@Fe6yIBHuy8ef     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www.9YXP5Bqh7IwtvSXXCI........o     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is valid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  311580747419172404009  is invalid!!
+z1m8DPoyD0sJEkYv@SG2cM@Fe6yIBHuy8ef     is not a valid email address!!
+www.9YXP5Bqh7IwtvSXXCI........o     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is valid!!
+Range is invalid!!
+Color is invalid!!",0.47393773574801495,"[0.19148936170212771, 0.20833333333333337, 0.25396825396825395, 0.2857142857142857, 0.19117647058823528, 1.0, 1.0, 1.0, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 311580747419172404009', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ z1m8DPoyD0sJEkYv@SG2cM@Fe6yIBHuy8ef', u'+ not'], [u'- http://www.google.com', u'+ www.9YXP5Bqh7IwtvSXXCI........o', u'+ not'], [], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'gxCezuCq0cv8Zo1Ygifu0z24rEwvZFjoGci8y8KrxO90SlazH4L53CtYdpBqeq8gTTUY4C5DYm95YIHjvJUEp6qfj8nePkEfmjlGlQy8A8WiEwEfYl5OayGfhb8sONqqq3PxZ56pF2CnaXSZTnEDnhncFX1ZelOL3Bdc3I8qCuJYaW0i3bJlxFOwoYtVqnSqBfXwWdBosqS52Aqyz5pdCrm9sQDReyZgfHIaKlq29VYzxWryjykL9K7K1um8mOKFQq5uCDkOCjBtApeAhPDh3pgWDvTnekwaO5GCGp5TzRCQ', 'tel': '0550', 'url': 'wwwww.GiqQIv.gECk8tXfux6GMdDilV2.opoM0v3my2W.A3MV59QUM9CXZ4igyU...brABDDb6aiXJ.E3AD.Isajp0QYRkIv2nQ.0AP.A.VCjzEV38PdlMLtaRnBFi.L9EzBgZJ1vxAZRmcpgBY.zR6t64xFyO6ix60tf.ql.i', 'number': '67929a3b8C9aCeFb', 'color': '#751628a32f', 'range': '700.67', 'time': '5:37', 'date': '71/3-15', 'commit': 'LoginG9QwgtrMbXmdRBbOuJ0rBmog9PL8vLBw6oVXbFLHlwb9KlT3Ebkdqj3349wr8EC30vCL97H70Qoj1p5APMy3fpkrNRK7FXfFLuIEuc7Gk2cmfWPlHQvyrtRQZbMe0NyA61XMc6ZpPhqsZUG8YIadf6bFDeutYXkycPdp0HQwSWek90MY5Otxh3eurUcyOB2dGan6ysLW7RmSfSPih5glvB17y3wJOvqsCJ0GNgZvsu5DRR3cTv3YJxTLyk3Pp2g9zUa0eIuMziIEIfNWBi8DuOTqieF1M8Tm36QrgzfZCfc9', 'login': '', 'password': '', 'email': '572hCE5lA91VsFMTdrTMy@qCqCzropJMc3Ac@yo@uqFlgw@22LPllnKufhLORNBB@P6Gq4d9@o1pVSMjn@RVdyeCevfrHu@gMFZtzZCWj@curA3ZqFs8u@GFrbgqHtLMWNxk7UWj@FL2Zskaw9XDXId@ilZK3No@LgioweylU@hLzpIN0RWBo9NYFB2@u81fXzRCe2Jamm'}",200,0.07930707931518555,0.08293008804321289,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Please do not leave the account empty!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Please do not leave the password empty!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0550  is invalid!!<br>
+<!-- Deal with Email. -->
+572hCE5lA91VsFMTdrTMy@qCqCzropJMc3Ac@yo@uqFlgw@22LPllnKufhLORNBB@P6Gq4d9@o1pVSMjn@RVdyeCevfrHu@gMFZtzZCWj@curA3ZqFs8u@GFrbgqHtLMWNxk7UWj@FL2Zskaw9XDXId@ilZK3No@LgioweylU@hLzpIN0RWBo9NYFB2@u81fXzRCe2Jamm     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+wwwww.GiqQIv.gECk8tXfux6GMdDilV2.opoM0v3my2W.A3MV59QUM9CXZ4igyU...brABDDb6aiXJ.E3AD.Isajp0QYRkIv2nQ.0AP.A.VCjzEV38PdlMLtaRnBFi.L9EzBgZJ1vxAZRmcpgBY.zR6t64xFyO6ix60tf.ql.i     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Please do not leave the account empty!!
+Please do not leave the password empty!!
+The phone number  0550  is invalid!!
+572hCE5lA91VsFMTdrTMy@qCqCzropJMc3Ac@yo@uqFlgw@22LPllnKufhLORNBB@P6Gq4d9@o1pVSMjn@RVdyeCevfrHu@gMFZtzZCWj@curA3ZqFs8u@GFrbgqHtLMWNxk7UWj@FL2Zskaw9XDXId@ilZK3No@LgioweylU@hLzpIN0RWBo9NYFB2@u81fXzRCe2Jamm     is not a valid email address!!
+wwwww.GiqQIv.gECk8tXfux6GMdDilV2.opoM0v3my2W.A3MV59QUM9CXZ4igyU...brABDDb6aiXJ.E3AD.Isajp0QYRkIv2nQ.0AP.A.VCjzEV38PdlMLtaRnBFi.L9EzBgZJ1vxAZRmcpgBY.zR6t64xFyO6ix60tf.ql.i     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.34428209392571474,"[0.0, 0.0, 0.34782608695652173, 0.0901639344262295, 0.0628019323671497, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Account', u'+ account', u'+ empty!!', u'- is', u'- valid!!'], [u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Password', u'+ password', u'+ empty!!', u'- is', u'- valid!!'], [u'- 0911111111', u'+ 0550', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ 572hCE5lA91VsFMTdrTMy@qCqCzropJMc3Ac@yo@uqFlgw@22LPllnKufhLORNBB@P6Gq4d9@o1pVSMjn@RVdyeCevfrHu@gMFZtzZCWj@curA3ZqFs8u@GFrbgqHtLMWNxk7UWj@FL2Zskaw9XDXId@ilZK3No@LgioweylU@hLzpIN0RWBo9NYFB2@u81fXzRCe2Jamm', u'+ not'], [u'- http://www.google.com', u'+ wwwww.GiqQIv.gECk8tXfux6GMdDilV2.opoM0v3my2W.A3MV59QUM9CXZ4igyU...brABDDb6aiXJ.E3AD.Isajp0QYRkIv2nQ.0AP.A.VCjzEV38PdlMLtaRnBFi.L9EzBgZJ1vxAZRmcpgBY.zR6t64xFyO6ix60tf.ql.i', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'WAb4co4Mxrc81PIJJJSZHGSFUq2uxoQ8UO3y4uiXQsVbD3WRMR1oZhwIpj3XEWdHE47ucwi6QEd3dz0ExPid8DQVIWFTNWwD6UVg9MFpY1717PMRHv5unM9yr0zZY7Joz49zUk6rqkpQrrmDpmJLS0cJjQxr76DniUg4nrDjzTpsafgaUcsuGnOVdFYLiCJm9ymHkvzBaBL7JU0X3PlCsDAesRuYgIjc2JgvSvA49P9lS0oZWT4XpUOqED2cPqmA5s9kRri3V6N1MEcdoRtmi4wetc8zEY3ZlOf8Omnhglro', 'tel': '0369559283', 'url': 'httpwww.uaZPeE.NsmH0y1281zGGp.auZBR.L02e.Mk0hox41CSdzpua.T', 'number': '8922394867637786.508141342627943018', 'color': '#BFEEA3', 'range': '0000000000000000000005931', 'time': '948262861398846699:60', 'date': '00000000005-11 31', 'commit': 'LoginIU7tIKUzXzhrAi8bvMm5wAnyXksSeOP8oPzrmut60u4zoIBnwp8l6qzMvgxFyE5ti2hGDzkSQD4gFfHMysZIwiEzRzWrFTsEs8hdZJ0vfAOrawv1ivZFYBcAE9ncpis4qX8gY9d4oOo3LuLGMXL9nuyYuruMIl2JBIqqBwBpP0o1MaYYpasr2Yxe5yGGBuyJWFZUbEPUJzVJoN9eypsNMRNGOI1ZsJtKud76NISC4f8jTKnty2MQ8VGqJr1oivDiZ6R0YGiqccsZ5lGn0raNRRT7yOwmMCkxRRfq8RiWiWi5', 'login': '7921733633784', 'password': '7921733633784', 'email': 'yC2bf2LfDFpyc3TL4.lMAb8QNQRsC5Jx4TLMuX'}",200,0.09660696983337402,0.10085391998291016,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0369559283  is valid!!<br>
+<!-- Deal with Email. -->
+yC2bf2LfDFpyc3TL4.lMAb8QNQRsC5Jx4TLMuX     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+httpwww.uaZPeE.NsmH0y1281zGGp.auZBR.L02e.Mk0hox41CSdzpua.T     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  0369559283  is valid!!
+yC2bf2LfDFpyc3TL4.lMAb8QNQRsC5Jx4TLMuX     is not a valid email address!!
+httpwww.uaZPeE.NsmH0y1281zGGp.auZBR.L02e.Mk0hox41CSdzpua.T     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.5888754811700636,"[1.0, 1.0, 0.5348837209302326, 0.275, 0.13684210526315788, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 0369559283'], [u'- test@gmail.com.tw', u'+ yC2bf2LfDFpyc3TL4.lMAb8QNQRsC5Jx4TLMuX', u'+ not'], [u'- http://www.google.com', u'+ httpwww.uaZPeE.NsmH0y1281zGGp.auZBR.L02e.Mk0hox41CSdzpua.T', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'lXO5Tqt6iYAe1N8G81FTldhTDJaKqBbwJnkWHF5zvFCoOPOU92eQn0N1gG1WsAWLZJ8pNdqmOlMt4E6ds3WVQHTOJomz4Jaavi981XVpp2mQMvJABCEeaorVrVoAtlM2K9zfPnhyBdcXkOyuCkjXwqISXDgRwwzYgPXs5TanUSpMTP3D8HMw3TY6VMKpTOF9yRoIL1mbqlNbMgECrvD0AaLcJvzfl3c3Qcx4rE1e4oIjpIbvfTJMYT1pnhb4A6kzZJeP94ZScVjXdXWkxCLv37hBlq2jMb8kQ66GODBZT1EH', 'tel': '0153255350693024014382722', 'url': 'http:www.vCJHPOQrzthSEj4kD.pWpkLB3sFHZbccJl8s5.MwH3WBSiB.dPB1V7JESWW5x4Bvh.5', 'number': '295.', 'color': '#4EA', 'range': '80', 'time': '24:60', 'date': '936-11-30', 'commit': 'Login17vO85xjJzUF5i1R9zCZMfMtxRlOOQJsrn4ox5JIjeCITG3jb5KO9vqCHacWHRLVxbBAfT0L8G88tnCZBPEqZnKsnwF2NCyxOP5dTvTzebIo0zp5l2jou1uyDX0s60LnaqsZKtY1coJEGt0Mw4S71xQpd1NUCMCqWsirrHHF49M6icugxljsBYXANHOu2LXddWlrqThZDftQD8PZT0cIF5dTKw8RrSrK590B9YhsuC9CRiRNdDnGVjK7Y6oXfwW9V7bxBHSF1RE002CQTSrToYhAZaavuPBYay4npUYaKMa6', 'login': '74576342764984727986387419', 'password': '74576342764984727986387419', 'email': '              Cc32KjL@f26s7KPpNQtWbGXH35O'}",200,0.11432814598083496,0.11767005920410156,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0153255350693024014382722  is invalid!!<br>
+<!-- Deal with Email. -->
+              Cc32KjL@f26s7KPpNQtWbGXH35O     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:www.vCJHPOQrzthSEj4kD.pWpkLB3sFHZbccJl8s5.MwH3WBSiB.dPB1V7JESWW5x4Bvh.5     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is valid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  0153255350693024014382722  is invalid!!
+              Cc32KjL@f26s7KPpNQtWbGXH35O     is not a valid email address!!
+http:www.vCJHPOQrzthSEj4kD.pWpkLB3sFHZbccJl8s5.MwH3WBSiB.dPB1V7JESWW5x4Bvh.5     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is valid!!
+Range is invalid!!
+Color is invalid!!",0.46812091448563836,"[0.19148936170212771, 0.20833333333333337, 0.23880597014925375, 0.3188405797101449, 0.11504424778761058, 1.0, 1.0, 1.0, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 0153255350693024014382722', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ Cc32KjL@f26s7KPpNQtWbGXH35O', u'+ not'], [u'- http://www.google.com', u'+ http:www.vCJHPOQrzthSEj4kD.pWpkLB3sFHZbccJl8s5.MwH3WBSiB.dPB1V7JESWW5x4Bvh.5', u'+ not'], [], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'LOfPhyhp8gRZgqeSAJNrmB5ZoH2YFl8TxeWdLyXuN9zknzaGfv5tKWcMpnuL4tpfAQpNYJtmkKtWU6UBpzR34cypEm05Lz6Xkz21DB3Uelq0S8m88MJwcAWEBmhKq5DaQFJIuZdbcDyaqs8MnbkOmUYVtfbUBDn9Tcf17iuighOnOUxDjGmL4nMWh8ioxmDmXCETHa5JYqyu4Pu4NAObg7BmKPtPpxLrEx5c7YtUj8C6uLrA6OeyMd8zGJPN8WQkJrInmJ7U7ItenQ6gmzyiwv16jzAVfPTIMm4R4CR6p90P', 'tel': '3445 -  -430458', 'url': 'http:/www.YUQ.M9AeYJzwlG1Cw6R.5nFjFCFMdwouX7bF6O.iPZ0Cj29G0n04cNwwllM.994D76.Tkc4Dl5.sSJrNx6fo.mUMiatFNm..O0j6e.RrT7Qecm.DrSjUtgw.e4UWWuIeyBkG.UcaDj.5CtyvPpcuJO6T.Zw.5RfTyyOYCfmjL.dZDmP9dzGTsq.7dC1XjeAnLebhnQfSj.a4.l', 'number': '21693378561332165............', 'color': '#FA08BAB931', 'range': '100', 'time': '21:3', 'date': '000000000000000000054-10 24', 'commit': 'LoginEjeFOmQuUCd5Ox7tVYlfXUG7s2NLFKXmvQ5uEzM8J78T7llHwS5rqVuVkX72niEo5FJPM192FUP3ycLFKKOBYjtA3XAvkS7Y91YLtOL5V4e0gZ7di3M24ilKDUZnMV3eQElvO7knfPIznK0vU6cKgiLMwhkdIAeskymD7J5oxTesVrbpUKr0y19gWXPd6W4Me0nKi295M8ZarkoIQ8UnWHBEikhdTI09SRSPHXovnhWSFVe8JxIfNbdhuNwDA2y38bzlr3K09ZEGwgA8dGiyGeHmFFjdMV7dqsuWC4ovDSUm', 'login': 'ABDVFK', 'password': 'ABDVFK', 'email': 'joF1n5aK1x@lKFoFmtK8DQLLAH1Yx7P'}",200,0.13108611106872559,0.13482093811035156,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  3445 -  -430458  is invalid!!<br>
+<!-- Deal with Email. -->
+joF1n5aK1x@lKFoFmtK8DQLLAH1Yx7P     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:/www.YUQ.M9AeYJzwlG1Cw6R.5nFjFCFMdwouX7bF6O.iPZ0Cj29G0n04cNwwllM.994D76.Tkc4Dl5.sSJrNx6fo.mUMiatFNm..O0j6e.RrT7Qecm.DrSjUtgw.e4UWWuIeyBkG.UcaDj.5CtyvPpcuJO6T.Zw.5RfTyyOYCfmjL.dZDmP9dzGTsq.7dC1XjeAnLebhnQfSj.a4.l     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is valid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  3445 -  -430458  is invalid!!
+joF1n5aK1x@lKFoFmtK8DQLLAH1Yx7P     is not a valid email address!!
+http:/www.YUQ.M9AeYJzwlG1Cw6R.5nFjFCFMdwouX7bF6O.iPZ0Cj29G0n04cNwwllM.994D76.Tkc4Dl5.sSJrNx6fo.mUMiatFNm..O0j6e.RrT7Qecm.DrSjUtgw.e4UWWuIeyBkG.UcaDj.5CtyvPpcuJO6T.Zw.5RfTyyOYCfmjL.dZDmP9dzGTsq.7dC1XjeAnLebhnQfSj.a4.l     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is valid!!
+Color is invalid!!",0.628673071793977,"[1.0, 1.0, 0.2962962962962963, 0.3013698630136986, 0.0513833992094862, 1.0, 1.0, 0.33333333333333337, 1.0, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 3445', u'+ -', u'+ -430458', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ joF1n5aK1x@lKFoFmtK8DQLLAH1Yx7P', u'+ not'], [u'- http://www.google.com', u'+ http:/www.YUQ.M9AeYJzwlG1Cw6R.5nFjFCFMdwouX7bF6O.iPZ0Cj29G0n04cNwwllM.994D76.Tkc4Dl5.sSJrNx6fo.mUMiatFNm..O0j6e.RrT7Qecm.DrSjUtgw.e4UWWuIeyBkG.UcaDj.5CtyvPpcuJO6T.Zw.5RfTyyOYCfmjL.dZDmP9dzGTsq.7dC1XjeAnLebhnQfSj.a4.l', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'en39GzDbmUCpQlap8aKdIvF1tVRjQYPSC0nO4YQnc1WkS47fRQpybvDuAMH6uyMfZhzoaBAuVlVZfOms2bY7XD0a7XCpQurWQ3IuwkrURVSoorwQzOvTUa7XohJpMAiP4CFvwgHCO3X8ePitD1Axw4xzJ0HNI7oOJEOK4Db7YZdlmHgtDnH7pViAykGRmDuqrXD3SHOOCwOxsD7sMBX2rUnu6rLndDCSq9rHYCPJ3u0BY9KHhv7RdUwSOn5CY9NtzFkmPOPW3WZK4imlqTQejGYQWHfmPm7atNttHJghOpJI', 'tel': '0619 ------313128', 'url': 'http:/www.dtOdDjt3QVZZ2Xg.qy0B2dTbrLSzFCG.G9HGvpFhp0X0BpE.fEn18scWtGup6.q0CB7YhvnzPwY.z4nFnflbAt2gKvyy.wAchSAoCaGA.Mrskik5Lrre.muTn8jlz.aUgFi.NEzYuutfVXImcke.ZOkBQ8w6h.W2ElkBtHFo0XElE.NOv0l9XaLDVCRa6ovVEO.z1CFvIvMFWt3gC.GW5zYMeJToHYNV5A.OUkjeBgA0cY4.8', 'number': 'e3e67882d9cfe28e677fb.19272bf391da5', 'color': '#vjczcy', 'range': '8900', 'time': '22:77', 'date': '5162/4/26', 'commit': 'Login9p79RMAlnR3rjfEdNjKNjbwhkdXHBESXPP9MmCNPrKEQeGkQcQpXPSy0FjxW1umLJMzHH7tvySij3mIZiGiEby7YgcuXbh3hj6Vzjd6nsQ0Fyj8Az42LfWHrGeRBMI5N90Pkjoe95n3O5iSNoqXUjQVgyGrqo3CYWxU1Ui6GoVgtTYfI0kdbKgSyOvW7HhU7LocWpeOeNlFsRwpaG6dpNwOB9FUpwRmiX4NCERri0JQZ2KWmuvRm4NPuarykZEbzQweS7hU7rogaPbRrPyrBMiXgEvq9s0ABxfGob4zCc8JH', 'login': 'lyKkDPTSbeRL', 'password': 'lyKkDPTSbeRL', 'email': 'XVCmnW5j8UsxRXBbyxtdv@@@@@@@@@@@@@@@@@@@1A0odH2L2SvSD508'}",200,0.14822602272033691,0.15291094779968262,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0619 ------313128  is invalid!!<br>
+<!-- Deal with Email. -->
+XVCmnW5j8UsxRXBbyxtdv@@@@@@@@@@@@@@@@@@@1A0odH2L2SvSD508     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:/www.dtOdDjt3QVZZ2Xg.qy0B2dTbrLSzFCG.G9HGvpFhp0X0BpE.fEn18scWtGup6.q0CB7YhvnzPwY.z4nFnflbAt2gKvyy.wAchSAoCaGA.Mrskik5Lrre.muTn8jlz.aUgFi.NEzYuutfVXImcke.ZOkBQ8w6h.W2ElkBtHFo0XElE.NOv0l9XaLDVCRa6ovVEO.z1CFvIvMFWt3gC.GW5zYMeJToHYNV5A.OUkjeBgA0cY4.8     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  0619 ------313128  is invalid!!
+XVCmnW5j8UsxRXBbyxtdv@@@@@@@@@@@@@@@@@@@1A0odH2L2SvSD508     is not a valid email address!!
+http:/www.dtOdDjt3QVZZ2Xg.qy0B2dTbrLSzFCG.G9HGvpFhp0X0BpE.fEn18scWtGup6.q0CB7YhvnzPwY.z4nFnflbAt2gKvyy.wAchSAoCaGA.Mrskik5Lrre.muTn8jlz.aUgFi.NEzYuutfVXImcke.ZOkBQ8w6h.W2ElkBtHFo0XElE.NOv0l9XaLDVCRa6ovVEO.z1CFvIvMFWt3gC.GW5zYMeJToHYNV5A.OUkjeBgA0cY4.8     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.5487519739280019,"[1.0, 1.0, 0.27586206896551724, 0.22448979591836737, 0.04513888888888884, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 0619', u'+ ------313128', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ XVCmnW5j8UsxRXBbyxtdv@@@@@@@@@@@@@@@@@@@1A0odH2L2SvSD508', u'+ not'], [u'- http://www.google.com', u'+ http:/www.dtOdDjt3QVZZ2Xg.qy0B2dTbrLSzFCG.G9HGvpFhp0X0BpE.fEn18scWtGup6.q0CB7YhvnzPwY.z4nFnflbAt2gKvyy.wAchSAoCaGA.Mrskik5Lrre.muTn8jlz.aUgFi.NEzYuutfVXImcke.ZOkBQ8w6h.W2ElkBtHFo0XElE.NOv0l9XaLDVCRa6ovVEO.z1CFvIvMFWt3gC.GW5zYMeJToHYNV5A.OUkjeBgA0cY4.8', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'EdugE9YbiW2qu9xOLnmgEdlYKNXW0l8sGEVuglCpHNrMqUo3UwhGvwvO1gZdqIiaLQqQBKmTtJ6UkawKqz8YfpOxvelLF0untoqcvN9tQ0CGlFqe7aKRO0HRTBVoKuLEOq9TCBoDpJpfcv9No7h0OypUidlA8ywfEGDxhapC3azQtkWOwVCen1zDZ9XW9IE21WzpPy0k3X2iU44P6wS1be06BfgEBfEoZIHoKbQsEYiulAx3ribQdjfYI7YhrHPsrhjE7yvbyleqzSqTMmW5tX0W4uf4o4G8YclyKuGotEpt', 'tel': '4547-401516', 'url': 'http:wwwwwwwwwwwwwwwww.L30lise5h.AI1TkqyAz5MDX.YQK8sSMUjkguC.yFS6Mx1OOn0N12OomJT.VCgJBmYK05.sVGj8qWtYyxO7Avlh7Aa..1clpbxPaw7wj.sWU6FaVqPuc.hMMzIA.odZa0ogJPM.uNF1KFiGR0F.c0Wbm8lnaYAjDc.NjzdjHUu.PPs6iw.T', 'number': '621.........633008130748', 'color': '#ql5', 'range': 'Gyj', 'time': '22:722', 'date': '0000000000000000331-10 22', 'commit': 'LoginN1YvWupmHQ7AeoUiwUfdsrOghm9AfQH0TcfXPT2r1zldhotf3j09wky2gcb0osgMqoKcW4alJ4uQWKa5qunAAU7Y3nqAYU9FiEwJGa3Y6HRE8vZU5t1hsze6GqVdrW54iEEl0BCH37MNSQIorKg8AHpXN82pjd8MmfZyeHdABDwxpOTuyvnc75ER0pJieSNBAsRT7xTrNjt85a2OqlyrO76wWuB1K7RJXJOdU7VWGMwxXjmv0Iup0ka2ljKggFNijMYFW9qB2B0ecP3up7q5eFkA0T2KFU5A95Z7Xnrf7ohC', 'login': 'gwoABqFOPhyVqyAaJO', 'password': 'gwoABqFOPhyVqyAaJO', 'email': 'vz@l@VUzxM3JmbVHMO'}",200,0.16615796089172363,0.17184901237487793,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  4547-401516  is valid!!<br>
+<!-- Deal with Email. -->
+vz@l@VUzxM3JmbVHMO     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:wwwwwwwwwwwwwwwww.L30lise5h.AI1TkqyAz5MDX.YQK8sSMUjkguC.yFS6Mx1OOn0N12OomJT.VCgJBmYK05.sVGj8qWtYyxO7Avlh7Aa..1clpbxPaw7wj.sWU6FaVqPuc.hMMzIA.odZa0ogJPM.uNF1KFiGR0F.c0Wbm8lnaYAjDc.NjzdjHUu.PPs6iw.T     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  4547-401516  is valid!!
+vz@l@VUzxM3JmbVHMO     is not a valid email address!!
+http:wwwwwwwwwwwwwwwww.L30lise5h.AI1TkqyAz5MDX.YQK8sSMUjkguC.yFS6Mx1OOn0N12OomJT.VCgJBmYK05.sVGj8qWtYyxO7Avlh7Aa..1clpbxPaw7wj.sWU6FaVqPuc.hMMzIA.odZa0ogJPM.uNF1KFiGR0F.c0Wbm8lnaYAjDc.NjzdjHUu.PPs6iw.T     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.4285867468676143,"[0.19148936170212771, 0.20833333333333337, 0.5227272727272727, 0.3666666666666667, 0.054621848739495826, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 4547-401516'], [u'- test@gmail.com.tw', u'+ vz@l@VUzxM3JmbVHMO', u'+ not'], [u'- http://www.google.com', u'+ http:wwwwwwwwwwwwwwwww.L30lise5h.AI1TkqyAz5MDX.YQK8sSMUjkguC.yFS6Mx1OOn0N12OomJT.VCgJBmYK05.sVGj8qWtYyxO7Avlh7Aa..1clpbxPaw7wj.sWU6FaVqPuc.hMMzIA.odZa0ogJPM.uNF1KFiGR0F.c0Wbm8lnaYAjDc.NjzdjHUu.PPs6iw.T', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'HBs7hntKTfBUxukL9VkaXuN68kJoMloIz5xAeNvpaRwcKyhtKKL6DqS2hTl9PdyHHJnrVvLODCzoOxpmRyF7NRU8iQvnasqBt05hr9bhXCUzQKLb7t2l4qBQABBQTHIC5je5wXuvn7SOWZxxrLCAsz0JqcV1xDhZwcacyCFuFy6CFV8n3kr6vrHybO9NB9rrHMdXzTOB4W49nskeKJIac6Kpmf7oQnHm4z7KdMnzchga1GjusN4jMQEBqjtd7jKx4nJfJjfoCWTM52l5ESCiRm2Owt49v1c2lnqZaYkYf2Cs', 'tel': '0126 050945', 'url': 'ftp:www.Q', 'number': '5v4fkgx4z', 'color': '#suuhbybl16an7fcw', 'range': 'vX2gMEq', 'time': '21:60', 'date': '0000000000000000000082897 6/9', 'commit': 'LoginXFrj4v1dF4jpvQiKTfPQ1TiGPEhoazqKv3IdD7DqqiYBdGLEXv3syxQGJSRx2w9ONKASFpX0nU4I6EtUBd9Z2A4l5BiI3AZVC5uDHZuhavM0uPhoDv9F44CI76ABUuVc5SmqbLP5MASFzhKyrqKXea2mpoQhnKIiR3ILW1J2lc0VpeVc3Wm6TynEohHLwPtbMvIK4fUeLPHUa1fEkhDCBnnE7BDxwAAHyIbhdg5CKnynWhYVndyzgRn1SOJ0k9IknESJUlKhd1ahbnRqsogcMhtVUpUW6Crdl6YdzDUzOpIZ', 'login': 'NW', 'password': 'NW', 'email': 'TEjFq9FO65t@uP89x@uTq5fEMSjF@K@9TC7deJWaduF5@2IBSlEIx8NrIB@sFSyw4iUK@C2Jqxotxh4@5ya@B0Mqaqi7bNkW4W0@7RNeGJdy55KVFrlMS2ws@nfSxiNMLlbn@uIQvqkdPP14@Y9Vl@zp0x5PXPm7KTJNXpuq8I@BoUev0JemRz@fLecX1c77DOVhLN8RZq@2HM@FjBvxe1OlPOhN9Xyqfxug'}",200,0.18733000755310059,0.19506597518920898,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too short or inlcudes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too short or inlcudes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0126 050945  is valid!!<br>
+<!-- Deal with Email. -->
+TEjFq9FO65t@uP89x@uTq5fEMSjF@K@9TC7deJWaduF5@2IBSlEIx8NrIB@sFSyw4iUK@C2Jqxotxh4@5ya@B0Mqaqi7bNkW4W0@7RNeGJdy55KVFrlMS2ws@nfSxiNMLlbn@uIQvqkdPP14@Y9Vl@zp0x5PXPm7KTJNXpuq8I@BoUev0JemRz@fLecX1c77DOVhLN8RZq@2HM@FjBvxe1OlPOhN9Xyqfxug     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp:www.Q     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too short or inlcudes invalid chars!!
+Password is too short or inlcudes invalid chars!!
+The phone number  0126 050945  is valid!!
+TEjFq9FO65t@uP89x@uTq5fEMSjF@K@9TC7deJWaduF5@2IBSlEIx8NrIB@sFSyw4iUK@C2Jqxotxh4@5ya@B0Mqaqi7bNkW4W0@7RNeGJdy55KVFrlMS2ws@nfSxiNMLlbn@uIQvqkdPP14@Y9Vl@zp0x5PXPm7KTJNXpuq8I@BoUev0JemRz@fLecX1c77DOVhLN8RZq@2HM@FjBvxe1OlPOhN9Xyqfxug     is not a valid email address!!
+ftp:www.Q     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.4232584516224196,"[0.1875, 0.20408163265306123, 0.5348837209302326, 0.08148148148148149, 0.28260869565217395, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 0126', u'+ 050945'], [u'- test@gmail.com.tw', u'+ TEjFq9FO65t@uP89x@uTq5fEMSjF@K@9TC7deJWaduF5@2IBSlEIx8NrIB@sFSyw4iUK@C2Jqxotxh4@5ya@B0Mqaqi7bNkW4W0@7RNeGJdy55KVFrlMS2ws@nfSxiNMLlbn@uIQvqkdPP14@Y9Vl@zp0x5PXPm7KTJNXpuq8I@BoUev0JemRz@fLecX1c77DOVhLN8RZq@2HM@FjBvxe1OlPOhN9Xyqfxug', u'+ not'], [u'- http://www.google.com', u'+ ftp:www.Q', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'X6SEomQrbJIjLKgOYWJEIuuLtnWIT5IUBUDqMQuGC61XDmTclHmEC5IE38DBptyVMIUsBM05J8GIGJKRhRzQcdkz8xxRDTA4RIpoMzX3BBgwbTx5H9sOMe24h6HzmJEqSBI8lfBqt5w5XpgXdHPl4MFJAo1i3op866mGU04v16rJ81NyaXEr2off0RmjIgssZGg5W6S8t50stOIRwFMvEEV60P1PuvxJEYg7l8K6ku51cx5fcLSqheMWPQKPn4AevPFDYYckjNicIr490awDwX78JYS7Fgj6mOOrBae2f0O2', 'tel': '9559----------------624645', 'url': 'ftp:/www.XzSU9fJuPWsv.NLx5RvFuNJ1ylcfe0jgj.REiRzBj1W1CpPm...Rhi7r64L7F.KF9jZct.3n0FQao6jXcj22SKk.aXxGWEUPb7DbbJFyK.vQrwSRLKvK1LXBONR.WfqxJArjwvdYuD.3cfNVcT7jfnWmdViO2Yr.AVIzZHRdgFCHJMi8c.Vd9743UKYoia7ueY2..fpxRgCGACR6niK748..yFaMHK5w48eLZh6SxApN.JDIdznzp93CSOzrLJL.K', 'number': '0003939824', 'color': '#8FYMVR', 'range': '4', 'time': '14:60:51:23:40:26:44:19:34', 'date': '/9 10-4', 'commit': 'Login0MZvcgTOwOoizLAwLweuP19Ru4y4pjOq5e6P39YqyshtR18PiHbcCaqea6S3OYyEfTyAJRGSH1tfrWmyBXftEo5RMw3UxwPZTfsfjIvPFUTgvHwYGsmoFn8lRF8PnNyPvhL15jkR0EqDdlnXQqV8mLTjmR1pV7Aed4nx2TQ8icBXMS9IcvVlWchFatl92wQLGTvYZVGfLKX8uprcmv3ZlHeZ70yS4Enpv7G97Ns0AARakSxPKS5hqfXVPF8g7sDWnkhebkjavqZLHrrSCtIQ4LHhEaRSNH7z4R4P1ywjD4Fa', 'login': 'yyytLnMcYFCGcn', 'password': 'yyytLnMcYFCGcn', 'email': 'bpuIYK.FI6wlQaD9'}",200,0.20858097076416016,0.21367692947387695,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  9559----------------624645  is invalid!!<br>
+<!-- Deal with Email. -->
+bpuIYK.FI6wlQaD9     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp:/www.XzSU9fJuPWsv.NLx5RvFuNJ1ylcfe0jgj.REiRzBj1W1CpPm...Rhi7r64L7F.KF9jZct.3n0FQao6jXcj22SKk.aXxGWEUPb7DbbJFyK.vQrwSRLKvK1LXBONR.WfqxJArjwvdYuD.3cfNVcT7jfnWmdViO2Yr.AVIzZHRdgFCHJMi8c.Vd9743UKYoia7ueY2..fpxRgCGACR6niK748..yFaMHK5w48eLZh6SxApN.JDIdznzp93CSOzrLJL.K     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is valid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  9559----------------624645  is invalid!!
+bpuIYK.FI6wlQaD9     is not a valid email address!!
+ftp:/www.XzSU9fJuPWsv.NLx5RvFuNJ1ylcfe0jgj.REiRzBj1W1CpPm...Rhi7r64L7F.KF9jZct.3n0FQao6jXcj22SKk.aXxGWEUPb7DbbJFyK.vQrwSRLKvK1LXBONR.WfqxJArjwvdYuD.3cfNVcT7jfnWmdViO2Yr.AVIzZHRdgFCHJMi8c.Vd9743UKYoia7ueY2..fpxRgCGACR6niK748..yFaMHK5w48eLZh6SxApN.JDIdznzp93CSOzrLJL.K     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is valid!!
+Range is invalid!!
+Color is invalid!!",0.6266204405077602,"[1.0, 1.0, 0.23529411764705888, 0.3793103448275862, 0.04290429042904287, 1.0, 1.0, 1.0, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 9559----------------624645', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ bpuIYK.FI6wlQaD9', u'+ not'], [u'- http://www.google.com', u'+ ftp:/www.XzSU9fJuPWsv.NLx5RvFuNJ1ylcfe0jgj.REiRzBj1W1CpPm...Rhi7r64L7F.KF9jZct.3n0FQao6jXcj22SKk.aXxGWEUPb7DbbJFyK.vQrwSRLKvK1LXBONR.WfqxJArjwvdYuD.3cfNVcT7jfnWmdViO2Yr.AVIzZHRdgFCHJMi8c.Vd9743UKYoia7ueY2..fpxRgCGACR6niK748..yFaMHK5w48eLZh6SxApN.JDIdznzp93CSOzrLJL.K', u'+ not'], [], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': '0CyGOg2emUd86ze0E1y29rJOJENvVmSwk7ZHekqNwPaq1S8Os0K7BzHALbJqwzJCf7noWyy9gdBQMGVkygGXlq4N0KymWQPgVdvDhFFYOU2SFbWbcjaKdnhhLRz4uAPHxv4opvn79YSCHgHsYQOfZ6dRjoKXpW0PCRxFBn48Cv6AoUTIVTuqMhlh21eN8fvhwuQMBElm9aTyVcrPgGpr9j87iUwYIwzNPzx1YTv2EKCvBSFcnWCBJoH6s0xQ4Xt5Z6o695M2y9AhlH92XJKChU6CxHzS3mZFP4ALEjHPA7Qm', 'tel': '0132                  079983', 'url': 'ftp://///////////////www.o', 'number': '348f26735bca8a', 'color': '#IRXXA', 'range': '6571', 'time': '08:Mo', 'date': '4127926167177156 10 7', 'commit': 'LoginLtAwf9hg9A01OMc12dJjVLcck8t0IrzLKS9BH5lsTGvcX478ZB4zY9MFLgNORKUQNBuPrOD9CWFAu61hXOYp7TBbCILmMq7cQbgdPHJC7Z8X4dBC3YQcIHJh7MnT8UUHhcq5nuDVz64IxMrCMTBA83LMdi8UbOL4NS7nQsljQvpG700jL3tDaaTtmcBruayHJIIDJLoUAHChD5rGOvvuVQ3xTE4yJofztt3AevnkT7IEs8UYjSIdyfNen4taKHakOIkq2M0fA1E9p7uNni9I82psBVAYUdXokDJJKAHRjrwF', 'login': 'FdAT0', 'password': 'FdAT0', 'email': '                 N@cKvnaU7FAJPpJmbR'}",200,0.22621893882751465,0.23009991645812988,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too short or inlcudes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too short or inlcudes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0132                  079983  is invalid!!<br>
+<!-- Deal with Email. -->
+                 N@cKvnaU7FAJPpJmbR     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp://///////////////www.o     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too short or inlcudes invalid chars!!
+Password is too short or inlcudes invalid chars!!
+The phone number  0132                  079983  is invalid!!
+                 N@cKvnaU7FAJPpJmbR     is not a valid email address!!
+ftp://///////////////www.o     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.4214318798868488,"[0.1875, 0.20408163265306123, 0.3076923076923077, 0.3666666666666667, 0.2063492063492064, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 0132', u'+ 079983', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ N@cKvnaU7FAJPpJmbR', u'+ not'], [u'- http://www.google.com', u'+ ftp://///////////////www.o', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'XiEUkzKXIb0FUm18Bf7wLw6vvY6GWZS51LdtjmRCSQ89pI2vIMp5EgOt5DBuXQ0tT5Olj7PFXYv5CYzqictAqKxESDTNSdKG2pOUAkfWwAK7A5btbQc3ebUMBnqmsi5QDcuLNZ3Chlm4JolYd7ueQLli3TrQmolSy7HDAegHWqOG0TAKyCdVwqBgJoXGDLyuDsibVwFSa7g2VK12gzrBtMleHHbtmMFEqjI8cnVWwszZg4sk5NbcFSVWnGqdoPAb6sxfFzrjlkjPhrVYiYGOkpZqV3mcEzal4AGgLRLqONtm', 'tel': '6721   -- --  518 - -- 185', 'url': '193279992721.734763419891816724.747.65.415593679792566.48972435263316.9974763579.6182699982.8898392645.5598592777531.78388881341583211.42528418385.94335435.43935.917116128.65.8863927996235594.6983338225157911.4891425566593724195.2731223.5836473271', 'number': '6655156CC1D2C6C3', 'color': '#U7RNC822P6BC5I', 'range': '4233653422525898926................', 'time': 'Dq:50', 'date': '1445- 31', 'commit': 'LoginPHjftr0bBc5gWi3R4YJFl6H6KK4gRtVPXzzZXosLV7dKiuqg6cHCoUOcSuWPo7Rt5LbJDSDL0xJMmPRs65mobejJTaBuuKI9ZcwI6lsBqWAe7skY3UyTfQ8tKOBzn7UUe7h57Te3JeZ7F2s3XqNYW7Z12VnYpsARCcPySPHNZ8d2YLIGHVSlxgPNTecHkZT7zcJdOcY9aacUdXeYB59LUafuM4d5d9HG7ZqdN4nAh5Awfzg0bM4Jtb11c98DNgoCW7AcmiUw2yQR9NayOXTOpyyYU23AntJc2Pym719OJMse', 'login': 'vaDb5GLPcE', 'password': 'vaDb5GLPcE', 'email': 'jZ3S2fV@kM4dyTE8e'}",200,0.24339699745178223,0.24704599380493164,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  6721   -- --  518 - -- 185  is invalid!!<br>
+<!-- Deal with Email. -->
+jZ3S2fV@kM4dyTE8e     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+193279992721.734763419891816724.747.65.415593679792566.48972435263316.9974763579.6182699982.8898392645.5598592777531.78388881341583211.42528418385.94335435.43935.917116128.65.8863927996235594.6983338225157911.4891425566593724195.2731223.5836473271     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  6721   -- --  518 - -- 185  is invalid!!
+jZ3S2fV@kM4dyTE8e     is not a valid email address!!
+193279992721.734763419891816724.747.65.415593679792566.48972435263316.9974763579.6182699982.8898392645.5598592777531.78388881341583211.42528418385.94335435.43935.917116128.65.8863927996235594.6983338225157911.4891425566593724195.2731223.5836473271     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.563187143000474,"[1.0, 1.0, 0.27118644067796616, 0.3728813559322034, 0.045774647887323994, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 6721', u'+ --', u'+ --', u'+ 518', u'+ -', u'+ --', u'+ 185', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ jZ3S2fV@kM4dyTE8e', u'+ not'], [u'- http://www.google.com', u'+ 193279992721.734763419891816724.747.65.415593679792566.48972435263316.9974763579.6182699982.8898392645.5598592777531.78388881341583211.42528418385.94335435.43935.917116128.65.8863927996235594.6983338225157911.4891425566593724195.2731223.5836473271', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'dxpOrPQPF75UoLBc4yDqFclX9w6X49OOandDnAMfapJv6ovD2HxQlO7NRMlxWv4GsMiCRvfDPqz95Y6Oos9kLBKatcC9YDY0XC3cs1lvycv3DtwzDLtEmA7V8zwmWwpxjyW9npOv4SBzO1new4xqWZw8z38ZtC4A0HNbovKuFX0sdqyYAFcmhVUJKtgrKVpjje8WNv2oKk4wuhBQFsWH9GMRbBZLDfLqZfCjJHAX3PDV0cJfi4zbuQAjPAY1qLh63eMiK4SRUF3whdji7NT2ZkrbGG8iftr5b0pI9C8wbSrW', 'tel': '0126  -----  ---- 116 - --981', 'url': 'www.yQjfahON0W.F4np8mzrt.ygb35V6D7tuwIya.VGKnFqz7.B', 'number': 'BA5e7Bddc2B8', 'color': '###########92eee2', 'range': '900.59', 'time': '07:60', 'date': '2559 0000000000/6', 'commit': 'LoginB4Rbul8NR5UgvZgEH1IZB6ZI4VdlLa4ycwhECxPeOPzt91wlobN5RqZU2KVZ3Afu5k05UWZ60EyTj71sPPibiRhe811odImUkNdwz3vjJrbtDFo6Bg7dYEAUscPwPwhVY4EwCfu2JNjwHpx017hC7ZLelbNvPJhe8XtZhvgp5b0TFKM29WbUfVRGN3MmYSGxPagm7bzzpN8Kk6Q94mhm7tXhM0q723lLdHHNCzFTghmqOE7rhNEWTnm7tdjGa5sfN0hhqw3uIpQdHs96n251tZPnQKSKXDeiBqdlwj2AMNiQ', 'login': 'qBhB18MApGkGSm9tHqRl4dSAhZId4tvWCIG4', 'password': 'qBhB18MApGkGSm9tHqRl4dSAhZId4tvWCIG4', 'email': 'W1u9zZ025PXAwJEYdg@@@@@@@@@@@@@@@@@LX1znaD95e5Kggn'}",200,0.26033902168273926,0.2652161121368408,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0126  -----  ---- 116 - --981  is invalid!!<br>
+<!-- Deal with Email. -->
+W1u9zZ025PXAwJEYdg@@@@@@@@@@@@@@@@@LX1znaD95e5Kggn     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www.yQjfahON0W.F4np8mzrt.ygb35V6D7tuwIya.VGKnFqz7.B     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  0126  -----  ---- 116 - --981  is invalid!!
+W1u9zZ025PXAwJEYdg@@@@@@@@@@@@@@@@@LX1znaD95e5Kggn     is not a valid email address!!
+www.yQjfahON0W.F4np8mzrt.ygb35V6D7tuwIya.VGKnFqz7.B     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.3978709388052589,"[0.19148936170212771, 0.20833333333333337, 0.25, 0.23913043478260865, 0.1477272727272727, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 0126', u'+ -----', u'+ ----', u'+ 116', u'+ -', u'+ --981', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ W1u9zZ025PXAwJEYdg@@@@@@@@@@@@@@@@@LX1znaD95e5Kggn', u'+ not'], [u'- http://www.google.com', u'+ www.yQjfahON0W.F4np8mzrt.ygb35V6D7tuwIya.VGKnFqz7.B', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'grOthxQmYDNj8j1N6xQ79vh6cyXYP6NowdBPXBXqJQ7iBJzJIfp0WZcnDY1lfKVRsJU06qqEJ7rGdPlH8qNaaQmDkYWaYeKUe5vyqK39MkpFBYc3JWzXbe4najuIliYJgXPdiVn29NT7IfKkYknNK27ZfTK1PFhnP7iPGoBubCzRoQi5kbUBkEeq21aKQTxtcBK7iT8H4RimHgaUQ9IyGsdK5z0J9Abzslq9pvFO7JPyrBFnjdlHik2gt6VTxd18p4wBqNRWtpB8GWw3TUxCA0FLfijw1uSZsHf4EfCm89zy', 'tel': '9923-116-470', 'url': 'www....................s8n8CsXUMze.sqyFkc4Kc4PE6cp.ACy.UXqneK5PElIYyY3X.utqQwzKm6cBYBGU1K8.nD8vL9N9.FNZTFCWHkQHtn.O0.wx57n.mAyVNVuMy19lS09N3fL.J', 'number': '5453915772618898785.85953', 'color': '################9', 'range': '000000000000003654122857', 'time': '22::::::::::::::24', 'date': '2029/4 15', 'commit': 'Login9kq8KXonHpPUJ9sHzoC7ontYBEGqdrZi6e7JyMfm0980KfAYLSvo1QBDCt6LeikeIgYLeVH3II68IESN7orMgL9nGNKPNWjL7XyplK0uSXBXzFpRMIO09JNGQxdBeYDiR6ZFIeffV87Brz2ib3MpBU4PHshgN3Hzw4XZ7g2INyM9juzKDebR44wkf6hrrcaZpZV4uQgCQjTqR0zOUQUQbGHaITu5itD6aQkyVOJsKe8WqSV06w62oSdIyb9ghiudjOmOcokP1UVuSDxm9R6fTdtzQMZN2vCQGjgWcadeyS4u', 'login': '', 'password': '', 'email': 'TOGzBx@T60w0NuavucRBPIn@yejdwWF'}",200,0.279339075088501,0.2841780185699463,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Please do not leave the account empty!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Please do not leave the password empty!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  9923-116-470  is valid!!<br>
+<!-- Deal with Email. -->
+TOGzBx@T60w0NuavucRBPIn@yejdwWF     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www....................s8n8CsXUMze.sqyFkc4Kc4PE6cp.ACy.UXqneK5PElIYyY3X.utqQwzKm6cBYBGU1K8.nD8vL9N9.FNZTFCWHkQHtn.O0.wx57n.mAyVNVuMy19lS09N3fL.J     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Please do not leave the account empty!!
+Please do not leave the password empty!!
+The phone number  9923-116-470  is valid!!
+TOGzBx@T60w0NuavucRBPIn@yejdwWF     is not a valid email address!!
+www....................s8n8CsXUMze.sqyFkc4Kc4PE6cp.ACy.UXqneK5PElIYyY3X.utqQwzKm6cBYBGU1K8.nD8vL9N9.FNZTFCWHkQHtn.O0.wx57n.mAyVNVuMy19lS09N3fL.J     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.3826333164051946,"[0.0, 0.0, 0.5111111111111111, 0.3013698630136986, 0.07182320441988954, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Account', u'+ account', u'+ empty!!', u'- is', u'- valid!!'], [u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Password', u'+ password', u'+ empty!!', u'- is', u'- valid!!'], [u'- 0911111111', u'+ 9923-116-470'], [u'- test@gmail.com.tw', u'+ TOGzBx@T60w0NuavucRBPIn@yejdwWF', u'+ not'], [u'- http://www.google.com', u'+ www....................s8n8CsXUMze.sqyFkc4Kc4PE6cp.ACy.UXqneK5PElIYyY3X.utqQwzKm6cBYBGU1K8.nD8vL9N9.FNZTFCWHkQHtn.O0.wx57n.mAyVNVuMy19lS09N3fL.J', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'wgdp1romcG0EMCTdvYIoFVAW6NqPBX4bKao6y42stjb0zMQXX7pyWmJKVRkoohcB3mDn5tWKWPhOH3XY17X002N0Tpk2G9WVXBvuvJBD6co7KXuUZLOPkJCaWszczqbuTDkaf6nuLCBEjwYAlTi3SZXvw6ctnuXkEqkQOzf3fKnG48XKGi0duSEmCL74CoeTX8dKpibY3H5PVio2R2HISTFT3xMHigYxmiML1iGSjogyVJnJefT5CZUDDie4hjvUjHz9PuHmSZffYF6YQVbPQGNmd2Byh19hxb8yOGbdCXLR', 'tel': '0509 313 201', 'url': 'www.KsWc88rI2BFJuiaxY...............kdcrxNd6o...................7HHTbpony2e85...............OgHJW................xaEDLXzso7Wqha5e............yLAq7XOjq..............Kda9eq............bMjjATsVJkX36qE...........2p8IIooeyJxFy.................X...F..qreF9yLi3JLhKyGm................D4YLlWypypgc5N8Px4a............RFq6................q6z7Vq0uZcUzx4c..................t1e.....2', 'number': '744.', 'color': '#######70b698a3cdf14aba54019ec', 'range': '70', 'time': '000000000000021:34', 'date': '2573 00000000000000009/16', 'commit': 'Login3vRXqxE3ZW6Xsyw9rMVqGwEDQr3ivsx072TvhNIMgKfbnU2HCdoO6sgcVcNEdTh1AsIk5OCJW1zFU2BEtBHjuowDtZw8WIsWTUlakEXuWto5DhZEcgAmZlHrmDMhazU4VyIX4fkpKi7HevjrceHomBSvl7L0plA2fIv4Ozv11AKWUUYeY52GdLEgoYh3zvSPyxp1Jjir3AH4MgXqynPebkwrPffSGC8fR2l96QoGBPknh9j42BkJqyVMifpw0brKRGpFmpM85m9kHTHSiT4uzdtmwgUQfxkUQXY3MZIB1PEe', 'login': '   \t\x0c\r\x0c  \x0c \r\r\x0c\r\x0c', 'password': '   \t\x0c\r\x0c  \x0c \r\r\x0c\r\x0c', 'email': '4clYXbSrXOdIESQ@aAJIjkvX@DI29E8zGltb4JcdauUD4@Ww85i9dO'}",200,0.2980201244354248,0.30500292778015137,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+The account includes invaid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+The password includes invaid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0509 313 201  is valid!!<br>
+<!-- Deal with Email. -->
+4clYXbSrXOdIESQ@aAJIjkvX@DI29E8zGltb4JcdauUD4@Ww85i9dO     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www.KsWc88rI2BFJuiaxY...............kdcrxNd6o...................7HHTbpony2e85...............OgHJW................xaEDLXzso7Wqha5e............yLAq7XOjq..............Kda9eq............bMjjATsVJkX36qE...........2p8IIooeyJxFy.................X...F..qreF9yLi3JLhKyGm................D4YLlWypypgc5N8Px4a............RFq6................q6z7Vq0uZcUzx4c..................t1e.....2     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is valid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","The account includes invaid chars!!
+The password includes invaid chars!!
+The phone number  0509 313 201  is valid!!
+4clYXbSrXOdIESQ@aAJIjkvX@DI29E8zGltb4JcdauUD4@Ww85i9dO     is not a valid email address!!
+www.KsWc88rI2BFJuiaxY...............kdcrxNd6o...................7HHTbpony2e85...............OgHJW................xaEDLXzso7Wqha5e............yLAq7XOjq..............Kda9eq............bMjjATsVJkX36qE...........2p8IIooeyJxFy.................X...F..qreF9yLi3JLhKyGm................D4YLlWypypgc5N8Px4a............RFq6................q6z7Vq0uZcUzx4c..................t1e.....2     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is valid!!
+Range is invalid!!
+Color is invalid!!",0.44046870717118447,"[0.0, 0.0, 0.5348837209302326, 0.22916666666666663, 0.03194103194103193, 1.0, 1.0, 1.0, 0.30434782608695654, 0.30434782608695654]","[[u'+ The', u'- Account', u'+ account', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'+ The', u'- Password', u'+ password', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'- 0911111111', u'+ 0509', u'+ 313', u'+ 201'], [u'- test@gmail.com.tw', u'+ 4clYXbSrXOdIESQ@aAJIjkvX@DI29E8zGltb4JcdauUD4@Ww85i9dO', u'+ not'], [u'- http://www.google.com', u'+ www.KsWc88rI2BFJuiaxY...............kdcrxNd6o...................7HHTbpony2e85...............OgHJW................xaEDLXzso7Wqha5e............yLAq7XOjq..............Kda9eq............bMjjATsVJkX36qE...........2p8IIooeyJxFy.................X...F..qreF9yLi3JLhKyGm................D4YLlWypypgc5N8Px4a............RFq6................q6z7Vq0uZcUzx4c..................t1e.....2', u'+ not'], [], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'AiNnDyQMwQhHqSBWvS7mJE0Me8n29L0a8kzd6BOiK9tOa5Waw0b1RTsvP7ycMG68OvjzFgYKoJJvk6OBCI1OTBDTwczicZBoazGtLRVOLVWWsFO7rCLWMTMaZd1eBohdisoSFoIv6x7Udalu4rEOkPhIAiVCnEwtCoWGFhr8WSjj4f5k9VvyFtTY6ugkJTO5g19ekSGZbHIUWy3XSb4b1xilwwOJytoXyjMkmIJA5WL3sbHHGFD7ZSFcLRena3t7EwmY7tLvGthkB67XZQkmHbs6KbZn8ut8nxDm7OlQA8pC', 'tel': '9083 699-596', 'url': 'wwwwwwwwwwwwwwwwwww...X9TLXLN1sRmbfA6.yS8XOUZaHxaGH8kVKj.le.MIBi.jgyiQCHRU1xL0d3CJw8l.RpSFJgY4mwpKkGduDsBv.J66Wp7iT0.qHpWflJy.Z', 'number': '146252498524518132.....................', 'color': '##################8619C3', 'range': '800', 'time': '6:34', 'date': '2325 12 30', 'commit': 'LoginQiRK9Gpc2lzyHrWf1NyaYt1T4hgtflHyrzlgbPKGP1A70c6CeCTlRU6eIer0qPSBcyeBjh51Jmx7fKnQrH360yx4gIT5Xv8fBb25fsD07uffFrEye7iKRp8GxPNAoW39k29enO5qu7FsSDiCF43kcg90r0bemx9Vf43Fp2CEqSyQ37rXppngGgz6OVHBx9GDwbzbB0SzjI1zEQJJ7N137cdjnVjYyj6kBNy2vEMUPvQrxfrHYIEb2Jqu40DDj4BcHDQdhGCslkbd60eAF6zj0QRqH330DtjnX0LsjpYyvaBf', 'login': '\x0c\r\x0c   \t \r\t\r\t\x0c \t\r  \x0c\r\x0c\x0c\x0c   \r\x0c\x0c\x0c\r ', 'password': '\x0c\r\x0c   \t \r\t\r\t\x0c \t\r  \x0c\r\x0c\x0c\x0c   \r\x0c\x0c\x0c\r ', 'email': 'Av76rrqCDB9tbpyZKmi.PHPm0AYdPDQAoemOOD'}",200,0.31949591636657715,0.3227570056915283,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  9083 699-596  is valid!!<br>
+<!-- Deal with Email. -->
+Av76rrqCDB9tbpyZKmi.PHPm0AYdPDQAoemOOD     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+wwwwwwwwwwwwwwwwwww...X9TLXLN1sRmbfA6.yS8XOUZaHxaGH8kVKj.le.MIBi.jgyiQCHRU1xL0d3CJw8l.RpSFJgY4mwpKkGduDsBv.J66Wp7iT0.qHpWflJy.Z     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is valid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  9083 699-596  is valid!!
+Av76rrqCDB9tbpyZKmi.PHPm0AYdPDQAoemOOD     is not a valid email address!!
+wwwwwwwwwwwwwwwwwww...X9TLXLN1sRmbfA6.yS8XOUZaHxaGH8kVKj.le.MIBi.jgyiQCHRU1xL0d3CJw8l.RpSFJgY4mwpKkGduDsBv.J66Wp7iT0.qHpWflJy.Z     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is valid!!
+Color is invalid!!",0.4914499419865951,"[0.19148936170212771, 0.20833333333333337, 0.5227272727272727, 0.275, 0.07926829268292679, 1.0, 1.0, 0.33333333333333337, 1.0, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 9083', u'+ 699-596'], [u'- test@gmail.com.tw', u'+ Av76rrqCDB9tbpyZKmi.PHPm0AYdPDQAoemOOD', u'+ not'], [u'- http://www.google.com', u'+ wwwwwwwwwwwwwwwwwww...X9TLXLN1sRmbfA6.yS8XOUZaHxaGH8kVKj.le.MIBi.jgyiQCHRU1xL0d3CJw8l.RpSFJgY4mwpKkGduDsBv.J66Wp7iT0.qHpWflJy.Z', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': '8xgoJClBoJNhDsRGUtbKZU0AKdiu5nK75jGOc0AYMoPA1KxtbSZVPwEqvoAj2nfv7YwGO7lJ2IE5zOis3efv75LeogT4NgFgvBwKkdAPImyrkTvcdouaEAvVBhsdfEtQISiu8fhxUe3GpjZ8hj6Ki86DytmzEsYEDU0A1M6OCprlA4jYigrx29chlU1RjZKtOIaGDbJualExbCizqdSTN7B2tH87t9ehjHmUi5eGDfkBYSRSbxScZR9HqlSz9NIqZBHj4UngxIFqUWURW67EYJPMRfXJWu0kACTj1FL1xVub', 'tel': '0371 697-060', 'url': 'httpwww.bg5.R', 'number': '169ef744b36b64d.18d4fb692333318149762', 'color': '@0373D4', 'range': '700', 'time': '73455338994954225814:60', 'date': '1632 17 7', 'commit': 'Login7nYa50wO8JT6zrqCtvj2muWlOSSvS1Lc7oUkkYxTDGALKTDXDvgNGOflaayky92ZrFd3jyiecaVisnKQiTxGwWyj8unf105T2Y0H1086elZEgm691Bncp4Cg2Ln42WqbGG3id0NtbKywWo7j222ponC9JDhtYIz1bmhGWVu5gSPPWfTWV5VxoGdIN26jQWNIzZgqge7dJ0cENdwQqnv3YqL0NBHEQkfzTmoPveAJbDrIB5zmWseHNkH9Rz2VliyW5xKqBuHCi3LD01ihMsAmUQB6jA7QBFR0y0Qg20fGY4Bv', 'login': '\tn\rj4\r', 'password': '\tn\rj4\r', 'email': '         fW2@kX3'}",200,0.33646392822265625,0.3404109477996826,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+The account includes invaid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+The password includes invaid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0371 697-060  is valid!!<br>
+<!-- Deal with Email. -->
+         fW2@kX3     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+httpwww.bg5.R     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is valid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","The account includes invaid chars!!
+The password includes invaid chars!!
+The phone number  0371 697-060  is valid!!
+         fW2@kX3     is not a valid email address!!
+httpwww.bg5.R     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is valid!!
+Color is invalid!!",0.4869388023984298,"[0.0, 0.0, 0.5227272727272727, 0.44897959183673475, 0.26, 1.0, 1.0, 0.33333333333333337, 1.0, 0.30434782608695654]","[[u'+ The', u'- Account', u'+ account', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'+ The', u'- Password', u'+ password', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'- 0911111111', u'+ 0371', u'+ 697-060'], [u'- test@gmail.com.tw', u'+ fW2@kX3', u'+ not'], [u'- http://www.google.com', u'+ httpwww.bg5.R', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'iJ3pLO0i6RhPInir6IvNyUGn1ZCizMMW1ZO4Gdr3HuUis6e5oMOstg0UYOS0pO5q1qW5je17bLYOZNjJR2pewc4LQjvOsb60NMMvWNkrs3ZlP32nZphjM9FaReU38qnVQl2euZcvBxcYAj27MwIM3dIeIoh5z2nkwq5UAL7vT8oBUkjyYb16FPngQPg8uDZ4vb1ZH2Z4majw5Kxwl4L28tArlMfolrlKx6OfgVAYIFR4IDapemJ8vVis6A44EFqpODv0hZisUaeTDPoe6Ekzk9IDbOIxxb1yje8tP8Lh4p2Y', 'tel': '4999-200 276', 'url': 'http:www..ayW00sbi.P3r..7whPVPmAWUxyr1vNdGBu.6YRN9zMFrO7MQOrN6u.x0hcWdtL3ig.bSElwCAUgBdnoKlzO8.ieiu.Q.l.MzmAE9lA.cHEmyN1.kYiE5r6.dVNpW.P6s.K', 'number': '4719744582358467526.....44820562323315', 'color': '@973c33', 'range': 'lofAER', 'time': '15:60', 'date': '2439-46-9', 'commit': 'LoginuU2T41uYV1ll3t90bxzAYuj58wonXwxueLBucZe7WCrAmbppoAckzcyn9vYw8jRmV9owNZCDxnGMgYYRThFwvyB8YmEGl1EcvQMg6wrXDUedoGAw8fHrOy0VV4VUeae5yg6W4M1RrJe0t7T3TWII61TgL7xmocUVK1zT1V8NbUVDG47DuFMJL0r7ZUWrdDsG4nsKHHZ5LF0Mud1pFucbFlF7ocAENYP1jIliM2HNiJgiR2Ra31YiJF1csb9NKXMY54tGnQ4OZpbcGl9kavhbMi99xA3F3pjDE5NUL2ASj59m', 'login': '\x0c\x0c\tG4e\t\r ', 'password': '\x0c\x0c\tG4e\t\r ', 'email': '02WcNU0NEg@8INwtT6OYUeBaWvmBqv'}",200,0.35501599311828613,0.35802602767944336,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+The account includes invaid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+The password includes invaid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  4999-200 276  is valid!!<br>
+<!-- Deal with Email. -->
+02WcNU0NEg@8INwtT6OYUeBaWvmBqv     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:www..ayW00sbi.P3r..7whPVPmAWUxyr1vNdGBu.6YRN9zMFrO7MQOrN6u.x0hcWdtL3ig.bSElwCAUgBdnoKlzO8.ieiu.Q.l.MzmAE9lA.cHEmyN1.kYiE5r6.dVNpW.P6s.K     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","The account includes invaid chars!!
+The password includes invaid chars!!
+The phone number  4999-200 276  is valid!!
+02WcNU0NEg@8INwtT6OYUeBaWvmBqv     is not a valid email address!!
+http:www..ayW00sbi.P3r..7whPVPmAWUxyr1vNdGBu.6YRN9zMFrO7MQOrN6u.x0hcWdtL3ig.bSElwCAUgBdnoKlzO8.ieiu.Q.l.MzmAE9lA.cHEmyN1.kYiE5r6.dVNpW.P6s.K     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.3843758141473691,"[0.0, 0.0, 0.5227272727272727, 0.3055555555555556, 0.07344632768361581, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ The', u'- Account', u'+ account', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'+ The', u'- Password', u'+ password', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'- 0911111111', u'+ 4999-200', u'+ 276'], [u'- test@gmail.com.tw', u'+ 02WcNU0NEg@8INwtT6OYUeBaWvmBqv', u'+ not'], [u'- http://www.google.com', u'+ http:www..ayW00sbi.P3r..7whPVPmAWUxyr1vNdGBu.6YRN9zMFrO7MQOrN6u.x0hcWdtL3ig.bSElwCAUgBdnoKlzO8.ieiu.Q.l.MzmAE9lA.cHEmyN1.kYiE5r6.dVNpW.P6s.K', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'xWwaLJxaKnNffDQU81hMgup8K3IokMxmk0oxWYwisuwvyQcEcDpuHlLUwMohEz0O9cThnxrSVUpIyDI2lRPwacGLcrU36f0qfpTf1OQJdw8c9cvQhoIR7V7ASoR0SCUd8HqYP6waKmpj5n949txIVkDq6n8wLc9hPeZTr9Uo4OgiqpzIZQMv7n03EgvY033VeOaqoCmGCDyO5UrRsw4oNWocReamamjPVhVtqRXnL4VJbcIC1XwIipY7kEaDPTqHsh2vIUCLpXrBXdcUSwfz5bbnfYBkGYD6kqbiqUzIzG05', 'tel': '0674-488 773', 'url': 'http:/www.DSAf95r4eY7c2.P1qr3DH5CsPpItXJqF.JLd.TsqdXrF.wdyD9MRw6B.asmZ.fv.KzT0g0CtU7D5.P8AI.I6EjHIIei6.l38FOqw0s1ajMFQGlkml.D.If.eke6mMPBQARyBx7qYI6.IOAC6JmUGm9kwaMslzh.q0U.XV.rWcBxS604.A', 'number': 'lzltfq', 'color': '#B7E528', 'range': 'QI7b1sctk0rWh4zK07jB8', 'time': '06:2', 'date': '2202-11486424 2', 'commit': 'LoginfspylZbMIqkc9sJmxo2rWgu9aVYyu2KQQtVnaMmBpGHwdF039qYH0tnmCtrpvyEChdSqise1So5df0slMFeA3d3qDhOztKUEpT4ZAz3u6TGn5YxO0OLuP8oMcWHHVaGbz5eG2xI9NLTI90jGdpKUJ7UYnhD0WPEFbjQEBItujXMXp5PWlRYKnJsSoqDSnvMy3btJiRUKhVHo7zQRDZHH8s0ryizItYjl8YjP8TaGjaNuo0wJJRsCpugQVSGrqMdbK9c4gnAMU5OOUG54mCfIw6oI3eqwy7HC6iGbv11ZrIQ2', 'login': '\t\t\t u \x0cE\t\t\t 8\td\r\x0cD', 'password': '\t\t\t u \x0cE\t\t\t 8\td\r\x0cD', 'email': 'ZRB9Sg2Ty7@@@@@@T'}",200,0.37108612060546875,0.3755650520324707,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0674-488 773  is valid!!<br>
+<!-- Deal with Email. -->
+ZRB9Sg2Ty7@@@@@@T     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:/www.DSAf95r4eY7c2.P1qr3DH5CsPpItXJqF.JLd.TsqdXrF.wdyD9MRw6B.asmZ.fv.KzT0g0CtU7D5.P8AI.I6EjHIIei6.l38FOqw0s1ajMFQGlkml.D.If.eke6mMPBQARyBx7qYI6.IOAC6JmUGm9kwaMslzh.q0U.XV.rWcBxS604.A     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  0674-488 773  is valid!!
+ZRB9Sg2Ty7@@@@@@T     is not a valid email address!!
+http:/www.DSAf95r4eY7c2.P1qr3DH5CsPpItXJqF.JLd.TsqdXrF.wdyD9MRw6B.asmZ.fv.KzT0g0CtU7D5.P8AI.I6EjHIIei6.l38FOqw0s1ajMFQGlkml.D.If.eke6mMPBQARyBx7qYI6.IOAC6JmUGm9kwaMslzh.q0U.XV.rWcBxS604.A     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.4295496023487898,"[0.19148936170212771, 0.20833333333333337, 0.5227272727272727, 0.3728813559322034, 0.0580357142857143, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 0674-488', u'+ 773'], [u'- test@gmail.com.tw', u'+ ZRB9Sg2Ty7@@@@@@T', u'+ not'], [u'- http://www.google.com', u'+ http:/www.DSAf95r4eY7c2.P1qr3DH5CsPpItXJqF.JLd.TsqdXrF.wdyD9MRw6B.asmZ.fv.KzT0g0CtU7D5.P8AI.I6EjHIIei6.l38FOqw0s1ajMFQGlkml.D.If.eke6mMPBQARyBx7qYI6.IOAC6JmUGm9kwaMslzh.q0U.XV.rWcBxS604.A', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'g8nT8fld38P7MRPDujIhHRRzpTRveKIGpSgObw45p2UzzHxGbWb9XbPE6lB7RfxQP1XnJhn8En83RpMlFkhNxwnHTbDhi44wKRRJO6afvDFMc2uOBBKyYInK3hdj4EHDFK9Rwv01LQ88AHb1jt1tskyAdO7yM0RWRlhHUfAy0us9PKXJW2NooI6EK42ZGQJU1doMmb7CduGJoZYxauar5o5D1cueV1gfRpFURd6Vilw1QEukGv4cnMPTOm3rrgpAZACORw79n4FxQ7sCR8nnFrCiZHBRLMnPSkAWgmpnMbau', 'tel': '6871----------003---------------071', 'url': 'http:////www.h78fgH8ft.SzoVbazOo0KUCu0.8KSL3J.GP6yqv0ol2.szN9n0Ajoi7Lo.jqvHz2r9i.V4.XR8CeX.6HCbZ6n3ATSefNmd.jiRr4lPHbY6vp.YzwyvxdGo5lheCfuSWka.Q', 'number': '00000000000000000066921196514612847613', 'color': '#############2', 'range': '7', 'time': '19:77', 'date': '1400 11/24', 'commit': 'LoginCkULGWjpxsVCkHERiH7QriAsCICF56zVUn4rsssRYCZltLBc08nG3l9CU8yqHfmoQM5jR6OqhVZa3e54M2UDTWKxGL2kcW6Z1kmde3NSufcgL02TiTaOoay9b5EEMytiqmdkabgbI5diwMcuZVk2NI2xW8lF7IgqsBbTaMKmUtHUoFkKRAm4jMFgo6cIYo9aPI6cmLmoKJshVoXquX2vqsIOwdFHVaTzQ60KHh6ltw5DlWCsWFojZDA0Rf1CUJoMpYrQebtEqh8T3y7DdVAdqdrD30sXM8PhPqMCeoKoOItN', 'login': '6', 'password': '6', 'email': 'RaBzH3dVEny941NqS@kd9deqfQnWZYy72ix67sn@IxKr6h'}",200,0.3894059658050537,0.3933260440826416,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too short or inlcudes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too short or inlcudes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  6871----------003---------------071  is invalid!!<br>
+<!-- Deal with Email. -->
+RaBzH3dVEny941NqS@kd9deqfQnWZYy72ix67sn@IxKr6h     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:////www.h78fgH8ft.SzoVbazOo0KUCu0.8KSL3J.GP6yqv0ol2.szN9n0Ajoi7Lo.jqvHz2r9i.V4.XR8CeX.6HCbZ6n3ATSefNmd.jiRr4lPHbY6vp.YzwyvxdGo5lheCfuSWka.Q     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too short or inlcudes invalid chars!!
+Password is too short or inlcudes invalid chars!!
+The phone number  6871----------003---------------071  is invalid!!
+RaBzH3dVEny941NqS@kd9deqfQnWZYy72ix67sn@IxKr6h     is not a valid email address!!
+http:////www.h78fgH8ft.SzoVbazOo0KUCu0.8KSL3J.GP6yqv0ol2.szN9n0Ajoi7Lo.jqvHz2r9i.V4.XR8CeX.6HCbZ6n3ATSefNmd.jiRr4lPHbY6vp.YzwyvxdGo5lheCfuSWka.Q     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.38632260303724053,"[0.1875, 0.20408163265306123, 0.20779220779220775, 0.25, 0.07182320441988954, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 6871----------003---------------071', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ RaBzH3dVEny941NqS@kd9deqfQnWZYy72ix67sn@IxKr6h', u'+ not'], [u'- http://www.google.com', u'+ http:////www.h78fgH8ft.SzoVbazOo0KUCu0.8KSL3J.GP6yqv0ol2.szN9n0Ajoi7Lo.jqvHz2r9i.V4.XR8CeX.6HCbZ6n3ATSefNmd.jiRr4lPHbY6vp.YzwyvxdGo5lheCfuSWka.Q', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'JDiZwjuibTLbAMB1tTldnzuyWhA4tDWMbI8caqZhemiA3QX16Qy05GsoMU2xixUUPhMAnJ8KyrlQ4Ppl5NUuPzWIHBKjDqcodhla0fr7i2YJfH47RPwIUqCq2eQ7YK8XU0XvPMY2GQ6WBEgALGm9Yx5KlF7GmSP9m6vQmgWkcB1QqBAB4jwHl4664i7FlMXZDedMcDDPHTs0IOLAhuqM9b3zo9IXAasAhBl8LHekBPdw3KcZpAF0EjLS5XcN8BikfCF20FPQdI6baUuHet1aQ0zgP0GPzVNv6FQutDvgolVw', 'tel': '0298        687              668', 'url': 'http:wwwwwwwwwwwwwwwwww.YlGbIPHvRX.VKocRmlU.ieVKGDQDMTJbrsayN.bxRhl.rpsNsOU.0BpAlOFgO98aLBDP.EnQjF6o3B.XCJ0vqleJ.A4ALHq.NBmkc8SKfwkZE4Twf.R', 'number': 'e3225fcc', 'color': '####9DDD91EF254FF32A29E45', 'range': '56623824', 'time': '15:9199576946', 'date': '1249/11 0000000', 'commit': 'LoginA3ajLcsTEpqLN08J7RdrQ6QcB644Lvd6QoSi6bkypnXFlQD948Vh0nLHOOPefnaKhvzPcFojhZZhPIFpdJ4HA5W1H7sb7ZOZoq7Fy8jNCqjSqukR6yQPUoLFPHLa2surQObV8lfoV7wWR5y0U74Ciq4XEi6fpkwHeu4ZIzLxPYyOq541xJI4tva2XIpa98yss5CQKAMRMgMU1h5aROwxRQT9HFugqgJeSzP81ObiXP2WN2YCFS5FmYh9v5WzJQ4NswoC76w2rfxnB4SJHvrOL0ySBXaMAEC1MhPKCOrgW5bp', 'login': '1880605', 'password': '1880605', 'email': 'eyzF76@1boVFnaxRlqKhVoWM7xMc@pVv3CWRYzHw@XTM5d@xvBcZ3T'}",200,0.40767908096313477,0.41217994689941406,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0298        687              668  is invalid!!<br>
+<!-- Deal with Email. -->
+eyzF76@1boVFnaxRlqKhVoWM7xMc@pVv3CWRYzHw@XTM5d@xvBcZ3T     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:wwwwwwwwwwwwwwwwww.YlGbIPHvRX.VKocRmlU.ieVKGDQDMTJbrsayN.bxRhl.rpsNsOU.0BpAlOFgO98aLBDP.EnQjF6o3B.XCJ0vqleJ.A4ALHq.NBmkc8SKfwkZE4Twf.R     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  0298        687              668  is invalid!!
+eyzF76@1boVFnaxRlqKhVoWM7xMc@pVv3CWRYzHw@XTM5d@xvBcZ3T     is not a valid email address!!
+http:wwwwwwwwwwwwwwwwww.YlGbIPHvRX.VKocRmlU.ieVKGDQDMTJbrsayN.bxRhl.rpsNsOU.0BpAlOFgO98aLBDP.EnQjF6o3B.XCJ0vqleJ.A4ALHq.NBmkc8SKfwkZE4Twf.R     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.5552751596229857,"[1.0, 1.0, 0.3076923076923077, 0.22916666666666663, 0.07386363636363635, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 0298', u'+ 687', u'+ 668', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ eyzF76@1boVFnaxRlqKhVoWM7xMc@pVv3CWRYzHw@XTM5d@xvBcZ3T', u'+ not'], [u'- http://www.google.com', u'+ http:wwwwwwwwwwwwwwwwww.YlGbIPHvRX.VKocRmlU.ieVKGDQDMTJbrsayN.bxRhl.rpsNsOU.0BpAlOFgO98aLBDP.EnQjF6o3B.XCJ0vqleJ.A4ALHq.NBmkc8SKfwkZE4Twf.R', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'Et5j2t3JfgjKF2Pw4Ejv2n0zUeCf13HHnEH3jOAXiK3fOoIQu7XIVImoqP2zJJE8iMLEtJt7r15gkQRKoSPSKvLCp2yWlKLJkikmcfMHR59wvujUt73VDXgAH96IkKYRjmibqAT89KazghQnO5UBR9nmtdy1yGOUQpfONnzhuBlppFw9NI7gJfnlDh1SQpRgvOEzv8e8bzEqfgerbRWh1SK8mOzcEVTyDcgN7E7BTN9n2gpmHY8JkK9zwAPUBaiAzGk2Q9gXwCQ3Y5WXxBEZ8ASbSDJJs6dUIrPnu01YSUUg', 'tel': '029 3833 481', 'url': 'ftp:www.DTpt.ppwPZHTbiQrmtIzqY5H.KdmzIkqw.IcEgAcm35mENgiW8..RO.n6eVtzlnb0XMyy.wdG6SRw3L.6dvHjy7A.BQnNSktLOOPP.Y5XLso.ETd2ZtLxvyeuaj4K0.EVDoxeqQ7aiYDMq.omX0A3t.F', 'number': '72831F857FCB64D', 'color': '9033bb', 'range': '978271.....', 'time': '23:60', 'date': '2403-11/00000000000001', 'commit': 'LoginSrm0NaslMEVgiXzGtm4mVZWDdn0JAcgMvHUswoRZSqYD4qGisCACJPzukEEGP6c0jpk2sLuJa6PStNalj4TnNKRVJcrRrTEXfShNC3F9bbJZgESwIbfE6ebEoUAsB2jyB2rmwfZjSollGrI6zbgxCSEafKzXvl3mF0IQDIM9gMDl3VSb6A0qiQrZ4SiDEdaxVqbCqrdgbCqD0SGcKqdC0mtNvVTu28inNSFx1uKD0UBFSQlYYHfZNXcqrCYxLzFCZmNeS17rb8ExSDLb1HfN79POdUSz2rmBoLmTdocB4uiS', 'login': '4969706415463622053051243', 'password': '4969706415463622053051243', 'email': 'nJUk.pfZOx182NCYJn'}",200,0.4295661449432373,0.433337926864624,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  029 3833 481  is invalid!!<br>
+<!-- Deal with Email. -->
+nJUk.pfZOx182NCYJn     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp:www.DTpt.ppwPZHTbiQrmtIzqY5H.KdmzIkqw.IcEgAcm35mENgiW8..RO.n6eVtzlnb0XMyy.wdG6SRw3L.6dvHjy7A.BQnNSktLOOPP.Y5XLso.ETd2ZtLxvyeuaj4K0.EVDoxeqQ7aiYDMq.omX0A3t.F     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  029 3833 481  is invalid!!
+nJUk.pfZOx182NCYJn     is not a valid email address!!
+ftp:www.DTpt.ppwPZHTbiQrmtIzqY5H.KdmzIkqw.IcEgAcm35mENgiW8..RO.n6eVtzlnb0XMyy.wdG6SRw3L.6dvHjy7A.BQnNSktLOOPP.Y5XLso.ETd2ZtLxvyeuaj4K0.EVDoxeqQ7aiYDMq.omX0A3t.F     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.4082200502617418,"[0.19148936170212771, 0.20833333333333337, 0.3076923076923077, 0.3666666666666667, 0.06598984771573602, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 029', u'+ 3833', u'+ 481', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ nJUk.pfZOx182NCYJn', u'+ not'], [u'- http://www.google.com', u'+ ftp:www.DTpt.ppwPZHTbiQrmtIzqY5H.KdmzIkqw.IcEgAcm35mENgiW8..RO.n6eVtzlnb0XMyy.wdG6SRw3L.6dvHjy7A.BQnNSktLOOPP.Y5XLso.ETd2ZtLxvyeuaj4K0.EVDoxeqQ7aiYDMq.omX0A3t.F', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': '8ZftWyks7tnI2dTz4Bn2CMA3RRBuQeYxLl2WMnZ72Unv4oKC00CAGQLA86jHuTNJ341ocB8zBbSvxReeLU0dlEk4MjSx4epOTtRMU5lLiU0sgwRA4vVfabSYJETd7e5UyK6htN0CxDhNWodj3jU3Ut9YQZgyPVfYVa0QIHvBhElmjXh0Uu2Ge7Siq47pcE1KPPt3eaIbcACAxXZzunQWJqcbIWNn3vwzUuuOY75kIQ9PpHSHs0Ol1KQOv8EUBQFZnapGHibBYGv2dlQu3FtA3zQRzwb4ffDIg0WMcGUhqUhU', 'tel': '429 9733 876', 'url': 'ftp:/www.6SBoCuC.qxLunmBm9h.59nThsTFg8YySSR7JZv.JO.Xs6w9MS7yFo.sz9lk.s5UL3tkUNyPj0klI.TUj.yMjUJAlkvHIny.QpcqJsiNdTaZfDIp.Mu8TPSE2xjM5im.t', 'number': 'BBd6Ffa9f41', 'color': '52f', 'range': '800.71', 'time': '05:60:02:03:11', 'date': '2622 10 36', 'commit': 'LoginCFbN0FNIhPFvGyRunA7hF8LYqKTSnPwgnxcrcNTcNMFHhyXCaPM6JfZTmHrRecLQ246Pk2JFy0YDiSyVr0uF7tf4hJQKiBuR0nt7VpEX3etBIZaOiS3nhGpAoTnmw1HfFAHSOcLV4gDNViTa53guxEd59fN1zCYXtQDSeVBRFHbWVUVBLEdCtYaDIyjUGtTJ2Ifmw1EphvN8XUU4Ok5sj7Y9VP0ofSHojeLMnRuODL9Spjz7fDExDTwGM9gOoDfXWFDVfScBdOuf7GWZ8DganUl5MriYs6mkuS2h5phTu93u', 'login': '', 'password': '', 'email': '       gMopcLCS@MahU8RfWGTnwxoa'}",200,0.4464571475982666,0.44989514350891113,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Please do not leave the account empty!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Please do not leave the password empty!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  429 9733 876  is invalid!!<br>
+<!-- Deal with Email. -->
+       gMopcLCS@MahU8RfWGTnwxoa     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp:/www.6SBoCuC.qxLunmBm9h.59nThsTFg8YySSR7JZv.JO.Xs6w9MS7yFo.sz9lk.s5UL3tkUNyPj0klI.TUj.yMjUJAlkvHIny.QpcqJsiNdTaZfDIp.Mu8TPSE2xjM5im.t     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Please do not leave the account empty!!
+Please do not leave the password empty!!
+The phone number  429 9733 876  is invalid!!
+       gMopcLCS@MahU8RfWGTnwxoa     is not a valid email address!!
+ftp:/www.6SBoCuC.qxLunmBm9h.59nThsTFg8YySSR7JZv.JO.Xs6w9MS7yFo.sz9lk.s5UL3tkUNyPj0klI.TUj.yMjUJAlkvHIny.QpcqJsiNdTaZfDIp.Mu8TPSE2xjM5im.t     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.36577672702110486,"[0.0, 0.0, 0.3076923076923077, 0.33333333333333337, 0.07471264367816088, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Account', u'+ account', u'+ empty!!', u'- is', u'- valid!!'], [u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Password', u'+ password', u'+ empty!!', u'- is', u'- valid!!'], [u'- 0911111111', u'+ 429', u'+ 9733', u'+ 876', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ gMopcLCS@MahU8RfWGTnwxoa', u'+ not'], [u'- http://www.google.com', u'+ ftp:/www.6SBoCuC.qxLunmBm9h.59nThsTFg8YySSR7JZv.JO.Xs6w9MS7yFo.sz9lk.s5UL3tkUNyPj0klI.TUj.yMjUJAlkvHIny.QpcqJsiNdTaZfDIp.Mu8TPSE2xjM5im.t', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': '01B3Oh0qNRObyUtGrxQPnxF3ErTknRkd1FsAtvafPRyzGmGTjMG2c1OSLuNXxRS9N0XFJVBHJnThkuKs1dsbuP1bl8cydbON3VSmLeM4d7Phfm9yxSHQqaviJTlME4m12huBf5g4pgwSSux3gNUleTQWm0wIxXB7T3mHXfd4JyzAe8vhic2i1VEZlpQJ6zzwBhO4fbnzu0cH8OHkCDuv94vJbOz4HnzvSOU8SzBa1jPsWxmtMW7eykiLN8YfMDIn7faLhO3CAjn15w2mBNEUwIQFcAYXA6IQlk6cWfA8R5vQ', 'tel': '017-6349-361', 'url': 'ftp:///www.c.x', 'number': '5542321541.220021', 'color': 'b24fd1f7e551ebd03ff44190943', 'range': '0000000000000002926716433739395', 'time': '21:El', 'date': '1388-10 66', 'commit': 'LoginuN8JNnB56mMhhIZXIbokYYdxdgGLaDvJcDHWPXXviqdtJar3HtxXCCBgXTYHWnjK8Nd2ElTR06bCR2iVXwFlCOepRenupz7OrCfHgfOWnQVCcoDcPR6AzUFn4NrXpjhJc0PmFjmziKLD5tRE31eabLJWmY5rb3dko92L7iuLJps15buUGLxeo7siy7f6zcGioTCPkONyoac9aT780KM6aUO1uPvmGyy3q2CJH9fTHW5mgbKNsoACyMzoFAUI45eLgxfmnP0cdgRunGjjBjjoCHTdG4ZDk56634VQRZTg7WgT', 'login': '487540516311', 'password': '487540516311', 'email': 'Qh8Vb5u8kjNztu00E9Q@U2CgE'}",200,0.46411705017089844,0.4678499698638916,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  017-6349-361  is invalid!!<br>
+<!-- Deal with Email. -->
+Qh8Vb5u8kjNztu00E9Q@U2CgE     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp:///www.c.x     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is valid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  017-6349-361  is invalid!!
+Qh8Vb5u8kjNztu00E9Q@U2CgE     is not a valid email address!!
+ftp:///www.c.x     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is valid!!
+Range is invalid!!
+Color is invalid!!",0.6488252118209747,"[1.0, 1.0, 0.2962962962962963, 0.32835820895522383, 0.2549019607843137, 1.0, 1.0, 1.0, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 017-6349-361', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ Qh8Vb5u8kjNztu00E9Q@U2CgE', u'+ not'], [u'- http://www.google.com', u'+ ftp:///www.c.x', u'+ not'], [], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'ZtJC7yxRSLbJUgTKOOtbLntOeb9V4AUThRna4flNmrxr903PPUpypvmfyCjYfnV2TS0luFx3sIQpNhugOxBWTTz6XpN4dPGnp17iSo1yrF65yGpzoYWvMT5S0r4RO3tn6Hnvku7BtYkPdfoBx7XPhe6xxZQWlor94x2HW6g0iwYxm3GMNJMDHY1HlZwPtET3pqceh4X1hhG4jh1oELqFFV6XvmOEC82JpBvIVkiedC9JK993fxQTZZfAi4XnZSTkdiph21eb2lZ6K9ypJgoo5ak0UV9ExhSd7i3n7SiPv65n', 'tel': '535-8579-798', 'url': '846.38193457222.4795.6216129.5694214797.8872.9858311.2587381663554.4.795617614684.558463.826889392429938.348.254368367347543.85967.344163193727125843538', 'number': '594971499321341493329.', 'color': '5E1ADE', 'range': '60', 'time': 'ys:12', 'date': '1700 7/83761378176', 'commit': 'Loginn8n7DoEWneu3oHRmI6kWrOvrs5cusQbjednPnsx9zmDjqZBvPAAPZN0Lcc3kbgKUINmFBVeTUjd4pldPqjEiZvtsKVY1jeIdgrYRBQP1FHjPjkim5hv4HMBO863DAk6YnMhseS2pJHmcCAQqUF27PQ8aHR3cskvQsfKWKYxKzEK6jqoDd09KpObYhuzY5Ll5y0ZC8KuxrrywPJuUxmuYNkxYEh7wisZmyN1j9gYg4Xhdg6ecOA243A83L4NhCJFfzebVSb8ZvSMtLu2V0Tx577mayrAsdXU1llcw0WhuDiJ4', 'login': '93750507909556355790982396776', 'password': '93750507909556355790982396776', 'email': 'Dp@@@@@@@@@@@@@@@@@@'}",200,0.4809410572052002,0.4852581024169922,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  535-8579-798  is invalid!!<br>
+<!-- Deal with Email. -->
+Dp@@@@@@@@@@@@@@@@@@     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+846.38193457222.4795.6216129.5694214797.8872.9858311.2587381663554.4.795617614684.558463.826889392429938.348.254368367347543.85967.344163193727125843538     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  535-8579-798  is invalid!!
+Dp@@@@@@@@@@@@@@@@@@     is not a valid email address!!
+846.38193457222.4795.6216129.5694214797.8872.9858311.2587381663554.4.795617614684.558463.826889392429938.348.254368367347543.85967.344163193727125843538     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.40617697552994925,"[0.19148936170212771, 0.20833333333333337, 0.2962962962962963, 0.3548387096774194, 0.06878306878306883, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 535-8579-798', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ Dp@@@@@@@@@@@@@@@@@@', u'+ not'], [u'- http://www.google.com', u'+ 846.38193457222.4795.6216129.5694214797.8872.9858311.2587381663554.4.795617614684.558463.826889392429938.348.254368367347543.85967.344163193727125843538', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'wRa3Qxf6wfGirpvYa87adAB1Tnejrbdy8QC1IvNls8YkYNeotId7CPcntxdbbCGa4SfeiADotAoo2wKyEWnwVNHRZo9x8guXOnKtRhwRsRVJact7kBuCRZ3JWJCa93TcqS2M5rmZ9cXeESG0Tp7gLo1CO0zcuKzRihAOcVS4qtHX2qJAeqPoRZm2jActcFIq1q1LLQiyJcn5nBOUmJM7AeCJT8FOUi0fYmJ9cuY0uwyOKARa4f83f1SZx53CiU7BBqIT9SD9ALnQgmRsp9VCrlRauIdSrzcnDljbsvYIg0av', 'tel': '046-0833 254', 'url': 'www.L4WKXwvkravweG.oEobmflAeJ.TRg8VFu.EoDQuSK76h.eNHZSJb9yn.LgxSgSZp9g1nDQx.BcDOGDCK3.SYZ8uzai8USA.ANbgzNPZ.X', 'number': '788356339876358722.........', 'color': '722', 'range': '500', 'time': '11:60', 'date': '2053/-/-/ ---- /-/11-27', 'commit': 'Loginpaasjh7tUOywBD9rIgbHKD7ci8KvFFRE6po09CJeDhaLvvxXPw2ePJoDuta3E9SKQZFkuweQJdsUuNEypuAQooz5eIvxz9IoXYzzRapbHU57m3V2YdKg6PTs21rkVdyUL6LMitSh7ovpxOGWXMEW39zEWZDXrB866crQNansK9GHkuNZirVin7ENSNVeWMk46NMJ4LX7INSo1GpXLKs9kqXVsIA6NUkoi719NSbQ68iGyUrpS3t75xcLyw5S3Tr223kETj6mxgHCvKSKEUNuP1Gogb5Pw6c4cfYEkfciLSlE', 'login': 'joJ', 'password': 'joJ', 'email': 'gZi@W@5K0xwnNwh7oyfsOAYqP'}",200,0.49957799911499023,0.5026271343231201,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too short or inlcudes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too short or inlcudes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  046-0833 254  is invalid!!<br>
+<!-- Deal with Email. -->
+gZi@W@5K0xwnNwh7oyfsOAYqP     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www.L4WKXwvkravweG.oEobmflAeJ.TRg8VFu.EoDQuSK76h.eNHZSJb9yn.LgxSgSZp9g1nDQx.BcDOGDCK3.SYZ8uzai8USA.ANbgzNPZ.X     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is valid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too short or inlcudes invalid chars!!
+Password is too short or inlcudes invalid chars!!
+The phone number  046-0833 254  is invalid!!
+gZi@W@5K0xwnNwh7oyfsOAYqP     is not a valid email address!!
+www.L4WKXwvkravweG.oEobmflAeJ.TRg8VFu.EoDQuSK76h.eNHZSJb9yn.LgxSgSZp9g1nDQx.BcDOGDCK3.SYZ8uzai8USA.ANbgzNPZ.X     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is valid!!
+Color is invalid!!",0.47485488893718164,"[0.1875, 0.20408163265306123, 0.30188679245283023, 0.32835820895522383, 0.08904109589041098, 1.0, 1.0, 0.33333333333333337, 1.0, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 046-0833', u'+ 254', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ gZi@W@5K0xwnNwh7oyfsOAYqP', u'+ not'], [u'- http://www.google.com', u'+ www.L4WKXwvkravweG.oEobmflAeJ.TRg8VFu.EoDQuSK76h.eNHZSJb9yn.LgxSgSZp9g1nDQx.BcDOGDCK3.SYZ8uzai8USA.ANbgzNPZ.X', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'as21mQbynTteYuQi9ip7xmwK6VX98XGdWMSesBirb3f4kuR7wqE7WfDhWcnHKMWWyU4NUAl3xNirLetTV4EpYFCqRiRpa3Qa9o4XuHwKlfNMgUtBSf7i0yH4Md6oLFqy3I8SYNCGhy1S4SzDvb4OjKab009OoqpFIuRZqbou9azBn9K995SOeh9yhYASfxGNfW0PBBI8wcjGo2Jh7bYINJxYf26JDXxLgGA80S2FZNziuUO8cKbA7AL6aw9tZGq53kuxf0RPWd5wkRCDsNTfdW01tyCIjXy0hRT4JE280H0c', 'tel': '782-5848 571', 'url': 'www...........9XRBK07.tit2gcLkxndrD.e01t4r1.1.gqMRB..g', 'number': 'e52fcbd4d7.d8', 'color': '5FA5D10A4A', 'range': '9844600', 'time': '02::60', 'date': '2963-11/ / ///-/ 21', 'commit': 'LoginTCevv0RjOGWpRJB1UwjG65H30jCLhrcObCOsny9nPTsV33rgBaIad5md7Yia1NrwxCB6vpK9FnlWC79AMmUVuiPspoDbQ7V9KHFoamrLoINOaZ1CJZK9blshTb93U7mKOlpkmxUAAJKoyAzA6aBGg3VsxwO3dh6brPLnojHa6X7DaojvLRPUXi2DgvOsHpBrDF47kb3Euwd4OCw6tDUlTJtAYikDi7SGTkvla7LYsl2Uon4omF5tkWl0TkgrfkdQO2alzmCKu9Golc3NvVOecBNy9hcCCHAufOSPjSbjrT9g', 'login': 'OcKYpNnkQlAFRhPi', 'password': 'OcKYpNnkQlAFRhPi', 'email': 'w4xc34tePgWs@fC9cZJ9BiP7UmiHH9R@5CLHEGv2Eusw@IPaNPg@Pf@9E3YZIRpNIFN2D0vKV@4YNstaSthqQSqOkIR7zxq@5Qt@FEPItXjghtiYvL6@Xm0u25uP9n1@AlinStX08tpFPbi0Ol4Z@R8ISYxcSMpVzIK4iCfBrE@h1oVo07@r1YY8VGRdIOKS1ErQk@trR@uShU6kKthHADM@wLpk1s'}",200,0.5165300369262695,0.5199899673461914,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  782-5848 571  is invalid!!<br>
+<!-- Deal with Email. -->
+w4xc34tePgWs@fC9cZJ9BiP7UmiHH9R@5CLHEGv2Eusw@IPaNPg@Pf@9E3YZIRpNIFN2D0vKV@4YNstaSthqQSqOkIR7zxq@5Qt@FEPItXjghtiYvL6@Xm0u25uP9n1@AlinStX08tpFPbi0Ol4Z@R8ISYxcSMpVzIK4iCfBrE@h1oVo07@r1YY8VGRdIOKS1ErQk@trR@uShU6kKthHADM@wLpk1s     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www...........9XRBK07.tit2gcLkxndrD.e01t4r1.1.gqMRB..g     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  782-5848 571  is invalid!!
+w4xc34tePgWs@fC9cZJ9BiP7UmiHH9R@5CLHEGv2Eusw@IPaNPg@Pf@9E3YZIRpNIFN2D0vKV@4YNstaSthqQSqOkIR7zxq@5Qt@FEPItXjghtiYvL6@Xm0u25uP9n1@AlinStX08tpFPbi0Ol4Z@R8ISYxcSMpVzIK4iCfBrE@h1oVo07@r1YY8VGRdIOKS1ErQk@trR@uShU6kKthHADM@wLpk1s     is not a valid email address!!
+www...........9XRBK07.tit2gcLkxndrD.e01t4r1.1.gqMRB..g     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.5470106254150553,"[1.0, 1.0, 0.30188679245283023, 0.08333333333333337, 0.1428571428571429, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 782-5848', u'+ 571', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ w4xc34tePgWs@fC9cZJ9BiP7UmiHH9R@5CLHEGv2Eusw@IPaNPg@Pf@9E3YZIRpNIFN2D0vKV@4YNstaSthqQSqOkIR7zxq@5Qt@FEPItXjghtiYvL6@Xm0u25uP9n1@AlinStX08tpFPbi0Ol4Z@R8ISYxcSMpVzIK4iCfBrE@h1oVo07@r1YY8VGRdIOKS1ErQk@trR@uShU6kKthHADM@wLpk1s', u'+ not'], [u'- http://www.google.com', u'+ www...........9XRBK07.tit2gcLkxndrD.e01t4r1.1.gqMRB..g', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'fOi8Fg6LFIIjjPAQJGDD1GG3tneZWpbKsKrc7XhE6AqnMWPI5Y1Dvv2MKgn21cGMvvZNaGhvcUzv46BVzwPfWOpiTHVZybqIlODmQ8sCCImhZBjm4MRtADZeTt6H14khK0JZ8TzomvBAdpIHwa73IDM5Rp6dJpMK7HGsvtHeRgpkU2FRnX5Hxr047GKeahaWxnhyDXGpdTIJLFwSA47nOZ80jxuR2z5ouLL1I6nuSTzJYflxKcfGFWHC5gpFf4KHVeHxVakYsW2xlet9UhKV1qypPj8gj6INfMyVjfxy7qLW', 'tel': '097 7649-068', 'url': 'www.Q3JvG4cyh.............a8LJIDDLcdNKWWJZII5.................5TGMWTKRDExysjzmXq..........3', 'number': '145993..................55660389648311', 'color': 'zvzwmx', 'range': 'bqOt', 'time': '0000023:32', 'date': '1390-- / --10//--/-  -31', 'commit': 'LoginSgN9xh5tORq5l2PGuGD74nu3PYuWNCq5F7q9rGwkCN2wwtPwn2EqIw6vC8aJgK14mtnza7YwMtFgwJsv5seSlNIq1upCViobt5wfCWu4KzlZvzooqH9nKel0NAOkx5jZmpfaEHmYtQDzifliZreUW3zlWmiipFmF0He2T376qqqsEq1EppYvlAC8ZleXM2cWzHafcHSrqZBvu8JRYqF0xOYxrDTTCcGibYP1Baq6sjzDJUdWFmYVpqs5LsoIf7aFXfhQ0Meq54wah6OIDLmpQd0xGVsCGhcbAtzIuKCu1n57', 'login': 'IGtmmyIcDYPKrrHPx', 'password': 'IGtmmyIcDYPKrrHPx', 'email': 'Rf9SnDh.O79WJVg'}",200,0.5325870513916016,0.5355520248413086,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  097 7649-068  is invalid!!<br>
+<!-- Deal with Email. -->
+Rf9SnDh.O79WJVg     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+www.Q3JvG4cyh.............a8LJIDDLcdNKWWJZII5.................5TGMWTKRDExysjzmXq..........3     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  097 7649-068  is invalid!!
+Rf9SnDh.O79WJVg     is not a valid email address!!
+www.Q3JvG4cyh.............a8LJIDDLcdNKWWJZII5.................5TGMWTKRDExysjzmXq..........3     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.5731443190240778,"[1.0, 1.0, 0.30188679245283023, 0.38596491228070173, 0.1015625, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 097', u'+ 7649-068', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ Rf9SnDh.O79WJVg', u'+ not'], [u'- http://www.google.com', u'+ www.Q3JvG4cyh.............a8LJIDDLcdNKWWJZII5.................5TGMWTKRDExysjzmXq..........3', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': '2MZIOLr3JxG81NFGQNDKPUza2UJM6N4vr08QvOPu380rZRz5aPA6uQfbZNaBf3hMPqFKW5RpmvAR2pUNMe5iKjTJFfvDqkcaPCyCzGm5bTlTCCudZqDbz066XhyXZmqFF8MkVqCPt1CRntJWpCr5Kp8OarkTHhCGrstJisX9JG775JjUIlwgWKzWMNaSZ54lX3DPk3DuD5a9g6P1RG3zwXrXVL99DMLpcw8Mn16Iadvnwhv2JQkikxLzsy2RddHHfkvkhY3mn602GhSYPEJYq5DdfepcRF1PNCQIgReV9L2N', 'tel': '273 2415-886', 'url': 'wwwwwwwwwwwwwwwwwwww.9lBh7CTmA.pYnM4mH45jkhXsiy63.tK2SCmum2U.ao4nBY3JC.dSXqJQezyCH.7vNmX0X0nz.auTVgy5UCnZX6WiP.SMB9XAV.Js8hi9KiDZt423r.i3lWG1zUS0cpXh.EAkuALmGX0YAe2Q.1nLI8HwpL7JV.Cliy0.m.BeAS6apr706FJF.A', 'number': 'r6q2f1afj3uhqhghp', 'color': '', 'range': 'TKdPMROT2HDXXFb', 'time': '8:60', 'date': '       -3/31', 'commit': 'LoginnTmlws1T4hiQSIUCumJJwCtBlomopuwtuvU3ezP7cPkKe7bEU5SIFdTQgQ1Zt6jqTLJPbCfPgfxGRx0pYb4YgRFn2nW33C0W8euQ1D9vNUuxR1C6fLI3bkTuTh3XRnL7loDUo2QDBJ37FMajahViERnYLR5twZvSSZ2zu63e49RnH12D9uE0ddeXTlfI8zs67ErdfRkliir2XzhWITfv8Y346WIpSdOPc1Cy6HsqFu5EKX8hYqX0Ok66J4mxQKs3HCdCZNbUfhsvxJidhad9cMsPUnmUbJoWJfhEdvZmCgB1', 'login': 'pR', 'password': 'pR', 'email': '         zIdxPzFnJ1v0a@c8E'}",200,0.5486841201782227,0.5524859428405762,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too short or inlcudes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too short or inlcudes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  273 2415-886  is invalid!!<br>
+<!-- Deal with Email. -->
+         zIdxPzFnJ1v0a@c8E     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+wwwwwwwwwwwwwwwwwwww.9lBh7CTmA.pYnM4mH45jkhXsiy63.tK2SCmum2U.ao4nBY3JC.dSXqJQezyCH.7vNmX0X0nz.auTVgy5UCnZX6WiP.SMB9XAV.Js8hi9KiDZt423r.i3lWG1zUS0cpXh.EAkuALmGX0YAe2Q.1nLI8HwpL7JV.Cliy0.m.BeAS6apr706FJF.A     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+You leave the color empty!!<br>
+</body>
+</html>
+
+","Account is too short or inlcudes invalid chars!!
+Password is too short or inlcudes invalid chars!!
+The phone number  273 2415-886  is invalid!!
+         zIdxPzFnJ1v0a@c8E     is not a valid email address!!
+wwwwwwwwwwwwwwwwwwww.9lBh7CTmA.pYnM4mH45jkhXsiy63.tK2SCmum2U.ao4nBY3JC.dSXqJQezyCH.7vNmX0X0nz.auTVgy5UCnZX6WiP.SMB9XAV.Js8hi9KiDZt423r.i3lWG1zUS0cpXh.EAkuALmGX0YAe2Q.1nLI8HwpL7JV.Cliy0.m.BeAS6apr706FJF.A     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+You leave the color empty!!",0.37581976071250517,"[0.1875, 0.20408163265306123, 0.30188679245283023, 0.3728813559322034, 0.054166666666666696, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.0]","[[u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ short', u'+ or', u'+ inlcudes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 273', u'+ 2415-886', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ zIdxPzFnJ1v0a@c8E', u'+ not'], [u'- http://www.google.com', u'+ wwwwwwwwwwwwwwwwwwww.9lBh7CTmA.pYnM4mH45jkhXsiy63.tK2SCmum2U.ao4nBY3JC.dSXqJQezyCH.7vNmX0X0nz.auTVgy5UCnZX6WiP.SMB9XAV.Js8hi9KiDZt423r.i3lWG1zUS0cpXh.EAkuALmGX0YAe2Q.1nLI8HwpL7JV.Cliy0.m.BeAS6apr706FJF.A', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'+ You', u'+ leave', u'+ the', u'- Color', u'+ color', u'+ empty!!', u'- is', u'- valid!!']]"
+0,"{'remember_me': 'Q2FfKWkEcWSrwHtlldLwI5UeDojcm2mKGFuMoDT4SoBoJysr4I2en7TV4mVj8IuPm5kPbnDIVogVt9HtFeUnoh1f6cTkqm6J1ZC7Hb6X2I2p9qhJQotSiB2BINmosJpDpUHMx7eZnQUoQhsNknYjvE0L2pKdKG3wvS2c0zXVqdEjXuDM09YPdmOoFJq0vUFZMqUqNiKWS4XjPipjX9vXJLJxFmDMIniKD9UFiE3VXRENBHeGIB2PhwX9qHVQd3WZRbgAqEEhgzrDeLExkw4AxBUavRUiZYpZSE5c7TeWupqB', 'tel': '916- -- - 8531 - ---426', 'url': 'httpwww.ZxglLyZh73edY.oipDmT78JnxQbY.kNo2Sb7uaW9IG7K.sRj5IdfjfTHU.vB0E.2Cm.kEpNJlw.T', 'number': '00000000000295226228944787139943', 'color': 'q2imyacarbn03xy0eesl00yiuf', 'range': '5', 'time': '8796548794:60', 'date': '     2278-10 22', 'commit': 'LoginFf72FOxv1qHH9R6S93I7aWEkxQtWkb2iViI0lGUqVJwqnP3gwAnTXMiNTuwr8RL16MdTpxrbF83RhzGKzgmWKr3AEDnttvPTBRPq21BL58w7GqPehinhbYg5AizWoUgY7LLUXZGxxdFD7M6tB2WiY6YWNTBUeKaLNiZWNKku7kgiSgWGSkEo1yVUomusn66X35xapiijGwYPZPRrzoh8otfDOmVe4tg8EVSiz2llSOnSLRvux9RZOVUxem6ghtNnlgA7nH42QwMv37giWg149ZHFyBt4yMwAD150Azr5RTGm', 'login': 'wsBYCyLHhYAjG', 'password': 'wsBYCyLHhYAjG', 'email': 'UqWK@ZU'}",200,0.5662329196929932,0.5694799423217773,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  916- -- - 8531 - ---426  is invalid!!<br>
+<!-- Deal with Email. -->
+UqWK@ZU     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+httpwww.ZxglLyZh73edY.oipDmT78JnxQbY.kNo2Sb7uaW9IG7K.sRj5IdfjfTHU.vB0E.2Cm.kEpNJlw.T     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  916- -- - 8531 - ---426  is invalid!!
+UqWK@ZU     is not a valid email address!!
+httpwww.ZxglLyZh73edY.oipDmT78JnxQbY.kNo2Sb7uaW9IG7K.sRj5IdfjfTHU.vB0E.2Cm.kEpNJlw.T     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.5765113260539574,"[1.0, 1.0, 0.2666666666666667, 0.44897959183673475, 0.1074380165289256, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 916-', u'+ --', u'+ -', u'+ 8531', u'+ -', u'+ ---426', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ UqWK@ZU', u'+ not'], [u'- http://www.google.com', u'+ httpwww.ZxglLyZh73edY.oipDmT78JnxQbY.kNo2Sb7uaW9IG7K.sRj5IdfjfTHU.vB0E.2Cm.kEpNJlw.T', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': '04Xckallesuav9cVUeaCJuagGi4kwpfevbhfADaLxBez5mZzTRVzfYGHxclhPWmzRgKpFLCn5rOjJHlvuKCUaaRA8C51krViaJBQND5IMaQ99zVkjb3dzG0MlHdVWJ6hevJ97jqImEvuaIgUSsrPCoW0rFLpQDuG4P5OY1ouSmmYgSBJh2jpQJGxD2A9AOtkf11yD4diaE5a97jrEN8tzem2SKOl46SMMPitazB6QS7YrLki5SBkL5oH1k7b0SBojK6qBqYeKe3F6mNBaSueYAd5neibKOcYrc6AcZcmz7jV', 'tel': '033 1815  -   - --  -- 755', 'url': 'http:www.I', 'number': 'e82dc2b3a7c', 'color': 'L70WH2', 'range': '383498981258357686', 'time': '07:00022', 'date': ' / / ', 'commit': 'LoginGsin5px6PZUls7vJC2q5pC2DCBwffvMu7ryDrzmgEI6hYHDU5y8QvdB72pFzcRCYmSt5A67MsfiWNHFfoKZB8zXH1O7EaaypsfpRZZBnqoBZAZZlTokN7zbufCmk1nKNExUaA45MXu38kCZkBUhg8c86VBFii5O0ffnEpHMLzW3JpkZ5nM2fqrdYJL4TBNM510h7EGscLsxIkaLrh6iSMBLVIpvKjy2Sc5fiocs7kNHQAEkBgrSTKzX76pvwDZwO3zIiye2cSFbcGcLXS7G0OJLyde660w2QpBePAxKs4y9c', 'login': 'E9Lu79', 'password': 'E9Lu79', 'email': 'wn8TjjFfXDNAMsI@@@@@@@@P72sUk'}",200,0.5828230381011963,0.5863780975341797,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  033 1815  -   - --  -- 755  is invalid!!<br>
+<!-- Deal with Email. -->
+wn8TjjFfXDNAMsI@@@@@@@@P72sUk     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:www.I     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  033 1815  -   - --  -- 755  is invalid!!
+wn8TjjFfXDNAMsI@@@@@@@@P72sUk     is not a valid email address!!
+http:www.I     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.5804345954083192,"[1.0, 1.0, 0.27586206896551724, 0.3098591549295775, 0.276595744680851, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 033', u'+ 1815', u'+ -', u'+ -', u'+ --', u'+ --', u'+ 755', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ wn8TjjFfXDNAMsI@@@@@@@@P72sUk', u'+ not'], [u'- http://www.google.com', u'+ http:www.I', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'Y1SGkHi25714mrWRAIkEtJ1CaGfjk51Ojd37ylqvvQKTGUHTa79i6ZABykh1YI0kjKsDiybG8U7Et3CgQK8dBusgPrQhuxs4CP8DMkccqE4KKwkQfSGezO2Mjr0DuzWPgSkx7WS8frfcttkWZhCVbzsziLBF0uifiGXyOtmgD5ZNWOpu5GCFRwMdBQwod5Div8Fqu5CDWy4IUUhagXpWaok7iKlkjT4dIwx5EIK6jz5KzOQSIehnbMzQRPfiDyD62e4hOsllmDx5F4GbiJb4LnzkBS2GTV2tkPPCbGtwG8Bq', 'tel': '09-40 119 450', 'url': 'http:/www.V9ZDLumt1Z.oA.iSOj0.ri3VKLvty.PfVG.1', 'number': '45EC3FFE844B86281EDD', 'color': '1KUVC', 'range': '14913175347923.......', 'time': '21:7', 'date': ' / - ', 'commit': 'LoginI7vClswD33ZAsiUbyRlvrhe1v6o2VoSxlhqQPR61AugCcl49iaFhu9QIqmejtIjebjoawtSK3DsklMQKyxeumDZP4RAV4niKH1ffrekkznKkx1fyx9BdkizpxX4sCWsSC43E0LQrqxc0Cl7344Ewz8Ro9VveI8zIIDSJXLPJg2neIb94L9ETWHUsOijkMNDapRPZZID7g8pGYde2owvnJV5oGoWObl3AyXPhrwriBnrJeQtohHXCpt3FH3maMZyeh478MjKe6ksVzyOkdmrO4JtErkiy0XzlpPnUSWsSQkZy', 'login': 'BFqq3gPtI0uP3tJ', 'password': 'BFqq3gPtI0uP3tJ', 'email': 'M8jUoxw0zY20G@ntW5r5c0WL6dug62x@Zcrhd'}",200,0.5996370315551758,0.602668046951294,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is valid!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is valid!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  09-40 119 450  is invalid!!<br>
+<!-- Deal with Email. -->
+M8jUoxw0zY20G@ntW5r5c0WL6dug62x@Zcrhd     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:/www.V9ZDLumt1Z.oA.iSOj0.ri3VKLvty.PfVG.1     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is valid!!
+Password is valid!!
+The phone number  09-40 119 450  is invalid!!
+M8jUoxw0zY20G@ntW5r5c0WL6dug62x@Zcrhd     is not a valid email address!!
+http:/www.V9ZDLumt1Z.oA.iSOj0.ri3VKLvty.PfVG.1     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.56790232966424,"[1.0, 1.0, 0.30188679245283023, 0.2784810126582279, 0.15662650602409633, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[], [], [u'- 0911111111', u'+ 09-40', u'+ 119', u'+ 450', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ M8jUoxw0zY20G@ntW5r5c0WL6dug62x@Zcrhd', u'+ not'], [u'- http://www.google.com', u'+ http:/www.V9ZDLumt1Z.oA.iSOj0.ri3VKLvty.PfVG.1', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'KtljDfX1mbZCn8ek5h0UPHfcjKHDjnPPxjRBBMAnPbDu4WMkMSHGzT9N0EjZ4bLQozJpO39fzLM7ls4LaeITAoauR6pGqypnN4yVXnelyNI66OZB2WVdq9XcdgWudOpGmKMaijvOc5CHFFRTau3uZglI1uVA6mn9HyPHrCsVkXNcseDFGuYviuO3TAfVxDpRDnsMBx2JLGMaX8pNia41UXR3XAfJ5z7vagxYRmA7CPWUYICJFTiC2CKN6ey5kgc0f43gnKPaaVTNMa57Uq8vnVTdvtqb3XJj3G10MdH49Kbr', 'tel': '09-95-064 396', 'url': 'http:////////////www.2ZTHLSX.BIBWkYldfYbICy.FHSEDM.uB.h.s.37mjm0nTjySTuqWzBM.8.7V5LI0kS6ZqU.sjk.a', 'number': 'B9D', 'color': 'YZ3P79TOOTUJGK3B7F04ZWHRWA3', 'range': '500.74', 'time': '22:99', 'date': '2470 10-1m', 'commit': 'Loginh5c3kRd74dcwodGkYOFDl0T5lUkQIYUxzcIW2hBA4EeUMJFbpnj8ka1zCriOZfipAtAzPHkOD4dJJEgCYnGjdaGt1KbDTYlnpiLL8PMHHZC7lrRXnmcWUHZlsmIgC1UzJnDT5dMMnBdnEDnYAOCVkEC2a7XE7jhKOwKto2A847gfk6ORmT2HVWiH1Se9UVnzbxlVx4a0vFmIK6Jhk2bmmXsNdLqEX8tUqNw2NmjcydUpvNi4vPZUMV9KbGmfD7HMsvSDF6uJcis7IfZRAwt3piRhCvC1l10s6ebE3vgp1EhQ', 'login': 'kxNVvwgYivlSkCGSLDv5T', 'password': 'kxNVvwgYivlSkCGSLDv5T', 'email': 'ec@Wt3cBv3k8B@e6IHhI9Mo@8Upxpk@x@0ndICXSACycZlp6e4@5rGX7igFDzFJ@MdIGDGyWVFn6kkd0mX4@W4XIsddyqzl2WaMWZ@2RoMQMsGz6MW@R3e@6O@U47efE8lhRa@yFkJgF7X02owsRF@zSSa2@xpb5vmYU@z5Q@BcKglctXiOwaIjrm6mkT@pdRaEMpAXSmh4YOwwfEkd@qD55qbsKTsksf@nPCIlJk4GD'}",200,0.6157181262969971,0.6193089485168457,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  09-95-064 396  is invalid!!<br>
+<!-- Deal with Email. -->
+ec@Wt3cBv3k8B@e6IHhI9Mo@8Upxpk@x@0ndICXSACycZlp6e4@5rGX7igFDzFJ@MdIGDGyWVFn6kkd0mX4@W4XIsddyqzl2WaMWZ@2RoMQMsGz6MW@R3e@6O@U47efE8lhRa@yFkJgF7X02owsRF@zSSa2@xpb5vmYU@z5Q@BcKglctXiOwaIjrm6mkT@pdRaEMpAXSmh4YOwwfEkd@qD55qbsKTsksf@nPCIlJk4GD     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:////////////www.2ZTHLSX.BIBWkYldfYbICy.FHSEDM.uB.h.s.37mjm0nTjySTuqWzBM.8.7V5LI0kS6ZqU.sjk.a     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  09-95-064 396  is invalid!!
+ec@Wt3cBv3k8B@e6IHhI9Mo@8Upxpk@x@0ndICXSACycZlp6e4@5rGX7igFDzFJ@MdIGDGyWVFn6kkd0mX4@W4XIsddyqzl2WaMWZ@2RoMQMsGz6MW@R3e@6O@U47efE8lhRa@yFkJgF7X02owsRF@zSSa2@xpb5vmYU@z5Q@BcKglctXiOwaIjrm6mkT@pdRaEMpAXSmh4YOwwfEkd@qD55qbsKTsksf@nPCIlJk4GD     is not a valid email address!!
+http:////////////www.2ZTHLSX.BIBWkYldfYbICy.FHSEDM.uB.h.s.37mjm0nTjySTuqWzBM.8.7V5LI0kS6ZqU.sjk.a     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.381429959285962,"[0.19148936170212771, 0.20833333333333337, 0.2962962962962963, 0.07913669064748197, 0.09701492537313428, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ 09-95-064', u'+ 396', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ ec@Wt3cBv3k8B@e6IHhI9Mo@8Upxpk@x@0ndICXSACycZlp6e4@5rGX7igFDzFJ@MdIGDGyWVFn6kkd0mX4@W4XIsddyqzl2WaMWZ@2RoMQMsGz6MW@R3e@6O@U47efE8lhRa@yFkJgF7X02owsRF@zSSa2@xpb5vmYU@z5Q@BcKglctXiOwaIjrm6mkT@pdRaEMpAXSmh4YOwwfEkd@qD55qbsKTsksf@nPCIlJk4GD', u'+ not'], [u'- http://www.google.com', u'+ http:////////////www.2ZTHLSX.BIBWkYldfYbICy.FHSEDM.uB.h.s.37mjm0nTjySTuqWzBM.8.7V5LI0kS6ZqU.sjk.a', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'LzrWZ3G800TdbS5GUPByFtEKuM24ZNU2KBTM8WOYbInfrq3WkpKwdCVTVyUjFYDbKQRKrRxhLrKt4YwBurmSNNfLpDdEoSefX6Hn5Oifmjos0lsusucR5ZpUh4vFaMPiziMlUWVX55DwR5IT91wiQNwUFbhux9ERmmchF3ddM98ccAWAlsm7YYkIaiqgZTnWv11CGY8wmlTQJeB8Ds1ys00pDAJGvNVTdHJQORSfI4pB43ZnBq5dldWMGBthjjXSRJBSwghcmJxHH3rj08yZUNUXEl9zUixbVo57jYUQOKj9', 'tel': '09-69406 561', 'url': 'http:wwwwwwwwwwww..Z2S9BlvQBU94A.Thm9X00gC7.agzQQ04L517z.dRReEns8I6gaC8xs7h.6HA.4L0XoE.yHR78lk.4', 'number': '3526169992657879115.2523034594509315222', 'color': '#3B51', 'range': '0000000000000017953844', 'time': '24:3751611538871796', 'date': '2051-ew-31', 'commit': 'Login7KPfb575cMTKsLxP6VcS0hkHfKAB3PgBhaTWET2coHkJOG4BplMBFKPlOjdqGi4LOEhWDNJd1rrC60M3cDtmBvc6ng6nyjCIcPfeKjsZtoes9CJSHTcsN0ICrqcW68rnTIZwkJYompsJnLwz8YoXzdvWMbazvxOAN4kmdOp0xzjEGsMSqXyeXK3EZwxEN4oU85LU1YbKKxmJHVQa5Bpx7A4h9l5blPP1LCl3AiStfcAVkveIUHmvJvH59iVk1x3B8cs7z6lEVB7QKkwrT72pbpKxvJg5nirLxi3tv3Bja6PR', 'login': '\x0c\t\r\r\x0c ', 'password': '\x0c\t\r\r\x0c ', 'email': 'jIvw.HV'}",200,0.633059024810791,0.636544942855835,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+The account includes invaid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+The password includes invaid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  09-69406 561  is invalid!!<br>
+<!-- Deal with Email. -->
+jIvw.HV     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+http:wwwwwwwwwwww..Z2S9BlvQBU94A.Thm9X00gC7.agzQQ04L517z.dRReEns8I6gaC8xs7h.6HA.4L0XoE.yHR78lk.4     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","The account includes invaid chars!!
+The password includes invaid chars!!
+The phone number  09-69406 561  is invalid!!
+jIvw.HV     is not a valid email address!!
+http:wwwwwwwwwwww..Z2S9BlvQBU94A.Thm9X00gC7.agzQQ04L517z.dRReEns8I6gaC8xs7h.6HA.4L0XoE.yHR78lk.4     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.3790639730699067,"[0.0, 0.0, 0.30188679245283023, 0.44897959183673475, 0.09774436090225569, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ The', u'- Account', u'+ account', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'+ The', u'- Password', u'+ password', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'- 0911111111', u'+ 09-69406', u'+ 561', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ jIvw.HV', u'+ not'], [u'- http://www.google.com', u'+ http:wwwwwwwwwwww..Z2S9BlvQBU94A.Thm9X00gC7.agzQQ04L517z.dRReEns8I6gaC8xs7h.6HA.4L0XoE.yHR78lk.4', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'OF9quxUevstYQQAiUrdkzafuJAA0WAsH76kjEdc0JtRsTS7vmlIbjyb7Ovjq1MpGJiJnmRujRbcBGCfxQvf0RhwIv3Enlk3vRoKBcPaDBOEjBcN7coMhHAU7pnC6zIr6CHS52bdCLUaDzAs5j7DRl0w85JGfKY9ypz5CUsMucmZS5W0uEJSFkOBwhWBiviAEhetgAkd5Mardo4PmTv8kZg3Y7YZFg8Xm3OX8uq5qfd2KPsqRtxxDRbicPkYZvt3tABFA3zcaAG1fd1lT0NAAhpNs0rPapzw5AJYb5KY0HmbO', 'tel': '09-50 623-956', 'url': 'ftp:www.8wTzBIC21lRai.4HHncpHz.ruYW263DrcASo96rG9C.pqajp.3lR0eF9v2RH.SFuXQ7GatPCp1OSlfDh..o', 'number': '58158974395487699.', 'color': '#e7EFc5', 'range': '10', 'time': '20:60', 'date': 'LYJo-11/28', 'commit': 'Login3Rjl7nFPO0HG5vzn8TbtOT6zPcfxz6C1jlObDs6y1bYDIIb1VQNJSjPIaFlu56s1J3XscPLaiaLOweCx3g5M1nEKbXGouj6Hp1ohggE92TM6oblKHMo85nOAgcYTz9iqw38GMBggg1Ij56Na9nXOOzJuJaQwEXzAM1C4BeSYqCwg6wRHpfDKGgf1V56yvHGXMQ64ei80L3kdFZLjOFeyLi4MIwMuacPKt3G7vuHrHkBPYE1g9w3x4dRTUA2xyD6ROpncQ0vSUJ6XgO0hOjxkAGaESqnjjFWL2yyVSe1gikWT', 'login': '   \t\t \x0c \t \r  \t', 'password': '   \t\t \x0c \t \r  \t', 'email': '         fsHlAWJ80xRobgpy6Sk@epGK'}",200,0.6516709327697754,0.6551129817962646,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+The account includes invaid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+The password includes invaid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  09-50 623-956  is invalid!!<br>
+<!-- Deal with Email. -->
+         fsHlAWJ80xRobgpy6Sk@epGK     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp:www.8wTzBIC21lRai.4HHncpHz.ruYW263DrcASo96rG9C.pqajp.3lR0eF9v2RH.SFuXQ7GatPCp1OSlfDh..o     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","The account includes invaid chars!!
+The password includes invaid chars!!
+The phone number  09-50 623-956  is invalid!!
+         fsHlAWJ80xRobgpy6Sk@epGK     is not a valid email address!!
+ftp:www.8wTzBIC21lRai.4HHncpHz.ruYW263DrcASo96rG9C.pqajp.3lR0eF9v2RH.SFuXQ7GatPCp1OSlfDh..o     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.36732211151368765,"[0.0, 0.0, 0.2962962962962963, 0.33333333333333337, 0.1015625, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ The', u'- Account', u'+ account', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'+ The', u'- Password', u'+ password', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'- 0911111111', u'+ 09-50', u'+ 623-956', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ fsHlAWJ80xRobgpy6Sk@epGK', u'+ not'], [u'- http://www.google.com', u'+ ftp:www.8wTzBIC21lRai.4HHncpHz.ruYW263DrcASo96rG9C.pqajp.3lR0eF9v2RH.SFuXQ7GatPCp1OSlfDh..o', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'o4sj7Gb67G3vepS3G5I0Gn8400YlVs27mhIcpSlcB1aGOKgjuIVnYjLDrg8S9N0tJEsgIgLXU6ZmKn1gejtdpRLYFEAZDo2WJt8VyV6Uz4GHZHXkgwQEQrQlIKlZgnHf3mwuCTrBBK3KCjQJVhBLSpY5agAgVcrIiYCKfYk9uiULPvG3qs73m0RSl8683WNYOJGLFL35tdj8rQmUWyPHTNbZeAKvvtPLfr9se8uadmWHUp2jRyE9l7FRvWP8gZcc7zi6mPvNBfJ75Ry5laOObUhjVofMY4QqgF3J5hg6eQuC', 'tel': 'JE/bfp#eoE', 'url': 'ftp:/www.zUjUSws2jKNowdCc4c.FLsNabmIpApHJe.kUcZupbcLUGkDG.Uy2Cbr6hlzVmdUe0lFY.R', 'number': '296547985362...............', 'color': '#dddd8b5BF21fFE5f3103437', 'range': '300', 'time': '17:60:46:02:41:27:58:51:07:23:01', 'date': '1Lzp-7-30', 'commit': 'LoginxRpZoG9vwZjZHSrFrqxCufIrIyGbtmQMtWurWeB8AxlqarjeTKE0W4ToYB149wH34dJFtimstKIyHG11pjLLNbt8NEEx7aGstnW2WjqqBLtvqR2LJ8olyGgXQ4Hmz6xEGIWExDta51GS7zubs8bWmOrh6PoU51wCDhKL7x2lwSxJ80jcLlyFYF6qsPjAf93r4mE3uawoFm2GlOGl6EDGbCxqz8pyVNAGxRCjqPdguNmsIhYn4W3wVrflKQIjHY6V2y8pqaCvKYqavW9wu6qbqAHwvc1O5ncOFtSJlKpB8vtE', 'login': '\t   \r\t\x0c\r\x0c\t\t \x0c\r\x0c  \t\r\x0c\t', 'password': '\t   \r\t\x0c\r\x0c\t\t \x0c\r\x0c  \t\r\x0c\t', 'email': '08g5vnBTYKzs7VwRJT'}",200,0.669281005859375,0.6741719245910645,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  JE/bfp#eoE  is invalid!!<br>
+<!-- Deal with Email. -->
+08g5vnBTYKzs7VwRJT     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp:/www.zUjUSws2jKNowdCc4c.FLsNabmIpApHJe.kUcZupbcLUGkDG.Uy2Cbr6hlzVmdUe0lFY.R     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is valid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  JE/bfp#eoE  is invalid!!
+08g5vnBTYKzs7VwRJT     is not a valid email address!!
+ftp:/www.zUjUSws2jKNowdCc4c.FLsNabmIpApHJe.kUcZupbcLUGkDG.Uy2Cbr6hlzVmdUe0lFY.R     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is valid!!
+Color is invalid!!",0.4823931794331967,"[0.19148936170212771, 0.20833333333333337, 0.3076923076923077, 0.3666666666666667, 0.11206896551724133, 1.0, 1.0, 0.33333333333333337, 1.0, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ JE/bfp#eoE', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ 08g5vnBTYKzs7VwRJT', u'+ not'], [u'- http://www.google.com', u'+ ftp:/www.zUjUSws2jKNowdCc4c.FLsNabmIpApHJe.kUcZupbcLUGkDG.Uy2Cbr6hlzVmdUe0lFY.R', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'Ke7G4NnH1sVTMpis8hMONuyjPefOho9LqMGPs9oYMloYLxfWXcyngPR5PlvD5bfei2JOZ7wUZLxhzmpcukYHIdvxrm50WtocuehpeXolen8NHa0Fl9yPFTa2xCHWVNVrisrZCly1RfttDIGHoi3i74RWDrCfDswYMc63McxgJTvJXwZm5zRVM0c1CbawoydEQTlRx2LYuwC04zGW994IWPSb34NtM46hwzw8s7Y0exX5nEwasbRy2ERQMGq6ZUyll2TStW4G15dtyr8utNynMr7IVmHVukNAE7XQOwXOaORz', 'tel': '8%65]25f8<', 'url': 'ftp://////www.IlOgs.wJoQdQS.mRFS6.vOzSBv.JyPVBji.HB1IvVEdFyxsc1Eva9LM.CbL3WKJD9qkoouOYWR.BShXvOJq1Ym7chvOq4R.oo8TLJBq3J.n', 'number': '8145a6a4c6f3.91b9d1da2b26f3a', 'color': '5Ece', 'range': '772100', 'time': '24:MR', 'date': '               2516-12/6', 'commit': 'LoginTOFCfnINxYmLVd40BPfRD56Z9e807UUwhMTJVGYRUU8VJDiKHKAR4qJjpyV9U1jGUNgPdueOYPaSZJPjvRQ3lMbwkhH4Zut31DJvKHg7xWBeByEQLkSZ1edAA3DGPL1BjqLqkn2Ed4xmg0hOVguvN2un5J7X5EnnFKrxWm1jpgDVnhSlxCL2A9QoFZRlB9TSLS9cobj1smhAqwxdMWKX8Azkwwu1bGC1DS5Z9NZtw7G6OqBZQkkJ1fBM1drdvu4FeIRMBPVzJDJvGbx2TtECdghyqDn3Lr7WVxzHd8zQust7', 'login': '', 'password': '', 'email': '@'}",200,0.6877620220184326,0.690838098526001,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Please do not leave the account empty!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Please do not leave the password empty!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  8%65]25f8<  is invalid!!<br>
+<!-- Deal with Email. -->
+@     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+ftp://////www.IlOgs.wJoQdQS.mRFS6.vOzSBv.JyPVBji.HB1IvVEdFyxsc1Eva9LM.CbL3WKJD9qkoouOYWR.BShXvOJq1Ym7chvOq4R.oo8TLJBq3J.n     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Please do not leave the account empty!!
+Please do not leave the password empty!!
+The phone number  8%65]25f8
+@     is not a valid email address!!
+ftp://////www.IlOgs.wJoQdQS.mRFS6.vOzSBv.JyPVBji.HB1IvVEdFyxsc1Eva9LM.CbL3WKJD9qkoouOYWR.BShXvOJq1Ym7chvOq4R.oo8TLJBq3J.n     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.38692687068299825,"[0.0, 0.0, 0.33333333333333337, 0.5116279069767442, 0.08227848101265822, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Account', u'+ account', u'+ empty!!', u'- is', u'- valid!!'], [u'+ Please', u'+ do', u'+ not', u'+ leave', u'+ the', u'- Password', u'+ password', u'+ empty!!', u'- is', u'- valid!!'], [u'+ 8%65]25f8', u'- 0911111111', u'- is', u'- valid!!'], [u'- test@gmail.com.tw', u'+ @', u'+ not'], [u'- http://www.google.com', u'+ ftp://////www.IlOgs.wJoQdQS.mRFS6.vOzSBv.JyPVBji.HB1IvVEdFyxsc1Eva9LM.CbL3WKJD9qkoouOYWR.BShXvOJq1Ym7chvOq4R.oo8TLJBq3J.n', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'KqHGMVZlM18k53DWQRU4uQP7vIOwXN1lk9FIT0OWfwPiqr2aSbxfZJiCAML1M8wHtg5g5Y3IanNKTVZd2qRcScxdYbL8QhCcN4a0QfT8Z35rKwZajkFWTtQw9pdG3aYIL5QalQ4nMON3RCW4m85oEXYu44brN5nL4YFNIThImfFQuXihtu9euGBp4MM9fe6pyJ9GqbLMDyUCsEQOcNToKJTtN3gnoUT7kjZJnMeWwiH9rxpVxVZb8eYyrFbFLrc8cfhIbjH9bXKsE2bqFT1U6FmepgHdyp1DpbReXGfuSxol', 'tel': '0N21+2Y5 8', 'url': '344993677624443281117.77824598969.87.9818886545676845122.46947785874292711267.591.5176715259973675.353412389.981769471395518126373.66783145958766367', 'number': '476371618....................62731633355600714459', 'color': '6b1B9D', 'range': 'EREuIl', 'time': 'Iq:07', 'date': '2971-    11 30', 'commit': 'Login9LDNxEEtxaEVuGa6Von5z0NqKUDKrle8e1TFZbaQK411hBqvfnb6D2UDb5QMxNq6Kd2ECkO2034Fq2i92i7i7LP6hm703P6JKzIxS8czLHHttgov6cUX5peWavVFjU0QoUpVTZ7ILqiTHqX9rZ8imvBb3U916X9OZrir4TNi7AACoLKf5CCIayLg8emyzqh7AEGmXd75U3VZsxxiVsk41TBc2xpIETWg0JDa5fpt5Sy9ZJFmNkk8FZuZUlc8xfj1rAVomnQcCKWO6wpYfnNX6N1EY1qxHCGC08CmEptJXuxL', 'login': '\t3O\tzSdOt_', 'password': '\t3O\tzSdOt_', 'email': '@mF1jh'}",200,0.7038631439208984,0.7071740627288818,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+The account includes invaid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+The password includes invaid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  0N21+2Y5 8  is invalid!!<br>
+<!-- Deal with Email. -->
+@mF1jh     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+344993677624443281117.77824598969.87.9818886545676845122.46947785874292711267.591.5176715259973675.353412389.981769471395518126373.66783145958766367     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","The account includes invaid chars!!
+The password includes invaid chars!!
+The phone number  0N21+2Y5 8  is invalid!!
+@mF1jh     is not a valid email address!!
+344993677624443281117.77824598969.87.9818886545676845122.46947785874292711267.591.5176715259973675.353412389.981769471395518126373.66783145958766367     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.37843580793069287,"[0.0, 0.0, 0.3137254901960784, 0.45833333333333337, 0.07027027027027022, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'+ The', u'- Account', u'+ account', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'+ The', u'- Password', u'+ password', u'- is', u'- valid!!', u'+ includes', u'+ invaid', u'+ chars!!'], [u'- 0911111111', u'+ 0N21+2Y5', u'+ 8', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ @mF1jh', u'+ not'], [u'- http://www.google.com', u'+ 344993677624443281117.77824598969.87.9818886545676845122.46947785874292711267.591.5176715259973675.353412389.981769471395518126373.66783145958766367', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"
+0,"{'remember_me': 'j7PtnWOSZWk0LlqASEVShGtf7w7bBGMemXaWHTsuhGXnU8TT0uIjT3uJN9I2npBCv2pQIp0fN5gUPfFx9zoVURWoj471XPUVZkE7uvq6TMA1xSOqGCSRCIiNaCoMggE7R6udBlMO3ZiOjgEaYqrojGheIzUn0f3iLbnL1ozZEn5VemuWN6iTVX2tauC8ap8epUDyz8zlg06yVp8Ur0P4LlGF1u92pJrsnyHHZE1OkiWvLofj8w3ryORvEr8mCUAhzOEIiePoOW6kzCzQNiMJJqc2CFp8br0qnuJzcx6P4Mfq', 'tel': 'k280871479', 'url': 'fTgXD7CYF', 'number': 'mx7xgi', 'color': 'fdd37f61F522fDC', 'range': 'p3DUAdYcGHzgv', 'time': ':', 'date': '1780 10                   5', 'commit': 'LoginXFJgyFF1D6yTIspKSCJvJDOKFCSDPF5Ek0AW9tr465QXxLo5kd1bgnpMOFtRcpO6NeSRHlOjTO761QjHRvoMMCm7pOAkg7dBmpl2paz2KJ3ZoajcXZ0fT61qZdJDkWSrtOGwuBAM5PAxw6SIuq6JOOCEwXnxFBohiRL9mCsfL8bxNBmYlbtOxAdQNTGHpKVgOQ1Ly3RUo2ANjdSTMVsSjNzvQEzeqjSGG4gRrfEThJWfsw47lGcRr7awUsnr70nHpXaewOjYfxNY7YyKzutqFVokCXsL9eSBfXfijG403GZp', 'login': 'G\r\tpU\x0c\tAZz\x0cW\rp\x0c\x0cm7qOi Z3', 'password': 'G\r\tpU\x0c\tAZz\x0cW\rp\x0c\x0cm7qOi Z3', 'email': '_@______'}",200,0.7207200527191162,0.723905086517334,"<html>
+<body>
+
+<!-- Deal with account. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of account should be longer than 6 and shorter than 17. -->
+Account is too long or includes invalid chars!!<br>
+<!-- Deal with password. -->
+<!-- Must contain at least one number/letter. Only numbers, letters and '_' are valid. Length of password should be longer than 6 and shorter than 17. -->
+Password is too long or includes invalid chars!!<br>
+
+<!-- Deal with Phone number. -->
+<!-- Phone number format: XXXX-XXX-XXX. '', ' '(space) and '-' are valid notations to seperate the phone number. -->
+The phone number  k280871479  is invalid!!<br>
+<!-- Deal with Email. -->
+_@______     is not a valid email address!!<br>
+<!-- Deal with URL. -->
+fTgXD7CYF     is not a valid URL!!<br>
+<!-- Deal with date. -->
+<!-- Date format: Year-Month-Day. '/', ' ' and '-' are valid notations to seperate the date. -->
+<!-- 999<Year<2100, 0<Month<13, 0<Day<32-->
+Date is invalid<br>
+<!-- Deal with time. -->
+<!-- Time format: Hour:Minute. ' '(space) and ':' are valid notations to seperate the time. -->
+<!-- 24>Hour>=0, 60>Minute>=0 -->
+Time is invalid<br>
+<!-- Deal with number. -->
+Number is invalid!!<br>
+<!-- Deal with range. -->
+Range is invalid!!<br>
+<!-- Deal with color. -->
+Color is invalid!!<br>
+</body>
+</html>
+
+","Account is too long or includes invalid chars!!
+Password is too long or includes invalid chars!!
+The phone number  k280871479  is invalid!!
+_@______     is not a valid email address!!
+fTgXD7CYF     is not a valid URL!!
+Date is invalid
+Time is invalid
+Number is invalid!!
+Range is invalid!!
+Color is invalid!!",0.43721526838871905,"[0.19148936170212771, 0.20833333333333337, 0.3076923076923077, 0.43999999999999995, 0.28260869565217395, 1.0, 1.0, 0.33333333333333337, 0.30434782608695654, 0.30434782608695654]","[[u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- valid!!', u'+ too', u'+ long', u'+ or', u'+ includes', u'+ invalid', u'+ chars!!'], [u'- 0911111111', u'+ k280871479', u'- valid!!', u'+ invalid!!'], [u'- test@gmail.com.tw', u'+ _@______', u'+ not'], [u'- http://www.google.com', u'+ fTgXD7CYF', u'+ not'], [], [], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!'], [u'- valid!!', u'+ invalid!!']]"

@@ -1,0 +1,2 @@
+TestMode,Network domain,Number of websites,Testing Websites,Total time,Time for each test,Number of testcase
+html,www.hhserver.com,4,"['http://www.hhserver.com/Test3.html', 'http://www.hhserver.com/Test2.html', 'http://www.hhserver.com/index.html', 'http://www.hhserver.com/Test1.html']",2.3006749153137207,"[0.7249858379364014, 0.7430720329284668, 0.010281085968017578, 0.8223299980163574]","[40, 40, 0, 40]"
