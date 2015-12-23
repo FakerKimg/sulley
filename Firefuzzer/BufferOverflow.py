@@ -22,6 +22,10 @@ class BufferOverflow():
         self.payload = {} 
         self.writer = []
         self.payload_count = 0
+        self.folder = ''
+
+    def set_folder(self,s):
+        self.folder = s
 
     def randomizer(self):
         str2 = ""
@@ -94,17 +98,17 @@ class BufferOverflow():
             return
         t0 = time.time()
         url = self.url[7:].replace('.','_').replace('/','_')
-        if not os.path.exists('./output/'+url):
-            os.makedirs('./output/'+url)
-        self.input_file = os.listdir('./input_type/')
+        if not os.path.exists('./output/'+self.folder+'/'+url):
+            os.makedirs('./output/'+self.folder+'/'+url)
+        self.input_file = os.listdir('./testcase/')
         self.input_type = ['text','password','tel','email','url','date','time','number','range','color']
         for k in range(len(self.input_type)):
             self.payload[self.input_type[k]] = []
-            self.read_payload(self.input_type[k],'./input_type/',False)
+            self.read_payload(self.input_type[k],'./testcase/',False)
             if self.oursite:
                 self.writer.append(csv.writer(open('./output/'+url+'/'+self.input_type[k]+'_result.csv','w')))
                 self.writer[k].writerow(('Form','Input','Output'))
-        self.writer.append(csv.writer(open('./output/'+url+'/'+'summary.csv','w')))
+        self.writer.append(csv.writer(open('./output/'+self.folder+'/'+url+'/'+'summary.csv','w')))
         self.writer[len(self.writer)-1].writerow(('Form','Payload','Status code','Request time','Response time','Response','Response body','Average correct rate','Correct rate','Diff'))
         payload_count = []
         self.correct = {}

@@ -51,9 +51,10 @@ class Firefuzzer():
         print "########################################################################################################################"
 
         t = time.strftime("%Y-%m-%d-%H-%M-%s",time.localtime())
-        if not os.path.exists('./output'):
-            os.mkdir('output')
-        fout = csv.writer(open('./output/fuzzing_'+t+'.csv','w'))
+        #if not os.path.exists('./output'):
+        #    os.mkdir('output')
+        os.makedirs('./output/'+t)
+        fout = csv.writer(open('./output/'+t+'/fuzzing_'+t+'.csv','w'))
         fout.writerow(('TestMode','Network domain','Number of websites','Testing Websites','Total time','Time for each test','Number of testcase'))
         
         if self.stype == "url":
@@ -61,6 +62,7 @@ class Firefuzzer():
             url = urlparse.urlparse(self.source)
             print url
             overflow = BufferOverflow.BufferOverflow(self.source)
+            overflow.set_folder(t)
             overflow.parse_html()
 	    if self.testmode == 'auto':
                 overflow.autotest(float(self.sleep))
@@ -83,6 +85,7 @@ class Firefuzzer():
             for u in self.link:
                 print 'Target url:',u
                 overflow = BufferOverflow.BufferOverflow(u)
+                overflow.set_folder(t)
                 overflow.parse_html()
                 if self.testmode == 'auto':
                     overflow.autotest(float(self.sleep))
