@@ -141,7 +141,7 @@ class BufferOverflow():
             t1 = time.time()
             response = self.sendBack()
             t2 = time.time()
-            print response
+            #print response
             if type(response)!=list:
                 self.writer[len(self.writer)-1].writerow(('none',self.input_pairs[0]['payload'],response,t1-t0,t2-t0,'none','none','none','none','none'))
             else:

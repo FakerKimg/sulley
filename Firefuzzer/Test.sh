@@ -6,9 +6,7 @@ if [ "$#" -eq 0 ]; then
 elif [ "$#" -ne 1 ]; then
     if [ "$2" = "new" ]; then
         echo "STEP 1: Generate new payload"
-        cd ./testcase/
         python generate.py
-        cd ..
         echo "STEP 2: Start Web traversal"
         python Web_Traversal.py $1
         if [ -f Web_Traversal_link ]; then

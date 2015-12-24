@@ -1,0 +1,4 @@
+cd ./testcase
+rm *
+cd ..
+
