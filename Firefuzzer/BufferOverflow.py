@@ -66,7 +66,10 @@ class BufferOverflow():
                     com.append(k)
                     different += len(k)-2
             #print s.ratio(),same/total_len
-            sim[1].append(1-different/total_len)
+            if total_len!=0:
+                sim[1].append(1-different/total_len)
+            else:
+                sim[1].append(1)
             sim[2].append(com)
         sim[0] = sum(sim[1])/len(a)
         return sim
@@ -154,7 +157,8 @@ class BufferOverflow():
                         similarity = self.similar([cres],[' '.join(res)])
                     #print similarity
                     res = '\n'.join(res)
-                    self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0,response[k].text,res,similarity[0],similarity[1],similarity[2]))
+                    self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0,response[k].text.encode('utf-8'),res.encode('utf-8'),similarity[0],similarity[1],similarity[2]))
+                    #self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0))
             time.sleep(sleep_time)
         
     def parse_html(self):
@@ -164,7 +168,7 @@ class BufferOverflow():
         forms = soup.select("form")
         # print "forms # : " + forms.len(forms)
         test_tag = ["form", "input", "div", "section","article","main","aside","header","footer","nav","figure","figcaption","template","video","audio","embed","mark","embed","mark","progress","meter","time","ruby","rt","rp","bdi","wbr","canvas","datalist","keygen","output"]
-        html4_tag = ['text','password','radio','checkbox','submit','button']
+        html4_tag = ['text','password','radio','checkbox','submit','button','file','hidden','image','reset']
         html5_tag = ['color','date','datetime','datetime-local','email','month','number','range','search','tel','time','url','week']
         for tag in test_tag:
             self.tag_num[tag]=len(soup.select(tag))
@@ -178,12 +182,13 @@ class BufferOverflow():
             html5 = 0
             action = form.get("action", "")
             method = form.get("method","").lower()
-            print 'method:',method
+            print action
+            #print 'method:',method
             if action == "" or not (method == "post" or method == "get") :
                 continue
             #print 'action:',action,'\n'
             inputs = form.find_all("input")
-            #print 'input:',inputs,'\n'
+            print 'input:',inputs,'\n'
             form_content = {}
             form_content["action"] = form["action"]
             form_content["payload"] = {}
@@ -196,6 +201,8 @@ class BufferOverflow():
 		if type == "":
 		    continue
                 t = _input.get("type","")
+                if t == '':
+                    continue
                 n = _input.get("name","")
                 v = _input.get("value","")
 		form_content["input"].append({'type':t,'name':n,'value':v})

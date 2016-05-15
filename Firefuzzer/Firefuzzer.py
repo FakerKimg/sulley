@@ -78,6 +78,9 @@ class Firefuzzer():
             t1 = t0
             tim = []
             payload = []
+            if len(self.link)==0:
+                print 'There is no website no fuzz'
+                sys.exit()
             for u in self.link:
                 print 'Target url:',u
                 overflow = BufferOverflow.BufferOverflow(u)
