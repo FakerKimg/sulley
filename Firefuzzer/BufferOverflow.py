@@ -158,7 +158,6 @@ class BufferOverflow():
                     #print similarity
                     res = '\n'.join(res)
                     self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0,response[k].text.encode('utf-8'),res.encode('utf-8'),similarity[0],similarity[1],similarity[2]))
-                    #self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0))
             time.sleep(sleep_time)
         
     def parse_html(self):
@@ -182,8 +181,7 @@ class BufferOverflow():
             html5 = 0
             action = form.get("action", "")
             method = form.get("method","").lower()
-            print action
-            #print 'method:',method
+            print 'method:',method
             if action == "" or not (method == "post" or method == "get") :
                 continue
             #print 'action:',action,'\n'
