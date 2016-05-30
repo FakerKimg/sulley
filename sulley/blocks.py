@@ -234,7 +234,8 @@ class block:
         #
 
         if self.group:
-            group_count = self.request.names[self.group].num_mutations()
+            #group_count = self.request.names[self.group].num_mutations()
+            group_count = len(self.request.names[self.group].values)
 
             # update the group value to that at the current index.
             self.request.names[self.group].value = self.request.names[self.group].values[self.group_idx]
@@ -261,6 +262,8 @@ class block:
 
                 # otherwise continue mutating this group/block.
                 else:
+                    mutated = True
+
                     # update the group value to that at the current index.
                     self.request.names[self.group].value = self.request.names[self.group].values[self.group_idx]
 

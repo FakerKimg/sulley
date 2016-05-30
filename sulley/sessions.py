@@ -186,10 +186,12 @@ class session (pgraph.graph):
             filehandler.setFormatter(formatter)
             self.logger.addHandler(filehandler)
 
+        """
         consolehandler = logging.StreamHandler()
         consolehandler.setFormatter(formatter)
         consolehandler.setLevel(log_level)
         self.logger.addHandler(consolehandler)
+        """
 
         self.total_num_mutations = 0
         self.total_mutant_index  = 0
@@ -555,6 +557,8 @@ class session (pgraph.graph):
         # finished with the last node on the path, pop it off the path stack.
         if path:
             path.pop()
+
+        return
 
         # loop to keep the main thread running and be able to receive signals
         if self.signal_module:

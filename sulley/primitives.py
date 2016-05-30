@@ -240,6 +240,8 @@ class group (base_primitive):
         @return: Number of values in this primitive.
         '''
 
+        return 0
+
         return len(self.values)
 
 
