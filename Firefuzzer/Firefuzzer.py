@@ -31,6 +31,7 @@ class Firefuzzer():
             self.link.append(tmp[:-1])
         
     def run(self):
+        '''
         print ""
         print "\t8888888888 8888888 8888888b.  8888888888 8888888888 888     888 8888888888P 8888888888P 8888888888 8888888b."
         print "\t888          888   888   Y88b 888        888        888     888       d88P        d88P  888        888   Y88b "
@@ -43,6 +44,7 @@ class Firefuzzer():
         print ""
 
         print "########################################################################################################################"
+        '''
         print "Targeted source : ",
         if self.stype == 'file':
             print 'File:',self.source
@@ -55,6 +57,7 @@ class Firefuzzer():
         #    os.mkdir('output')
         os.makedirs('./output/'+t)
         fout = csv.writer(open('./output/'+t+'/fuzzing_'+t+'.csv','w'))
+        #fout1 = csv.writer(open('./output/'+t+'/error'+'.csv','w'))
         fout.writerow(('TestMode','Network domain','Number of websites','Testing Websites','Total time','Time for each test','Number of testcase'))
         
         if self.stype == "url":
@@ -81,14 +84,21 @@ class Firefuzzer():
             if len(self.link)==0:
                 print 'There is no website no fuzz'
                 sys.exit()
+            error = []
             for u in self.link:
                 print 'Target url:',u
                 overflow = BufferOverflow.BufferOverflow(u)
                 overflow.set_folder(t)
                 overflow.parse_html()
                 if self.testmode == 'html':
-                    overflow.test_input(float(self.sleep))
-                    payload.append(overflow.payload_count)
+                    try:
+                        overflow.test_input(float(self.sleep))
+                        payload.append(overflow.payload_count)
+                        url = urlparse.urlparse(self.link[0])
+                    except:
+                        print "error : ",u
+                        error.append(u)
+                        #fout1.writerow((u))
                 else:
                     print 'wrong testing mode!'
                     sys.exit()
@@ -97,8 +107,9 @@ class Firefuzzer():
                 t1 = time.time()
             url = urlparse.urlparse(self.link[0])
             fout.writerow((self.testmode,url.netloc,len(self.link),self.link,t1-t0,tim,payload))
+            print error
         else:
-            print 'wrong source type!'               
+            print 'wrong source type!'
 
 if __name__ == "__main__":
     if len(sys.argv) <3 or len(sys.argv)>5:
@@ -106,6 +117,7 @@ if __name__ == "__main__":
         print "Wyntax is \n\tpython Firefuzzer <source> <source_type> (<sleep_time>) (<test_mode>)"
         sys.exit()
     args = sys.argv
+    #print len(args),args[0],args[1]
     if len(args)==3:
         fuzzer = Firefuzzer(args[1], args[2])
     elif len(args)==4:
@@ -118,5 +130,6 @@ if __name__ == "__main__":
     else:
         fuzzer = Firefuzzer(args[1], args[2], args[3], args[4])
     #print args,detail
+
     fuzzer.run()
 
