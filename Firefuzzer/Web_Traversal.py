@@ -52,15 +52,17 @@ def main():
     
     while not QUE.empty():
         target_url = QUE.get()
-        print target_url
-        response = get_url_content(target_url)
+        #print target_url
+        response = get_url_content(target_url[0])
         if not response:
             # Failed to access to the target url.
-            URLs[target_url]='Invalid'
+            URLs[target_url[0]]='Invalid'
+            print "invalid: ",target_url[0],target_url[1]
             count_invalid += 1
+            #print target_url,"Invalid"
         else:
             # Succeed to access to the target url and set it to be a valid url, and then try to get href.
-            URLs[target_url] = 'Valid'
+            URLs[target_url[0]] = 'Valid'
             count_valid += 1
             get_href(response.geturl(),root_url,response)
 
@@ -121,6 +123,7 @@ def get_href(url,root,response):
         complete_url = ''
 
         if len(href) < 4:
+            #print href, " len too small"
             continue
 
         # Deal with absolute url
@@ -136,9 +139,16 @@ def get_href(url,root,response):
             continue
         elif re.search('\?C=[A-Z]{1};O=[A-Z]{1}',href):
             continue
-        elif href[0]=='#' or ('javascript' in href) or ('mailto:' in href):
+        elif (href[0]=='#') or ('javascript' in href) or ('mailto:' in href):
+            #print href
             continue
-
+        '''
+        if href.find('/html5/#elements')>=0:
+            print url
+            print 'href: ',href
+            print href[0]=='#'
+            raw_input('PAUSE')
+        '''
         if FLAGS['PDF']:
             if ('.pdf' in href) or ('.PDF' in href):
                 FLAG_PDF_FOUND = True
@@ -161,43 +171,73 @@ def get_href(url,root,response):
         if FLAG_IMAGE_FOUND or FLAG_AUDIO_FOUND or FLAG_VIDEO_FOUND or FLAG_ARCHIVE_FOUND or FLAG_PDF_FOUND:
             continue
 
+        z=0
+
         # Take off '/', './' , '../' of href
-        while href.find('/') == 0:
-            GO_BACK += 1
-            href = href[1:]
+        if len(href)-1 >= 0:
+            if href[len(href)-1]=='/':
+                href = href[:-1]
+
+        if href.find('/') == 0:
+            temp_url = root
+            temp_url = temp_url[:temp_url.rfind('/')]
+            temp_url = temp_url[:temp_url.rfind('/')]
+            complete_url = temp_url + href
+            #print "/find: ",complete_url
+            z=1
+
         while href.find('../') == 0:
             GO_BACK += 1
             href = href[3:]
-        while href.find('./') == 0:
-            GO_BACK += 1
+
+        if href.find('./') == 0:
             href = href[2:]
-        if len(href)-1 >= 0:
-            if href[len(href)-1]=='/':
-                href = href[:-1]          
+            if (url.rfind('/')==len(url)-1):
+                complete_url = url + href
+            else:
+                complete_url = url + '/' +href
+            #print "./find: ",complete_url
+            z=1
 
         # Deal with url
         temp_url = url
-        if (temp_url.rfind('.html') or temp_url.rfind('.asp') ) and temp_url.count('/')>2:
+        #print "First: ",temp_url
+        if (temp_url.rfind('.html')>0 or temp_url.rfind('.htm')>0 or temp_url.rfind('.asp')>0 ) and temp_url.count('/')>2:
+            #print "html: ",temp_url
             temp_url = temp_url[:temp_url.rfind('/')]
+            #print "html temp: ",temp_url
 
         # Deal with GO_BACK and check whether 'http:' in href. THen combine parent address(url) and href
         while (GO_BACK>0) and temp_url.count('/')>2 and (not FLAG_HREF_HAS_HTTP):
             temp_url = temp_url[:temp_url.rfind('/')]
+            temp_url = temp_url[:temp_url.rfind('/')]
             GO_BACK -= 1
             if GO_BACK == 0:
-                complete_url = temp_url + '/' + href
+                complete_url = temp_url + "/" + href
+                #print "com: ",complete_url
+                z=1
 
-        if not FLAG_HREF_HAS_HTTP:
-            complete_url = temp_url + '/'+ href
+        if (not FLAG_HREF_HAS_HTTP) and (z==0):
+            if temp_url.rfind('/')==len(temp_url)-1:
+                complete_url = temp_url + href
+            else:
+                complete_url = temp_url + "/" + href
+            #print complete_url,"  http/html=2"
 
-        # If complete_url is not under root domain or it's too long, drop it.
         if (root not in complete_url) or len(complete_url)>200:
+            #print "not root: ",complete_url
             continue
 
+        # If complete_url is not under root domain or it's too long, drop it.
+        #if (root in complete_url) or (root[:root.rfind('html5/')] in complete_url) or (len(complete_url)<=200):
+        #else:
+        #   continue
+
         # If complete_url hasn't been traverse yet, put it into URLs and QUE.
+
         if complete_url not in URLs:
             URLs[complete_url] = 'Not determined'
-            QUE.put(complete_url)
+            QUE.put([complete_url,url])
 
 if __name__ == '__main__':
     main()

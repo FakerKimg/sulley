@@ -155,7 +155,7 @@ class BufferOverflow():
                     else:
                         cres = ' '.join(self.correct['response'][k])
                         similarity = self.similar([cres],[' '.join(res)])
-                    #print similarity
+                    #print "similarity: ",similarity
                     res = '\n'.join(res)
                     self.writer[len(self.writer)-1].writerow((k,self.input_pairs[k]['payload'],response[k].status_code,t1-t0,t2-t0,response[k].text.encode('utf-8'),res.encode('utf-8'),similarity[0],similarity[1],similarity[2]))
             time.sleep(sleep_time)
@@ -175,36 +175,39 @@ class BufferOverflow():
             self.input_tag_num[tag] = 0
         for tag in html5_tag:
             self.input_tag_num[tag] = 0
-	self.input_pairs = []
+        self.input_pairs = []
         for form in forms:
             html4 = 0
             html5 = 0
             action = form.get("action", "")
             method = form.get("method","").lower()
             print 'method:',method
-            if action == "" or not (method == "post" or method == "get") :
-                continue
-            #print 'action:',action,'\n'
+            #if action == "" or not (method == "post" or method == "get") :
+            #    continue
+            print 'action:',action,'\n'
             inputs = form.find_all("input")
             print 'input:',inputs,'\n'
             form_content = {}
-            form_content["action"] = form["action"]
+            if action == "":
+                form_content["action"] = self.url
+            else:
+                form_content["action"] = form["action"]
             form_content["payload"] = {}
-	    form_content["input"] = []
-            form_content["method"] = form["method"]
+            form_content["input"] = []
+            if not (method == "post" or method == "get"):
+                form_content["method"] = "get"
+            else:
+                form_content["method"] = form["method"]
            
             #count the number of input label
             for _input in inputs:
-	        types = _input.get("type","")
-		if type == "":
-		    continue
                 t = _input.get("type","")
                 if t == '':
                     continue
                 n = _input.get("name","")
                 v = _input.get("value","")
-		form_content["input"].append({'type':t,'name':n,'value':v})
-		self.input_tag_num[_input['type'].lower()] += 1
+                form_content["input"].append({'type':t,'name':n,'value':v})
+                self.input_tag_num[_input['type'].lower()] += 1
                 if t in html4_tag:
                     html4 += 1
                 else:
