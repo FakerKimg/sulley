@@ -6,7 +6,6 @@ import random
 
 
 def extract_edge_inputs(_graph, edge):
-
     _inputs = _graph.edge[edge[0]][edge[1]]["_inputs"]
     possible_inputs = []
     for _input in _inputs:
@@ -155,8 +154,8 @@ def generate_patterns(_type, scc_type, condense_type, valid, valid_graph, invali
 
     return _graph, output_paths
 
-def output_patterns(filename, _graph, _output_paths, num):
-    with open(filename, "w") as wf:
+def output_patterns(filename, _graph, _output_paths, num, _action):
+    with open(filename, _action) as wf:
         _num = num
         while True:
             if _num<=0:
