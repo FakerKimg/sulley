@@ -40,7 +40,9 @@ class FSM_based_Generator(object):
         return
 
     def output_cases(self, scc_type, condense_type, valid, filename):
+        # generate graphs and paths
         _ggg, output_paths = generate_patterns(self.tr._type, scc_type, condense_type, False, self.tr.correct_graph, self.tr.incorrect_graph, self.dead_state)
+        # generate test cases according to graphs and paths
         output_patterns(filename, _ggg, output_paths, len(output_paths), "a")
 
         return

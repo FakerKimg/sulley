@@ -24,6 +24,11 @@ scc_types = ["shortest", "all-vertices-covered", "tripartie"]
 condense_types = ["simplybfs", "simplydfs", "allcoverbfs", "allcoverdfs"]
 
 
+
+
+
+
+# original generation methods
 fout = {}
 for k in type_list:
     if len(sys.argv)!=2:
@@ -338,5 +343,4 @@ for input_type in input_types:
         for condense_type in condense_types:
             filename = './testcase/'+input_type+'_'+t
             ggg.output_cases(scc_type, condense_type, False, filename)
-
 
